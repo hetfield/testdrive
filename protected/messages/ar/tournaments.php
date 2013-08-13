@@ -1,0 +1,25 @@
+<?php
+
+return array (
+    'Tournaments' => 'الدورات',
+    'You have already registered in this round.' => ' لقد  قمت بالفعل بالتسجيل في هذه الجولة. ',
+    'You successfully registered in round.' => ' لقد قمت بالتسجيل بنجاح في الجولة.',
+    'You are successfully registered in this tournament.' => 'لقد قمت بالتسجيل بنجاح في هذه الدورة',
+    'Error occured during registration.' => 'حدث خطأ أثناء التسجيل.',
+    'Nickname is not unique.' => 'الإسم المستعار ليس فريد.',
+    'Conditions' => 'الشروط ',
+    'Participation' => 'المشاركة',
+    'Current Rounds' => 'الجولات الحالية',
+    'Rounds History' => 'سجل الجولات',
+    'Forex Drive' => 'Forex Drive',
+    'FX-Rodeo' => 'FX-Rodeo',
+    'Profit Day' => 'يوم الربح',
+    'Your account:' => 'حسابك الخاص :',
+    'Participants' => 'المشاركون',
+    'will be soon' => 'البداية قريباً',
+    'is going' => 'يتم حالياً',
+    'is gone' => 'الأنتهاء',
+    'You are registered' => 'لقد تم تسجيلك',
+    'You are banned' => 'لقد تم حظرك',
+    'Register in this round' => 'التسجيل في الجولة',
+);

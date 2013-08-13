@@ -1,0 +1,25 @@
+<?php
+
+return array (
+    'Tournaments' => 'Pertandingan',
+    'You have already registered in this round.' => 'Anda sudah mendaftar pada pusingan ini.',
+    'You successfully registered in round.' => 'Anda berjaya mendaftar pada pusingan ini.',
+    'You are successfully registered in this tournament.' => 'Anda berjaya mendaftar di dalam pertandingan ini.',
+    'Error occured during registration.' => 'Ralat semasa pendaftaran.',
+    'Nickname is not unique.' => 'Nama samaran tidak unik.',
+    'Conditions' => 'Syarat',
+    'Participation' => 'Penyertaan',
+    'Current Rounds' => 'Pusingan Semasa',
+    'Rounds History' => 'Sejarah pusingan terdahulu',
+    'Forex Drive' => 'Pemacu Forex',
+    'FX-Rodeo' => 'Fx-Rodeo',
+    'Profit Day' => 'Hari Keuntungan',
+    'Your account:' => 'Akaun anda:',
+    'Participants' => 'Para Peserta',
+    'will be soon' => 'akan bermula',
+    'is going' => 'sedang berjalan',
+    'is gone' => 'tamat',
+    'You are registered' => 'Anda telah berdaftar',
+    'You are banned' => 'Anda ditegah',
+    'Register in this round' => 'Berdaftar dalam pusingan ini',
+);
