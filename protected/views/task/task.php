@@ -19,14 +19,16 @@ $this->breadcrumbs=array(
 );
 ?>
 
-<?php if (Yii::app()->user->hasFlash('success')) : ?>
+<?php if (Yii::app()->user->hasFlash('success') || Yii::app()->user->hasFlash('Esuccess')) : ?>
     <div class="flash-success">
-        <?= Yii::app()->user->getFlash('success'); ?>
+        <?= Yii::app()->user->getFlash('success')."<br>";  ?>
+        <?= Yii::app()->user->getFlash('Esuccess'); ?>
     </div>
 <?php endif; ?>
-<?php if (Yii::app()->user->hasFlash('error')) : ?>
+<?php if (Yii::app()->user->hasFlash('error') || Yii::app()->user->hasFlash('Eerror')) : ?>
     <div class="flash-error">
         <?= Yii::app()->user->getFlash('error'); ?>
+        <?= Yii::app()->user->getFlash('Eerror'); ?>
     </div>
 <?php endif; ?>
 
