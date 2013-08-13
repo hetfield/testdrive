@@ -67,8 +67,8 @@ class TaskController extends Controller
                 $phpMailer->Port       = 587;
                 $phpMailer->SMTPSecure = true;
                 $phpMailer->Host = 'smtp.mfxbroker.com';//'smtp.mfxbroker.com';
-                $phpMailer->Username = 'translations@mfxbroker.com';                            // SMTP username
-                $phpMailer->Password = 'aiutsraghuy545#';                           // SMTP password
+                $phpMailer->Username = '';                            // SMTP username
+                $phpMailer->Password = '';                           // SMTP password
                 $phpMailer->SMTPSecure = 'tls';
                 $phpMailer->SMTPAuth   = true;
                 $phpMailer->From = 'translations@mfxbroker.com';
