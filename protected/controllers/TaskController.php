@@ -77,8 +77,8 @@ class TaskController extends Controller
 //                $phpMailer->Port       = 587;
 //                $phpMailer->SMTPSecure = true;
 //                $phpMailer->Host = 'smtp.mfxbroker.com';//'smtp.mfxbroker.com';
-//                $phpMailer->Username = 'translations@mfxbroker.com';                            // SMTP username
-//                $phpMailer->Password = 'aiutsraghuy545#';                           // SMTP password
+//                $phpMailer->Username = '';                            // SMTP username
+//                $phpMailer->Password = '';                           // SMTP password
 //                $phpMailer->SMTPSecure = 'tls';
 //                $phpMailer->SMTPAuth   = true;
 //                $phpMailer->From = 'translations@mfxbroker.com';
@@ -178,6 +178,21 @@ class TaskController extends Controller
                     include (realpath(dirname(__FILE__).'/../components/Smtp.php'));
                     /** @var PHPMailer $phpMailer */
 
+                $phpMailer->CharSet="utf8";
+                $phpMailer->IsSMTP();
+                $phpMailer->Port       = 587;
+                $phpMailer->SMTPSecure = true;
+                $phpMailer->Host = 'smtp.mfxbroker.com';//'smtp.mfxbroker.com';
+                $phpMailer->Username = '';                            // SMTP username
+                $phpMailer->Password = '';                           // SMTP password
+                $phpMailer->SMTPSecure = 'tls';
+                $phpMailer->SMTPAuth   = true;
+                $phpMailer->From = 'translations@mfxbroker.com';
+                $phpMailer->FromName = 'MasterForex';
+                $phpMailer->IsHTML(true);
+                $phpMailer->Subject = 'Тема письма';
+                $phpMailer->Body    = 'This is the HTML message body <b>in bold!</b>';
+                $phpMailer->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
 
                     foreach ($_POST[$modelName]['calendar'] as $key => $deadline){
