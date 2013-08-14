@@ -110,10 +110,10 @@ class TaskController extends Controller
                                 $phpMailer->Subject = 'New Task from MasterForex';
 
                                 if ($key == 'LangAr' || $key == 'LangMy' || $key == 'LangId'){
-                                    $phpMailer->Body    = 'Hello! <br>Please translate text with title "'.$_POST[$modelName]['title'].'" and Text Id = '.$recordText->getPrimaryKey().'. Deadline: '.$deadline.'. <br>You can do this on website <a href="http://translations.masterforex.com/">http://translations.masterforex.com/</a>. <br>Thank you!';
+                                    $phpMailer->Body    = 'Hello! <br>Please translate text with title "'.$_POST[$modelName]['title'].'" and Text Id = '.$recordText->getPrimaryKey().'. Deadline: '.$deadline.'. <br>You can do this on website <a href="http://translations.masterforex.com/">http://translations.masterforex.com/</a>.<br>Thank you!';
                                     $phpMailer->AltBody = 'Hello! Please translate text with title "'.$_POST[$modelName]['title'].'" and Text Id = '.$recordText->getPrimaryKey().'. Deadline: '.$deadline.'. You can do this on website http://translations.masterforex.com/. Thank you!';
                                 } else {
-                                    $phpMailer->Body    = 'Добрый день!<br>Просьба перевести тест c заголовком "'.$_POST[$modelName]['title'].'" и Text Id = '.$recordText->getPrimaryKey().' до '.$deadline.' на сайте <a href="http://translations.masterforex.com/">http://translations.masterforex.com/</a>. <br>Спасибо!';
+                                    $phpMailer->Body    = 'Добрый день!<br>Просьба перевести тест c заголовком "'.$_POST[$modelName]['title'].'" и Text Id = '.$recordText->getPrimaryKey().' до '.$deadline.' на сайте <a href="http://translations.masterforex.com/">http://translations.masterforex.com/</a>.<br>Спасибо!';
                                     $phpMailer->AltBody = 'Добрый день! Просьба перевести тест c заголовком "'.$_POST[$modelName]['title'].'" и Text Id = '.$recordText->getPrimaryKey().' до '.$deadline.' на сайте http://translations.masterforex.com/. Спасибо!';
                                 }
 
