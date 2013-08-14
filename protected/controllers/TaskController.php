@@ -107,7 +107,7 @@ class TaskController extends Controller
                                 $phpMailer->From = 'translations@mfxbroker.com';
                                 $phpMailer->FromName = 'MasterForex';
                                 $phpMailer->IsHTML(true);
-                                $phpMailer->Subject = 'Тема письма';
+                                $phpMailer->Subject = 'New Task from MasterForex';
 
                                 if ($key == 'LangAr' || $key == 'LangMy' || $key == 'LangId'){
                                     $phpMailer->Body    = 'Hello! <br>Please translate text with title "'.$_POST[$modelName]['title'].'" and Text Id = '.$recordText->getPrimaryKey().'. Deadline: '.$deadline.'. <br>You can do this on website <a href="http://translations.masterforex.com/">http://translations.masterforex.com/</a>. <br>Thank you!';
