@@ -36,16 +36,12 @@ class TaskController extends Controller
 
                     $mailArray = array(
                         'LangAr' => array(
-                            'email' => 'e.lozovaya@mfxbroker.com',
+                            'email' => 'translations@mfxbroker.com',
                             'name' => 'Екатерина Лозовая'
                         ),
                         'LangEn' => array(
-                            'email' => 'e.lozovaya@mfxbroker.com',
-                            'name' => 'Екатерина Лозовая'
-                        ),
-                        'LangEs' => array(
                             'email' => 'translations@mfxbroker.com',
-                            'name' => 'Iria Martinez Espinar'
+                            'name' => 'Екатерина Лозовая'
                         ),
 //                    'LangAr' => array(
 //                        'email' => 'ahmedsaied44@gmail.com',
@@ -163,8 +159,7 @@ class TaskController extends Controller
                 }catch (CException $exception){
                     Yii::app()->user->setFlash('error', "New text didn't add");
                 }
-
-
+                $this->redirect('task/index');
             }
         }
 
