@@ -177,6 +177,7 @@ class TextstatustranslationsController extends Controller
 
     public function changeStatusText($textId, $lang, $status)
     {
+        /** @var TextStatusTranslations $changeStatus */
         $changeStatus = TextStatusTranslations::model()->findByAttributes(array('TextId' => $textId));
 
         switch ($lang){
@@ -201,6 +202,17 @@ class TextstatustranslationsController extends Controller
             case 'az':
                 $changeStatus->StatusAz = $status;
                 break;
+        }
+
+        if ($changeStatus->StatusEn == 2 &&
+            $changeStatus->StatusEs == 2 &&
+            $changeStatus->StatusCn == 2 &&
+            $changeStatus->StatusMy == 2 &&
+            $changeStatus->StatusId == 2 &&
+            $changeStatus->StatusAr == 2 //&&
+            //$changeStatus->StatusAz == 2
+        ){
+            $changeStatus->Status = 2;
         }
         $changeStatus->save();
     }
