@@ -213,6 +213,43 @@ class TextstatustranslationsController extends Controller
             //$changeStatus->StatusAz == 2
         ){
             $changeStatus->Status = 2;
+            //отправка письма заказчику
+            include (realpath(dirname(__FILE__).'/../components/Phpmailer.php'));
+            include (realpath(dirname(__FILE__).'/../components/Smtp.php'));
+
+            $phpMailer = new PHPMailer();
+
+            $phpMailer->CharSet="utf8";
+            $phpMailer->IsSMTP();
+            $phpMailer->Port       = 587;
+            $phpMailer->SMTPSecure = true;
+            $phpMailer->Host = 'smtp.mfxbroker.com';//'smtp.mfxbroker.com';
+            $phpMailer->Username = 'translations@mfxbroker.com';                            // SMTP username
+            $phpMailer->Password = 'aiutsraghuy545#';                           // SMTP password
+            $phpMailer->SMTPSecure = 'tls';
+            $phpMailer->SMTPAuth   = true;
+            $phpMailer->From = 'translations@mfxbroker.com';
+            $phpMailer->FromName = 'MasterForex';
+            $phpMailer->IsHTML(true);
+            $phpMailer->Subject = 'Переводы готовы по Text Id = '.$textId;
+
+            /** @var TextTranslations $translations */
+            $translations = TextTranslations::model()->findByPk($textId);
+
+            $phpMailer->Body    = 'Переводы которые были Вами заказаны:<br><br>
+                Текст на английском языке:<br><br>'.htmlspecialchars_decode($translations->LangEn).'<br><br>
+                Текст на испанском языке:<br><br>'.htmlspecialchars_decode($translations->LangEs).'<br><br>
+                Текст на китайском языке:<br><br>'.htmlspecialchars_decode($translations->LangCn).'<br><br>
+                Текст на малазийском языке:<br><br>'.htmlspecialchars_decode($translations->LangMy).'<br><br>
+                Текст на индонезийском языке:<br><br>'.htmlspecialchars_decode($translations->LangId).'<br><br>
+                Текст на арабском языке:<br><br>'.htmlspecialchars_decode($translations->LangAr).'<br><br>
+                Текст на азербайджанском:<br><br>'.htmlspecialchars_decode($translations->LangAz).'<br><br>
+            ';
+
+            $customer = explode(',', $translations->Customer);
+            $phpMailer->AddAddress($customer[0], $customer[1]);
+
+            $phpMailer->Send();
         }
         $changeStatus->save();
     }

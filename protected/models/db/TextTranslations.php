@@ -17,7 +17,7 @@
  * @property string $LangRu
  * @property string $LangCn
  * @property string $LangAz
- * @property integer $Status
+ * @property string $Customer
  */
 
 class TextTranslations extends CActiveRecord

@@ -12,11 +12,12 @@ class TaskForm extends CFormModel
     public $languages = array();
     public $calendar = array();
     public $title;
+    public $customer;
 
     public function rules()
     {
         return array(
-            array('textForTranslation, languages, calendar, title', 'required'),
+            array('textForTranslation, languages, calendar, title, customer', 'required'),
         );
     }
 

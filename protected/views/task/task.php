@@ -47,11 +47,23 @@ $this->breadcrumbs=array(
         )
     );
     ?>
-    <?= $form->errorSummary($model, 'Пожалуйста, исправьте ошибки заполнения ({count}):', array('{count}'=>count($model->getErrors()))); ?>
+<!--    <?//= $form->errorSummary($model, 'Пожалуйста, исправьте ошибки заполнения ({count}):', array('{count}'=>count($model->getErrors()))); ?>-->
 
     <div class="titleArea">
         <?= $form->textFieldRow($model, 'title', array('class'=>'span3', 'maxlength' => '100')); ?>
     </div>
+
+    <br>
+
+    <div>
+        <?= $form->dropDownListRow($model, 'customer', array(
+            'e.lozovaya@mfxbroker.com,Екатерина Лозовая' => 'Екатерина Лозовая',
+            'd.kulagin@mfxbroker.com,Денис Кулагин' => 'Денис Кулагин',
+            's.maslov@mfxbroker.com,Степа Маслов' => 'Степа Маслов',
+            'e.fentisov@mfxbroker.com,Егор Финтисов' => 'Егор Финтисов',
+        )); ?>
+    </div>
+    <br>
 
     <div class="redactorArea">
         <?php
