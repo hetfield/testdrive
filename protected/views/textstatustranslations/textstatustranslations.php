@@ -15,6 +15,7 @@ $langs = array(
             $status = $data->StatusEn;
             /** @var DeadLines $deadline */
             $deadline = DeadLines::model()->findByAttributes(array('TextID' => $data->TextId));
+            $deadlineToString = explode(' ',$deadline->LangEn);
             if ($status == 0){
                 $color = 'important';
             } elseif ($status == 1){
@@ -22,7 +23,7 @@ $langs = array(
             } else {
                 $color = 'success';
             }
-            return '<p><span class="badge badge-'.$color.'">'.$status.'</span></p><p><span class="badge">DeadLine:<br>'.$deadline->LangEn.'</span></p>';
+            return '<p><span class="badge badge-'.$color.'">'.$status.'</span></p><p><span class="badge">DeadLine:<br>'.$deadlineToString[0].'<br>'.$deadlineToString[1].'</span></p>';
         },
         'type' => 'html',
     ),
@@ -32,6 +33,7 @@ $langs = array(
         'value' => function ($data){
             $status = $data->StatusEs;
             $deadline = DeadLines::model()->findByAttributes(array('TextID' => $data->TextId));
+            $deadlineToString = explode(' ',$deadline->LangEs);
             if ($status == 0){
                 $color = 'important';
             } elseif ($status == 1){
@@ -39,7 +41,7 @@ $langs = array(
             } else {
                 $color = 'success';
             }
-            return '<p><span class="badge badge-'.$color.'">'.$status.'</span></p><p><span class="badge">DeadLine:<br>'.$deadline->LangEs.'</span></p>';
+            return '<p><span class="badge badge-'.$color.'">'.$status.'</span></p><p><span class="badge">DeadLine:<br>'.$deadlineToString[0].'<br>'.$deadlineToString[1].'</span></p>';
         },
         'type' => 'html',
     ),
@@ -49,6 +51,7 @@ $langs = array(
         'value' => function ($data){
             $status = $data->StatusCn;
             $deadline = DeadLines::model()->findByAttributes(array('TextID' => $data->TextId));
+            $deadlineToString = explode(' ',$deadline->LangCn);
             if ($status == 0){
                 $color = 'important';
             } elseif ($status == 1){
@@ -56,7 +59,7 @@ $langs = array(
             } else {
                 $color = 'success';
             }
-            return '<p><span class="badge badge-'.$color.'">'.$status.'</span></p><p><span class="badge">DeadLine:<br>'.$deadline->LangCn.'</span></p>';
+            return '<p><span class="badge badge-'.$color.'">'.$status.'</span></p><p><span class="badge">DeadLine:<br>'.$deadlineToString[0].'<br>'.$deadlineToString[1].'</span></p>';
         },
         'type' => 'html',
     ),
@@ -66,6 +69,7 @@ $langs = array(
         'value' => function ($data){
             $status = $data->StatusAz;
             $deadline = DeadLines::model()->findByAttributes(array('TextID' => $data->TextId));
+            $deadlineToString = explode(' ',$deadline->LangAz);
             if ($status == 0){
                 $color = 'important';
             } elseif ($status == 1){
@@ -73,7 +77,7 @@ $langs = array(
             } else {
                 $color = 'success';
             }
-            return '<p><span class="badge badge-'.$color.'">'.$status.'</span></p><p><span class="badge">DeadLine:<br>'.$deadline->LangAz.'</span></p>';
+            return '<p><span class="badge badge-'.$color.'">'.$status.'</span></p><p><span class="badge">DeadLine:<br>'.$deadlineToString[0].'<br>'.$deadlineToString[1].'</span></p>';
         },
         'type' => 'html',
     ),
@@ -83,6 +87,7 @@ $langs = array(
         'value' => function ($data){
             $status = $data->StatusAr;
             $deadline = DeadLines::model()->findByAttributes(array('TextID' => $data->TextId));
+            $deadlineToString = explode(' ',$deadline->LangAr);
             if ($status == 0){
                 $color = 'important';
             } elseif ($status == 1){
@@ -90,7 +95,7 @@ $langs = array(
             } else {
                 $color = 'success';
             }
-            return '<p><span class="badge badge-'.$color.'">'.$status.'</span></p><p><span class="badge">DeadLine:<br>'.$deadline->LangAr.'</span></p>';
+            return '<p><span class="badge badge-'.$color.'">'.$status.'</span></p><p><span class="badge">DeadLine:<br>'.$deadlineToString[0].'<br>'.$deadlineToString[1].'</span></p>';
         },
         'type' => 'html',
     ),
@@ -100,6 +105,7 @@ $langs = array(
         'value' => function ($data){
             $status = $data->StatusId;
             $deadline = DeadLines::model()->findByAttributes(array('TextID' => $data->TextId));
+            $deadlineToString = explode(' ',$deadline->LangId);
             if ($status == 0){
                 $color = 'important';
             } elseif ($status == 1){
@@ -107,7 +113,7 @@ $langs = array(
             } else {
                 $color = 'success';
             }
-            return '<p><span class="badge badge-'.$color.'">'.$status.'</span></p><p><span class="badge">DeadLine:<br>'.$deadline->LangId.'</span></p>';
+            return '<p><span class="badge badge-'.$color.'">'.$status.'</span></p><p><span class="badge">DeadLine:<br>'.$deadlineToString[0].'<br>'.$deadlineToString[1].'</span></p>';
         },
         'type' => 'html',
     ),
@@ -117,6 +123,7 @@ $langs = array(
         'value' => function ($data){
             $status = $data->StatusMy;
             $deadline = DeadLines::model()->findByAttributes(array('TextID' => $data->TextId));
+            $deadlineToString = explode(' ',$deadline->LangMy);
             if ($status == 0){
                 $color = 'important';
             } elseif ($status == 1){
@@ -124,7 +131,7 @@ $langs = array(
             } else {
                 $color = 'success';
             }
-            return '<p><span class="badge badge-'.$color.'">'.$status.'</span></p><p><span class="badge">DeadLine:<br>'.$deadline->LangMy.'</span></p>';
+            return '<p><span class="badge badge-'.$color.'">'.$status.'</span></p><p><span class="badge">DeadLine:<br>'.$deadlineToString[0].'<br>'.$deadlineToString[1].'</span></p>';
         },
         'type' => 'html',
     ),

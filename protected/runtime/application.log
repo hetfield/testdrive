@@ -4583,3 +4583,20 @@ in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
 2013/08/13 17:09:55 [error] [application] Started
 in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (74)
 in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/14 08:49:31 [error] [php] Undefined index: LangEn (C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TaskController.php:108)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): TaskController->runAction()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): TaskController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): TaskController->run()
+#3 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/task
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TaskController.php (108)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/14 09:46:29 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (74)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/14 10:10:35 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (74)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)

@@ -25,8 +25,123 @@ class TaskController extends Controller
                 $recordText->LangRu = htmlspecialchars($_POST[$modelName]['textForTranslation']);
                 $recordText->Text = htmlspecialchars($_POST[$modelName]['textForTranslation']);
                 $newDeadLine = new DeadLines();
+//                $mailArray = array(
+//                    'LangAr' => array(
+//                        'email' => 'translations@mfxbroker.com',
+//                        'name' => 'Mado Saied'
+//                    ),
+//                    'LangEn' => array(
+//                        'email' => 'translations@mfxbroker.com',
+//                        'name' => 'Mado Saied'
+//                    ),
+////                    'LangAr' => array(
+////                        'email' => 'ahmedsaied44@gmail.com',
+////                        'name' => 'Mado Saied'
+////                    ),
+////                    'LangEn' => array(
+////                        'email' => 'e.fentisov@mfxbroker.com',
+////                        'name' => 'Егор Фентисов'
+////                    ),
+////                    'LangEs' => array(
+////                        'email' => 'iria_me9@hotmail.com',
+////                        'name' => 'Iria Martinez Espinar'
+////                    ),
+////                    'LangCn' => array(
+////                        'email' => 'huayu@masterforex.org',
+////                        'name' => 'huayu@masterforex.org',
+////                    ),
+////                    'LangMy' => array(
+////                        'email' => 'kamnfx@gmail.com',
+////                        'name' => 'Jeff Nash'
+////                    ),
+////                    'LangId' => array(
+////                        'email' => 'juliana_djulie@yahoo.com',
+////                        'name' => 'Juliana Saja'
+////                    ),
+////                    'LangAz' => array(
+////                        'email' => '',
+////                        'name' => ''
+////                    ),
+//                    );
+//
+//                $newTextStatusTranslations = new TextStatusTranslations();
+//
+//                include (realpath(dirname(__FILE__).'/../components/Phpmailer.php'));
+//                include (realpath(dirname(__FILE__).'/../components/Smtp.php'));
+//
+//                /** @var PHPMailer $phpMailer */
+//                $phpMailer = new PHPMailer();
+//
+//                $phpMailer->CharSet="utf8";
+//                $phpMailer->IsSMTP();
+//                $phpMailer->Port       = 587;
+//                $phpMailer->SMTPSecure = true;
+//                $phpMailer->Host = 'smtp.mfxbroker.com';//'smtp.mfxbroker.com';
+//                $phpMailer->Username = 'translations@mfxbroker.com';                            // SMTP username
+//                $phpMailer->Password = 'aiutsraghuy545#';                           // SMTP password
+//                $phpMailer->SMTPSecure = 'tls';
+//                $phpMailer->SMTPAuth   = true;
+//                $phpMailer->From = 'translations@mfxbroker.com';
+//                $phpMailer->FromName = 'MasterForex';
+//                $phpMailer->IsHTML(true);
+//                $phpMailer->Subject = 'Тема письма';
+//
+//
+//                foreach ($_POST[$modelName]['calendar'] as $key => $deadline){
+//                    if ($key == 'LangAr' ||
+//                        $key == 'LangEn' ||
+//                        $key == 'LangEs' ||
+//                        $key == 'LangCn' ||
+//                        $key == 'LangMy' ||
+//                        $key == 'LangId' ||
+//                        $key == 'LangAz'){
+//                        $newDeadLine->$key = $deadline;
+//
+//
+//
+//                        if (isset($mailArray[$key]) && $mailArray[$key]['email'] != ''){
+//
+//                            $phpMailer->Body    = 'Добрый день!<br>Просьба перевести тест c заголовком'.$_POST[$modelName]['title'].' до '.$deadline.'. Спасибо!';
+//                            $phpMailer->AltBody = 'Добрый день! Просьба перевести данный тест до '.$deadline.'. Спасибо!';
+//
+//                            $phpMailer->AddAddress($mailArray[$key]['email'], $mailArray[$key]['name']);
+//
+//                            try{
+//                                if (!$phpMailer->Send()){
+//                                    throw new CException('Error during email sending.');
+//                                }
+//
+//                                Yii::app()->user->setFlash('Esuccess', 'Emails sent successfully');
+//                            }catch (CException $exception){
+//                                Yii::app()->user->setFlash('Eerror', 'Failed to send Emails');
+//
+//                            }
+//                        }
+//                    }
+//
+//                }
+//
 
-                $mailArray = array(
+
+                try{
+                    if (!$recordText->save()){
+                        throw new CException('Error during model saving.');
+                    }
+
+
+                    $mailArray = array(
+                        'LangAr' => array(
+                            'email' => 'e.lozovaya@mfxbroker.com',
+                            'name' => 'Екатерина Лозовая'
+                        ),
+                        'LangEn' => array(
+                            'email' => 'e.lozovaya@mfxbroker.com',
+                            'name' => 'Екатерина Лозовая'
+                        ),
+                        'LangEs' => array(
+                            'email' => 'translations@mfxbroker.com',
+                            'name' => 'Iria Martinez Espinar'
+                        ),
 //                    'LangAr' => array(
 //                        'email' => 'ahmedsaied44@gmail.com',
 //                        'name' => 'Mado Saied'
@@ -55,64 +170,69 @@ class TaskController extends Controller
 //                        'email' => '',
 //                        'name' => ''
 //                    ),
-                );
+                    );
 
-                $newTextStatusTranslations = new TextStatusTranslations();
+                    $newTextStatusTranslations = new TextStatusTranslations();
 
-                /** @var PHPMailer $phpMailer */
-                $phpMailer = new PHPMailer();
+                    include (realpath(dirname(__FILE__).'/../components/Phpmailer.php'));
+                    include (realpath(dirname(__FILE__).'/../components/Smtp.php'));
+                    /** @var PHPMailer $phpMailer */
 
-                $phpMailer->CharSet="utf8";
-                $phpMailer->IsSMTP();
-                $phpMailer->Port       = 587;
-                $phpMailer->SMTPSecure = true;
-                $phpMailer->Host = 'smtp.mfxbroker.com';//'smtp.mfxbroker.com';
-                $phpMailer->Username = 'translations@mfxbroker.com';                            // SMTP username
-                $phpMailer->Password = 'aiutsraghuy545#';                           // SMTP password
-                $phpMailer->SMTPSecure = 'tls';
-                $phpMailer->SMTPAuth   = true;
-                $phpMailer->From = 'translations@mfxbroker.com';
-                $phpMailer->FromName = 'MasterForex';
-                $phpMailer->IsHTML(true);
-                $phpMailer->Subject = 'Тема письма';
-                $phpMailer->Body    = 'This is the HTML message body <b>in bold!</b>';
-                $phpMailer->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
-                foreach ($_POST[$modelName]['calendar'] as $key => $deadline){
-                    if ($key == 'LangAr' ||
-                        $key == 'LangEn' ||
-                        $key == 'LangEs' ||
-                        $key == 'LangCn' ||
-                        $key == 'LangMy' ||
-                        $key == 'LangId' ||
-                        $key == 'LangAz'){
-                        $newDeadLine->$key = $deadline;
 
-                        if (isset($mailArray[$key]) && $mailArray[$key]['email'] != ''){
-                            $phpMailer->AddAddress($mailArray[$key]['email'], $mailArray[$key]['name']);
+                    foreach ($_POST[$modelName]['calendar'] as $key => $deadline){
+                        if ($key == 'LangAr' ||
+                            $key == 'LangEn' ||
+                            $key == 'LangEs' ||
+                            $key == 'LangCn' ||
+                            $key == 'LangMy' ||
+                            $key == 'LangId' ||
+                            $key == 'LangAz'){
+                            $newDeadLine->$key = $deadline;
+
+                            if (isset($mailArray[$key]) && $mailArray[$key]['email'] != ''){
+
+                                $phpMailer = new PHPMailer();
+
+                                $phpMailer->CharSet="utf8";
+                                $phpMailer->IsSMTP();
+                                $phpMailer->Port       = 587;
+                                $phpMailer->SMTPSecure = true;
+                                $phpMailer->Host = 'smtp.mfxbroker.com';//'smtp.mfxbroker.com';
+                                $phpMailer->Username = 'translations@mfxbroker.com';                            // SMTP username
+                                $phpMailer->Password = 'aiutsraghuy545#';                           // SMTP password
+                                $phpMailer->SMTPSecure = 'tls';
+                                $phpMailer->SMTPAuth   = true;
+                                $phpMailer->From = 'translations@mfxbroker.com';
+                                $phpMailer->FromName = 'MasterForex';
+                                $phpMailer->IsHTML(true);
+                                $phpMailer->Subject = 'Тема письма';
+
+                                if ($key == 'LangAr' || $key == 'LangMy' || $key == 'LangId'){
+                                    $phpMailer->Body    = 'Hello! <br>Please translate text with title "'.$_POST[$modelName]['title'].'" and Text Id = '.$recordText->getPrimaryKey().'. Deadline: '.$deadline.'. <br>You can do this on website http://translations.masterforex.com/. <br>Thank you!';
+                                    $phpMailer->AltBody = 'Hello! Please translate text with title "'.$_POST[$modelName]['title'].'" and Text Id = '.$recordText->getPrimaryKey().'. Deadline: '.$deadline.'. You can do this on website http://translations.masterforex.com/. Thank you!';
+                                } else {
+                                    $phpMailer->Body    = 'Добрый день!<br>Просьба перевести тест c заголовком "'.$_POST[$modelName]['title'].'" и Text Id = '.$recordText->getPrimaryKey().' до '.$deadline.' на сайте http://translations.masterforex.com/. <br>Спасибо!';
+                                    $phpMailer->AltBody = 'Добрый день! Просьба перевести тест c заголовком "'.$_POST[$modelName]['title'].'" и Text Id = '.$recordText->getPrimaryKey().' до '.$deadline.' на сайте http://translations.masterforex.com/. Спасибо!';
+                                }
+
+                                $phpMailer->AddAddress($mailArray[$key]['email'], $mailArray[$key]['name']);
+
+                                try{
+                                    if (!$phpMailer->Send()){
+                                        throw new CException('Error during email sending.');
+                                    }
+
+                                    Yii::app()->user->setFlash('Esuccess', 'Emails sent successfully');
+                                }catch (CException $exception){
+                                    Yii::app()->user->setFlash('Eerror', 'Failed to send Emails');
+
+                                }
+                            }
                         }
-                    }
-                }
-
-                try{
-                    if (!$phpMailer->Send()){
-                        throw new CException('Error during email sending.');
+                        unset($phpMailer);
                     }
 
-                    Yii::app()->user->setFlash('Esuccess', 'Emails sent successfully');
-                }catch (CException $exception){
-                    Yii::app()->user->setFlash('Eerror', "Failed to send Emails");
-//                    if(!$phpMailer->Send()) {
-//                    echo 'Message could not be sent.';
-//                    echo 'Mailer Error: ' . $phpMailer->ErrorInfo;
-//                    exit;
-//                }
-                }
-
-                try{
-                    if (!$recordText->save()){
-                        throw new CException('Error during model saving.');
-                    }
 
                     $newDeadLine->TextID = $recordText->getPrimaryKey();
                     if (!$newDeadLine->save()){
