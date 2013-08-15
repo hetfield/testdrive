@@ -224,6 +224,20 @@ if (Yii::app()->user->getState('Role') == 'A'){
     array_push($columns, $buttonsT[0]);
 }
 ?>
+
+<?php if (Yii::app()->user->hasFlash('success') || Yii::app()->user->hasFlash('Esuccess')) : ?>
+    <div class="flash-success">
+        <?= Yii::app()->user->getFlash('success')."<br>";  ?>
+        <?= Yii::app()->user->getFlash('Esuccess'); ?>
+    </div>
+<?php endif; ?>
+<?php if (Yii::app()->user->hasFlash('error') || Yii::app()->user->hasFlash('Eerror')) : ?>
+    <div class="flash-error">
+        <?= Yii::app()->user->getFlash('error'); ?>
+        <?= Yii::app()->user->getFlash('Eerror'); ?>
+    </div>
+<?php endif; ?>
+
 <p>
 <?php $this->widget('bootstrap.widgets.TbBadge', array(
     'type'=>'important', // 'success', 'warning', 'important', 'info' or 'inverse'

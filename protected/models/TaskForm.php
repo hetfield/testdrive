@@ -8,7 +8,6 @@
  */
 class TaskForm extends CFormModel
 {
-    public $textForTranslation;
     public $languages = array();
     public $calendar = array();
     public $title;
@@ -17,17 +16,7 @@ class TaskForm extends CFormModel
     public function rules()
     {
         return array(
-            array('textForTranslation, languages, calendar, title, customer', 'required'),
+            array('languages, calendar, title, customer', 'required'),
         );
     }
-
-
-
-    public function attributeLabels()
-    {
-        return array(
-            'task'=>'',
-        );
-    }
-
 }

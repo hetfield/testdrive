@@ -1,32 +1,70 @@
-<div>
-    <?php
-    $form = $this->beginWidget(
-        'bootstrap.widgets.TbActiveForm',
-        array(
-            'id' => 'upload-form',
-            'enableAjaxValidation' => false,
-            'htmlOptions' => array('enctype' => 'multipart/form-data'),
-        )
-    );
-    ?>
-</div>
+<?php
+//Yii::import('ext.imperavi-redactor-widget.ImperaviRedactorWidget');
 
-<div>
-    <?= $form->fileFieldRow($model, 'Document'); ?>
-</div>
+//Yii::app()->clientScript->registerScript('adjust_currencies_ready', <<<JS
+//
+//$('.languages label.check input[checked=checked]').parent().addClass("active");
+//JS
+//    , CClientScript::POS_READY);
+//
+//
 
-<div>
-    <?php
-    $this->widget('bootstrap.widgets.TbButton', array(
-        'buttonType'=>'submit',
-        'label'=>'Upload',
-        'type'=>'primary', // null, 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
-        'size'=>'small', // null, 'large', 'small' or 'mini'
-    ));
-    ?>
-</div>
+$this->pageTitle=Yii::app()->name . ' - Task';
+$this->breadcrumbs=array(
+    'Task',
+);
+?>
 
-<?php $this->endWidget(); ?>
+<?php if (Yii::app()->user->hasFlash('success') || Yii::app()->user->hasFlash('Esuccess')) : ?>
+    <div class="flash-success">
+        <?= Yii::app()->user->getFlash('success')."<br>";  ?>
+        <?= Yii::app()->user->getFlash('Ssuccess')."<br>"; ?>
+        <?= Yii::app()->user->getFlash('Dsuccess'); ?>
+    </div>
+<?php endif; ?>
+<?php if (Yii::app()->user->hasFlash('error') || Yii::app()->user->hasFlash('Eerror')) : ?>
+    <div class="flash-error">
+        <?= Yii::app()->user->getFlash('error'); ?>
+        <?= Yii::app()->user->getFlash('Serror'); ?>
+        <?= Yii::app()->user->getFlash('Derror'); ?>
+    </div>
+<?php endif; ?>
+
+    <div class="form">
+        <?php
+        $form = $this->beginWidget(
+            'bootstrap.widgets.TbActiveForm',
+            array(
+                'id'=>'users-form',
+                'htmlOptions' => array(
+                    'class'=>'task_form',
+                    'enctype' => 'multipart/form-data',
+                )
+            )
+        );
+        ?>
+
+        <br>
+
+        <div class="uplod">
+            <?= $form->fileFieldRow($model, 'Document'); ?>
+        </div>
+
+
+        <div class="row buttons">
+            <?php $this->widget('bootstrap.widgets.TbButton', array(
+                'buttonType'=>'submit',
+                'label'=>'Send',
+                'type'=>'primary', // null, 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
+                'size'=>'small', // null, 'large', 'small' or 'mini'
+            )); ?>
+        </div>
+
+        <?php $this->endWidget(); ?>
+
+
+    </div><!-- form -->
+
 
 
 <?php
@@ -35,7 +73,7 @@ $pathToDocuments = Yii::app()->basePath.'\documents\\';
 $files = Uploadtask::model()->findAll();
 ?>
 
-<br>
+    <br>
 
 <?php
 /** @var Uploadtask $file */

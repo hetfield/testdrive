@@ -8,6 +8,7 @@
  *
  * @property integer $ID
  * @property string $Document
+ * @property string $TextId
  */
 
 class Uploadtask extends CActiveRecord
@@ -23,6 +24,7 @@ class Uploadtask extends CActiveRecord
     public function rules()
     {
         return array(
+            array('Document', 'required'),
             array('Document', 'file', 'types'=>'doc, docx'),
             array('Document', 'unique'),
         );

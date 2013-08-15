@@ -1,9 +1,5 @@
 <?php
-/* @var $this UsersController */
-/* @var $model UsersForm */
-/* @var $form CActiveForm  */
-
-Yii::import('ext.imperavi-redactor-widget.ImperaviRedactorWidget');
+//Yii::import('ext.imperavi-redactor-widget.ImperaviRedactorWidget');
 
 //Yii::app()->clientScript->registerScript('adjust_currencies_ready', <<<JS
 //
@@ -43,11 +39,11 @@ $this->breadcrumbs=array(
             'id'=>'users-form',
             'htmlOptions' => array(
                 'class'=>'task_form',
+                'enctype' => 'multipart/form-data',
             )
         )
     );
     ?>
-<!--    <?//= $form->errorSummary($model, 'Пожалуйста, исправьте ошибки заполнения ({count}):', array('{count}'=>count($model->getErrors()))); ?>-->
 
     <div class="titleArea">
         <?= $form->textFieldRow($model, 'title', array('class'=>'span3', 'maxlength' => '100')); ?>
@@ -66,31 +62,31 @@ $this->breadcrumbs=array(
     </div>
     <br>
 
-    <div class="redactorArea">
-        <?php
-        $this->widget('ImperaviRedactorWidget', array(
-            // You can either use it for model attribute
-            'model' => $model,
-            'attribute' => 'textForTranslation',
-
-            // or just for input field
-            'name' => 'my_input_name',
-
-            // Some options, see http://imperavi.com/redactor/docs/
-            'options' => array(
-                'lang' => 'en',
-                'buttons' => array('html', '|', 'formatting', '|', 'bold', 'italic', 'deleted', '|',
-                    'unorderedlist', 'orderedlist', 'outdent', 'indent', '|',
-                    'table', '|',
-                    'fontcolor', 'backcolor', '|', 'alignment', '|', 'horizontalrule', '|', 'underline',
-                    'alignleft', 'aligncenter', 'alignright', 'justify'),
-                'iframe' => true,
-                //'css' => 'wym.css',
-                'minHeight' => 200,
-            ),
-        ));
-        ?>
-    </div>
+<!--    <div class="redactorArea">-->
+<!--        --><?php
+//        $this->widget('ImperaviRedactorWidget', array(
+//            // You can either use it for model attribute
+//            'model' => $model,
+//            'attribute' => 'textForTranslation',
+//
+//            // or just for input field
+//            'name' => 'my_input_name',
+//
+//            // Some options, see http://imperavi.com/redactor/docs/
+//            'options' => array(
+//                'lang' => 'en',
+//                'buttons' => array('html', '|', 'formatting', '|', 'bold', 'italic', 'deleted', '|',
+//                    'unorderedlist', 'orderedlist', 'outdent', 'indent', '|',
+//                    'table', '|',
+//                    'fontcolor', 'backcolor', '|', 'alignment', '|', 'horizontalrule', '|', 'underline',
+//                    'alignleft', 'aligncenter', 'alignright', 'justify'),
+//                'iframe' => true,
+//                //'css' => 'wym.css',
+//                'minHeight' => 200,
+//            ),
+//        ));
+//        ?>
+<!--    </div>-->
 
     <br />
 
@@ -104,7 +100,7 @@ $this->breadcrumbs=array(
                     <label style="display: inline;" for="TaskForm_languages_1">English</label>
                 </td>
                 <td>
-                    <input style="width: 145px;" type="datetime" name="TaskForm[calendar][LangEn]" value="<?= date("Y-m-d H:i a", mktime(0, 0, 0, date("m"), date("d")+1, date("Y"))); ?>">
+                    <input style="width: 145px;" type="datetime" name="TaskForm[calendar][LangEn]" value="<?= date("Y-m-d H:i", mktime(0, 0, 0, date("m"), date("d")+1, date("Y"))); ?>">
                 </td>
             </tr>
             <tr>
@@ -113,7 +109,7 @@ $this->breadcrumbs=array(
                     <label style="display: inline;" for="TaskForm_languages_3">Spanish</label></label>
                 </td>
                 <td>
-                    <input style="width: 145px;" type="datetime" name="TaskForm[calendar][LangEs]" value="<?= date("Y-m-d H:i a", mktime(0, 0, 0, date("m"), date("d")+1, date("Y"))); ?>">
+                    <input style="width: 145px;" type="datetime" name="TaskForm[calendar][LangEs]" value="<?= date("Y-m-d H:i", mktime(0, 0, 0, date("m"), date("d")+1, date("Y"))); ?>">
                 </td>
             </tr>
             <tr>
@@ -122,7 +118,7 @@ $this->breadcrumbs=array(
                     <label style="display: inline;" for="TaskForm_languages_5">Chinese</label></label>
                 </td>
                 <td>
-                    <input style="width: 145px;" type="datetime" name="TaskForm[calendar][LangCn]" value="<?= date("Y-m-d H:i a", mktime(0, 0, 0, date("m"), date("d")+1, date("Y"))); ?>">
+                    <input style="width: 145px;" type="datetime" name="TaskForm[calendar][LangCn]" value="<?= date("Y-m-d H:i", mktime(0, 0, 0, date("m"), date("d")+1, date("Y"))); ?>">
                 </td>
             </tr>
             <tr>
@@ -131,7 +127,7 @@ $this->breadcrumbs=array(
                     <label style="display: inline;" for="TaskForm_languages_8">Azerbaijani</label></label>
                 </td>
                 <td>
-                    <input style="width: 145px;" type="datetime" name="TaskForm[calendar][LangAz]" value="<?= date("Y-m-d H:i a", mktime(0, 0, 0, date("m"), date("d")+1, date("Y"))); ?>">
+                    <input style="width: 145px;" type="datetime" name="TaskForm[calendar][LangAz]" value="<?= date("Y-m-d H:i", mktime(0, 0, 0, date("m"), date("d")+1, date("Y"))); ?>">
                 </td>
             </tr>
             <tr>
@@ -140,7 +136,7 @@ $this->breadcrumbs=array(
                     <label style="display: inline;" for="TaskForm_languages_0">Arabic</label></label>
                 </td>
                 <td>
-                    <input style="width: 145px;" type="datetime" name="TaskForm[calendar][LangAr]" value="<?= date("Y-m-d H:i a", mktime(0, 0, 0, date("m"), date("d")+2, date("Y"))); ?>">
+                    <input style="width: 145px;" type="datetime" name="TaskForm[calendar][LangAr]" value="<?= date("Y-m-d H:i", mktime(0, 0, 0, date("m"), date("d")+2, date("Y"))); ?>">
                 </td>
             </tr>
             <tr>
@@ -149,7 +145,7 @@ $this->breadcrumbs=array(
                     <label style="display: inline;" for="TaskForm_languages_2">Indonesian</label></label>
                 </td>
                 <td>
-                    <input style="width: 145px;" type="datetime" name="TaskForm[calendar][LangId]" value="<?= date("Y-m-d H:i a", mktime(0, 0, 0, date("m"), date("d")+2, date("Y"))); ?>">
+                    <input style="width: 145px;" type="datetime" name="TaskForm[calendar][LangId]" value="<?= date("Y-m-d H:i", mktime(0, 0, 0, date("m"), date("d")+2, date("Y"))); ?>">
                 </td>
             </tr>
             <tr>
@@ -158,7 +154,7 @@ $this->breadcrumbs=array(
                     <label style="display: inline;" for="TaskForm_languages_4">Malaysian</label></label>
                 </td>
                 <td>
-                    <input style="width: 145px;" type="datetime" name="TaskForm[calendar][LangMy]" value="<?= date("Y-m-d H:i a", mktime(0, 0, 0, date("m"), date("d")+2, date("Y"))); ?>">
+                    <input style="width: 145px;" type="datetime" name="TaskForm[calendar][LangMy]" value="<?= date("Y-m-d H:i", mktime(0, 0, 0, date("m"), date("d")+2, date("Y"))); ?>">
                 </td>
             </tr>
         </table>
