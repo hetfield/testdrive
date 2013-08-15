@@ -264,4 +264,15 @@ class TextstatustranslationsController extends Controller
             $status = TextStatusTranslations::model()->deleteAllByAttributes(array('TextId' => $_GET['id']));
         }
     }
+
+    public function actionUpload()
+    {
+        $modelName = 'Uploadtask';
+        $model = new $modelName;
+
+        $this->render('upload', array(
+                'model' => $model,
+            )
+        );
+    }
 }

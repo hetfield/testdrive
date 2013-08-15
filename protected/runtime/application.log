@@ -5721,3 +5721,49 @@ in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
 2013/08/15 15:12:13 [warning] [application] Не удалось присвоить небезопасный атрибут "Document" класса "Uploadtask".
 in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
 in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 15:38:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "translationupload/index".' in C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController('translationuplo...')
+#1 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/translationupload/index
+---
+2013/08/15 15:38:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "translationupload".' in C:\xampp\htdocs\yii-test\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(270): CController->missingAction('translationuplo...')
+#1 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): CController->run('translationuplo...')
+#2 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController('textstatustrans...')
+#3 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/textstatustranslations/translationupload
+---
+2013/08/15 15:39:37 [error] [php] include(Uploadtranslation.php): failed to open stream: No such file or directory (C:\xampp\htdocs\yii-test\framework\YiiBase.php:421)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php(271): spl_autoload_call()
+#1 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): TextstatustranslationsController->actionUploadtranslation()
+#2 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): TextstatustranslationsController->runAction()
+#4 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): TextstatustranslationsController->runActionWithFilters()
+#5 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): TextstatustranslationsController->run()
+#6 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/textstatustranslations/uploadtranslation
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (271)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 15:40:29 [error] [php] include(Uploadtranslation.php): failed to open stream: No such file or directory (C:\xampp\htdocs\yii-test\framework\YiiBase.php:421)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php(271): spl_autoload_call()
+#1 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): TextstatustranslationsController->actionUploadtranslation()
+#2 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): TextstatustranslationsController->runAction()
+#4 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): TextstatustranslationsController->runActionWithFilters()
+#5 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): TextstatustranslationsController->run()
+#6 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/textstatustranslations/uploadtranslation
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (271)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
