@@ -233,7 +233,7 @@ if (Yii::app()->user->getState('Role') == 'A'){
 <?php endif; ?>
 <?php if (Yii::app()->user->hasFlash('error') || Yii::app()->user->hasFlash('Eerror')) : ?>
     <div class="flash-error">
-        <?= Yii::app()->user->getFlash('error'); ?>
+        <?= Yii::app()->user->getFlash('error')."<br>"; ?>
         <?= Yii::app()->user->getFlash('Eerror'); ?>
     </div>
 <?php endif; ?>

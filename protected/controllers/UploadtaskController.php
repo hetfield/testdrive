@@ -21,7 +21,7 @@ class UploadtaskController extends Controller
 
     public function actionIndex()
     {
-        /** @var Uploadtask $modelName */
+        /** @var Uploadtask $model */
         $modelName = 'Uploadtask';
         $model = new $modelName();
         if (isset($_GET['id'])) $id = $_GET['id'];
@@ -36,48 +36,113 @@ class UploadtaskController extends Controller
                     if (!$model->save()){
                         throw new CException('Error during file saving.');
                     }
-
-//                    $phpMailer = new PHPMailer();
-//
-//                    $phpMailer->CharSet="utf8";
-//                    $phpMailer->IsSMTP();
-//                    $phpMailer->Port       = 587;
-//                    $phpMailer->SMTPSecure = true;
-//                    $phpMailer->Host = 'smtp.mfxbroker.com';//'smtp.mfxbroker.com';
-//                    $phpMailer->Username = 'translations@mfxbroker.com';                            // SMTP username
-//                    $phpMailer->Password = 'aiutsraghuy545#';                           // SMTP password
-//                    $phpMailer->SMTPSecure = 'tls';
-//                    $phpMailer->SMTPAuth   = true;
-//                    $phpMailer->From = 'translations@mfxbroker.com';
-//                    $phpMailer->FromName = 'MasterForex';
-//                    $phpMailer->IsHTML(true);
-//                    $phpMailer->Subject = 'New Task from MasterForex';
-//
-//                    if ($key == 'LangAr' || $key == 'LangMy' || $key == 'LangId'){
-//                        $phpMailer->Body    = 'Hello! <br>Please translate text with title "'.$_POST[$modelName]['title'].'" and Text Id = '.$recordText->getPrimaryKey().'. Deadline: '.$deadline.'. <br>You can do this on website <a href="http://translations.masterforex.com/">http://translations.masterforex.com/</a>.<br>Thank you!';
-//                        $phpMailer->AltBody = 'Hello! Please translate text with title "'.$_POST[$modelName]['title'].'" and Text Id = '.$recordText->getPrimaryKey().'. Deadline: '.$deadline.'. You can do this on website http://translations.masterforex.com/. Thank you!';
-//                    } else {
-//                        $phpMailer->Body    = 'Добрый день!<br>Просьба перевести тест c заголовком "'.$_POST[$modelName]['title'].'" и Text Id = '.$recordText->getPrimaryKey().' до '.$deadline.' на сайте <a href="http://translations.masterforex.com/">http://translations.masterforex.com/</a>.<br>Спасибо!';
-//                        $phpMailer->AltBody = 'Добрый день! Просьба перевести тест c заголовком "'.$_POST[$modelName]['title'].'" и Text Id = '.$recordText->getPrimaryKey().' до '.$deadline.' на сайте http://translations.masterforex.com/. Спасибо!';
-//                    }
-//
-//                    $phpMailer->AddAddress($mailArray[$key]['email'], $mailArray[$key]['name']);
-//
-//                    try{
-//                        if (!$phpMailer->Send()){
-//                            throw new CException('Error during email sending.');
-//                        }
-//
-//                        Yii::app()->user->setFlash('Esuccess', 'Emails sent successfully');
-//                    }catch (CException $exception){
-//                        Yii::app()->user->setFlash('Eerror', 'Failed to send Emails');
-//
-//                    }
-//                }
-//                        unset($phpMailer);
-
-
                     $model->Document->saveAs($path.$model->Document);
+
+                    /** @var TextTranslations $task */
+                    $task = TextTranslations::model()->findByPk($id);
+                    $taskTo = json_decode($task->TaskTo);
+
+                    $mailArray = array(
+                        'ar' => array(
+                            'email' => 'translations@mfxbroker.com',
+                            'name' => 'Mado Saied'
+                        ),
+                        'en' => array(
+                            'email' => 'translations@mfxbroker.com',
+                            'name' => 'Егор Фентисов'
+                        ),
+//                        'ar' => array(
+//                            'email' => 'ahmedsaied44@gmail.com',
+//                            'name' => 'Mado Saied'
+//                        ),
+//                        'en' => array(
+//                            'email' => 'e.fentisov@mfxbroker.com',
+//                            'name' => 'Егор Фентисов'
+//                        ),
+//                        'es' => array(
+//                            'email' => 'iria_me9@hotmail.com',
+//                            'name' => 'Iria Martinez Espinar'
+//                        ),
+//                        'cn' => array(
+//                            'email' => 'huayu@masterforex.org',
+//                            'name' => 'huayu@masterforex.org',
+//                        ),
+//                        'my' => array(
+//                            'email' => 'kamnfx@gmail.com',
+//                            'name' => 'Jeff Nash'
+//                        ),
+//                        'id' => array(
+//                            'email' => 'juliana_djulie@yahoo.com',
+//                            'name' => 'Juliana Saja'
+//                        ),
+//                        'az' => array(
+//                            'email' => '',
+//                            'name' => ''
+//                        ),
+                    );
+
+                    foreach ($taskTo as $translator){
+                        if (isset($mailArray[$translator])){
+                            $phpMailer = new PHPMailer();
+                            /** @var DeadLines $deadline */
+                            $deadline = DeadLines::model()->findByAttributes(array('TextID' => $id));
+
+
+
+                            $phpMailer->CharSet="utf8";
+                            $phpMailer->IsSMTP();
+                            $phpMailer->Port       = 587;
+                            $phpMailer->SMTPSecure = true;
+                            $phpMailer->Host = 'smtp.mfxbroker.com';//'smtp.mfxbroker.com';
+                            $phpMailer->Username = 'translations@mfxbroker.com';                            // SMTP username
+                            $phpMailer->Password = 'aiutsraghuy545#';                           // SMTP password
+                            $phpMailer->SMTPSecure = 'tls';
+                            $phpMailer->SMTPAuth   = true;
+                            $phpMailer->From = 'translations@mfxbroker.com';
+                            $phpMailer->FromName = 'MasterForex';
+                            $phpMailer->IsHTML(true);
+                            $phpMailer->Subject = 'New Task from MasterForex';
+
+
+                            if ($translator == 'ar' || $translator == 'my' || $translator == 'id'){
+                                $deadlineKey = array(
+                                    'ar' => 'LangAr',
+                                    'my' => 'LangMy',
+                                    'id' => 'LangId',
+                                );
+                                $phpMailer->Body    = 'Hello! <br>Please translate text with title "'.$task->Title.'" and Text Id = '.$task->ID.'. Deadline: '.$deadline->$deadlineKey[$translator].'. <br>You can do this on website <a href="http://translations.masterforex.com/">http://translations.masterforex.com/</a>.<br>Thank you!';
+                                $phpMailer->AltBody = 'Hello! Please translate text with title "'.$task->Title.'" and Text Id = '.$task->ID.'. Deadline: '.$deadline->$deadlineKey[$translator].'. You can do this on website http://translations.masterforex.com/. Thank you!';
+                            } else {
+                                $deadlineKey = array(
+                                    'en' => 'LangEn',
+                                    'cn' => 'LangCn',
+                                    'es' => 'LangEs',
+                                    'az' => 'LangAz',
+                                );
+                                $phpMailer->Body    = 'Добрый день!<br>Просьба перевести тест c заголовком "'.$task->Title.'" и Text Id = '.$task->ID.' до '.$deadline->$deadlineKey[$translator].' на сайте <a href="http://translations.masterforex.com/">http://translations.masterforex.com/</a>.<br>Спасибо!';
+                                $phpMailer->AltBody = 'Добрый день! Просьба перевести тест c заголовком "'.$task->Title.'" и Text Id = '.$task->ID.' до '.$deadline->$deadlineKey[$translator].' на сайте http://translations.masterforex.com/. Спасибо!';
+                            }
+
+                            /** @var Uploadtask $fileName */
+                            $fileName = Uploadtask::model()->findByAttributes(array('TextId' => $id));
+                            //var_dump($fileName->Document);die;
+                            $phpMailer->AddAttachment($path.$fileName->Document, $fileName->Document);
+                            $phpMailer->AddAddress($mailArray[$translator]['email'], $mailArray[$translator]['name']);
+                            try{
+                                if (!$phpMailer->Send()){
+                                    throw new CException('Error during email sending.');
+                                }
+
+                                Yii::app()->user->setFlash('Esuccess', 'Emails sent successfully');
+                            }catch (CException $exception){
+                                Yii::app()->user->setFlash('Eerror', 'Failed to send Emails');
+
+                            }
+                            unset($phpMailer);
+                        }
+                    }
+
+
                     Yii::app()->user->setFlash('success', 'New task is sent to translators');
                     $this->redirect(Yii::app()->createUrl('textstatustranslations/index'));
 

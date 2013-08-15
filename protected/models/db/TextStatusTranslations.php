@@ -44,7 +44,7 @@ class TextStatusTranslations extends CActiveRecord
         return new CActiveDataProvider(get_class($this), array(
             'criteria'=>$criteria,
             'pagination'=>array(
-                'pageSize'=>'40',
+                'pageSize'=>'10',
             ),
         ));
     }

@@ -5637,3 +5637,87 @@ in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
 2013/08/15 13:52:09 [error] [application] Started
 in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (74)
 in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 14:25:59 [warning] [application] Не удалось присвоить небезопасный атрибут "Document" класса "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 14:26:03 [error] [php] Undefined index: es (C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php:121)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): UploadtaskController->runAction()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): UploadtaskController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): UploadtaskController->run()
+#3 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/uploadtask/index/id/3
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (121)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 14:28:55 [warning] [application] Не удалось присвоить небезопасный атрибут "Document" класса "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 14:30:29 [warning] [application] Не удалось присвоить небезопасный атрибут "Document" класса "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 14:32:42 [warning] [application] Не удалось присвоить небезопасный атрибут "Document" класса "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 14:39:48 [warning] [application] Не удалось присвоить небезопасный атрибут "Document" класса "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 14:54:11 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (74)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 14:54:37 [warning] [application] Не удалось присвоить небезопасный атрибут "Document" класса "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 14:58:56 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (74)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 15:00:24 [warning] [application] Не удалось присвоить небезопасный атрибут "Document" класса "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 15:04:15 [warning] [application] Не удалось присвоить небезопасный атрибут "Document" класса "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 15:04:15 [error] [php] Undefined variable: fileName (C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php:123)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): UploadtaskController->runAction()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): UploadtaskController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): UploadtaskController->run()
+#3 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/uploadtask/index/id/9
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (123)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 15:06:02 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (74)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 15:06:31 [warning] [application] Не удалось присвоить небезопасный атрибут "Document" класса "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 15:06:31 [error] [php] Undefined variable: fileName (C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php:125)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): UploadtaskController->runAction()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): UploadtaskController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): UploadtaskController->run()
+#3 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/uploadtask/index/id/10
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (125)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 15:07:18 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (74)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 15:07:58 [warning] [application] Не удалось присвоить небезопасный атрибут "Document" класса "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 15:09:23 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (74)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 15:09:47 [warning] [application] Не удалось присвоить небезопасный атрибут "Document" класса "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 15:12:13 [warning] [application] Не удалось присвоить небезопасный атрибут "Document" класса "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
