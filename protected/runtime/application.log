@@ -4649,3 +4649,798 @@ REQUEST_URI=/task
 in C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\TbActiveForm.php (359)
 in C:\xampp\htdocs\yii-test\testdrive\protected\views\task\task.php (50)
 in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TaskController.php (173)
+2013/08/14 14:48:02 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (74)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/14 14:48:20 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (74)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/14 16:01:54 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'testdrive.uploadtask' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `Uploadtask`.
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (26)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/14 16:01:54 [error] [exception.CDbException] exception 'CDbException' with message 'The table "Uploadtask" for active record class "Uploadtask" cannot be found in the database.' in C:\xampp\htdocs\yii-test\framework\db\ar\CActiveRecord.php:2310
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Uploadtask))
+#1 C:\xampp\htdocs\yii-test\framework\db\ar\CActiveRecord.php(402): CActiveRecord::model('Uploadtask')
+#2 C:\xampp\htdocs\yii-test\framework\db\ar\CActiveRecord.php(77): CActiveRecord->getMetaData()
+#3 C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php(26): CActiveRecord->__construct()
+#4 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): UploadtaskController->actionIndex()
+#5 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): CController->run('index')
+#9 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController('uploadtask/inde...')
+#10 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/uploadtask/index
+HTTP_REFERER=http://testdrive.mf/translations/index
+---
+2013/08/14 16:07:41 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'testdrive.uploadtask' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `Uploadtask`.
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (26)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/14 16:07:41 [error] [exception.CDbException] exception 'CDbException' with message 'The table "Uploadtask" for active record class "Uploadtask" cannot be found in the database.' in C:\xampp\htdocs\yii-test\framework\db\ar\CActiveRecord.php:2310
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Uploadtask))
+#1 C:\xampp\htdocs\yii-test\framework\db\ar\CActiveRecord.php(402): CActiveRecord::model('Uploadtask')
+#2 C:\xampp\htdocs\yii-test\framework\db\ar\CActiveRecord.php(77): CActiveRecord->getMetaData()
+#3 C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php(26): CActiveRecord->__construct()
+#4 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): UploadtaskController->actionIndex()
+#5 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): CController->run('index')
+#9 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController('uploadtask/inde...')
+#10 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/uploadtask/index
+HTTP_REFERER=http://testdrive.mf/translations/index
+---
+2013/08/14 16:09:19 [error] [exception.CException] exception 'CException' with message 'Property "TbActiveForm.enctype" is not defined.' in C:\xampp\htdocs\yii-test\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CWidgetFactory.php(161): CComponent->__set('enctype', 'multipart/form-...')
+#1 C:\xampp\htdocs\yii-test\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(UploadtaskController), 'bootstrap.widge...', Array)
+#2 C:\xampp\htdocs\yii-test\framework\web\CBaseController.php(189): CBaseController->createWidget('bootstrap.widge...', Array)
+#3 C:\xampp\htdocs\yii-test\testdrive\protected\views\uploadtask\uploadtask.php(20): CBaseController->beginWidget('bootstrap.widge...', Array)
+#4 C:\xampp\htdocs\yii-test\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#5 C:\xampp\htdocs\yii-test\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#6 C:\xampp\htdocs\yii-test\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii-test\framework\web\CController.php(782): CController->renderPartial('uploadtask', Array, true)
+#8 C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php(38): CController->render('uploadtask', Array)
+#9 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): UploadtaskController->actionIndex()
+#10 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): CController->run('index')
+#14 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController('uploadtask/inde...')
+#15 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/uploadtask/index
+HTTP_REFERER=http://testdrive.mf/translations/index
+---
+2013/08/14 16:24:45 [error] [php] Undefined variable: model (C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php:24)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): UploadtaskController->runAction()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): UploadtaskController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): UploadtaskController->run()
+#3 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/uploadtask/index
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (24)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/14 16:25:26 [error] [php] Object of class TbButton could not be converted to string (C:\xampp\htdocs\yii-test\testdrive\protected\views\uploadtask\uploadtask.php:36)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(869): UploadtaskController->renderFile()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(782): UploadtaskController->renderPartial()
+#2 C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php(39): UploadtaskController->render()
+#3 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): UploadtaskController->actionIndex()
+#4 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): UploadtaskController->runAction()
+#6 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): UploadtaskController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): UploadtaskController->run()
+#8 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/uploadtask/index
+in C:\xampp\htdocs\yii-test\testdrive\protected\views\uploadtask\uploadtask.php (36)
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (39)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/14 16:26:09 [warning] [application] Failed to set unsafe attribute "document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (30)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/14 16:26:09 [error] [exception.CException] exception 'CException' with message 'Property "Uploadtask.image" is not defined.' in C:\xampp\htdocs\yii-test\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\db\ar\CActiveRecord.php(159): CComponent->__set('image', Object(CUploadedFile))
+#1 C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php(31): CActiveRecord->__set('image', Object(CUploadedFile))
+#2 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): UploadtaskController->actionIndex()
+#3 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): CController->run('index')
+#7 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController('uploadtask/inde...')
+#8 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/uploadtask/index
+HTTP_REFERER=http://testdrive.mf/uploadtask/index
+---
+2013/08/14 16:30:19 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (74)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/14 16:30:29 [warning] [application] Failed to set unsafe attribute "document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/14 16:30:29 [error] [exception.CException] exception 'CException' with message 'Property "Uploadtask.image" is not defined.' in C:\xampp\htdocs\yii-test\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\db\ar\CActiveRecord.php(143): CComponent->__get('image')
+#1 C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php(34): CActiveRecord->__get('image')
+#2 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): UploadtaskController->actionIndex()
+#3 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): CController->run('index')
+#7 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController('uploadtask/inde...')
+#8 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/uploadtask/index
+HTTP_REFERER=http://testdrive.mf/uploadtask/index
+---
+2013/08/14 16:30:52 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (74)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/14 16:31:01 [warning] [application] Failed to set unsafe attribute "document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/14 16:36:56 [warning] [application] Failed to set unsafe attribute "document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/14 16:36:56 [error] [php] move_uploaded_file(): The second argument to copy() function cannot be a directory (C:\xampp\htdocs\yii-test\framework\web\CUploadedFile.php:196)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): UploadtaskController->actionIndex()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): UploadtaskController->runAction()
+#3 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): UploadtaskController->runActionWithFilters()
+#4 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): UploadtaskController->run()
+#5 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/uploadtask/index
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (34)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/14 16:38:00 [warning] [application] Failed to set unsafe attribute "document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/14 16:58:20 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (74)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/14 16:58:32 [warning] [application] Failed to set unsafe attribute "document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/14 16:58:54 [warning] [application] Failed to set unsafe attribute "document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 08:33:58 [warning] [application] Failed to set unsafe attribute "document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 08:34:07 [warning] [application] Failed to set unsafe attribute "document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 08:34:24 [warning] [application] Failed to set unsafe attribute "document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 08:36:03 [warning] [application] Failed to set unsafe attribute "document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 09:02:13 [warning] [application] Failed to set unsafe attribute "document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 09:02:13 [error] [exception.CException] exception 'CException' with message 'Property "Uploadtask.Document" is not defined.' in C:\xampp\htdocs\yii-test\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\db\ar\CActiveRecord.php(143): CComponent->__get('Document')
+#1 C:\xampp\htdocs\yii-test\testdrive\protected\views\uploadtask\uploadtask.php(39): CActiveRecord->__get('Document')
+#2 C:\xampp\htdocs\yii-test\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\yii-test\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yii-test\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yii-test\framework\web\CController.php(782): CController->renderPartial('uploadtask', Array, true)
+#6 C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php(43): CController->render('uploadtask', Array)
+#7 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): UploadtaskController->actionIndex()
+#8 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): CController->run('index')
+#12 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController('uploadtask/inde...')
+#13 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/uploadtask/index
+HTTP_REFERER=http://testdrive.mf/uploadtask/index
+---
+2013/08/15 09:04:24 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (74)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 09:05:07 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (74)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 09:15:19 [error] [exception.CException] exception 'CException' with message 'CWebApplication and its behaviors do not have a method or closure named "basePath".' in C:\xampp\htdocs\yii-test\framework\base\CComponent.php:265
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php(48): CComponent->__call('basePath', Array)
+#1 C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php(48): CWebApplication->basePath()
+#2 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): UploadtaskController->actionDownload()
+#3 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): CController->run('download')
+#7 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController('uploadtask/down...')
+#8 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/uploadtask/download/document/Doc1.docx
+HTTP_REFERER=http://testdrive.mf/uploadtask/index
+---
+2013/08/15 09:21:28 [error] [php] Missing argument 2 for CHttpRequest::sendFile(), called in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php on line 50 and defined (C:\xampp\htdocs\yii-test\framework\web\CHttpRequest.php:845)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): UploadtaskController->runAction()
+#2 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): UploadtaskController->runActionWithFilters()
+#3 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): UploadtaskController->run()
+#4 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/uploadtask/download/document/Doc1.docx
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (50)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 09:22:56 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (74)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 09:23:05 [warning] [application] Failed to set unsafe attribute "document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 09:23:05 [error] [exception.CException] exception 'CException' with message 'Table "Uploadtask" does not have a column named "document".' in C:\xampp\htdocs\yii-test\framework\validators\CUniqueValidator.php:90
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\validators\CValidator.php(213): CUniqueValidator->validateAttribute(Object(Uploadtask), 'document')
+#1 C:\xampp\htdocs\yii-test\framework\base\CModel.php(159): CValidator->validate(Object(Uploadtask), NULL)
+#2 C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php(36): CModel->validate()
+#3 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): UploadtaskController->actionIndex()
+#4 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): CController->run('index')
+#8 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController('uploadtask/inde...')
+#9 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/uploadtask/index
+HTTP_REFERER=http://testdrive.mf/uploadtask/index
+---
+2013/08/15 09:23:47 [warning] [application] Failed to set unsafe attribute "document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 09:26:24 [warning] [application] Failed to set unsafe attribute "document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 09:26:32 [warning] [application] Failed to set unsafe attribute "document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 09:26:37 [warning] [application] Failed to set unsafe attribute "document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 09:28:36 [warning] [application] Failed to set unsafe attribute "document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 09:28:41 [warning] [application] Failed to set unsafe attribute "document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 09:28:45 [warning] [application] Failed to set unsafe attribute "document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 09:30:57 [warning] [application] Failed to set unsafe attribute "document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 09:33:01 [warning] [application] Failed to set unsafe attribute "document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 09:33:19 [warning] [application] Failed to set unsafe attribute "document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 09:33:49 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (74)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 09:34:15 [warning] [application] Failed to set unsafe attribute "document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 09:34:59 [warning] [application] Failed to set unsafe attribute "document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 09:35:55 [warning] [application] Failed to set unsafe attribute "document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 09:36:26 [warning] [application] Failed to set unsafe attribute "document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 09:36:26 [error] [exception.CException] exception 'CException' with message 'UploadtaskController cannot find the requested view "/uploadtask/index".' in C:\xampp\htdocs\yii-test\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(782): CController->renderPartial('/uploadtask/ind...', NULL, true)
+#1 C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php(36): CController->render('/uploadtask/ind...')
+#2 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): UploadtaskController->actionIndex()
+#3 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): CController->run('index')
+#7 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController('uploadtask/inde...')
+#8 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/uploadtask/index
+HTTP_REFERER=http://testdrive.mf/uploadtask/index
+---
+2013/08/15 09:37:03 [warning] [application] Failed to set unsafe attribute "document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 09:37:04 [error] [exception.CException] exception 'CException' with message 'UploadtaskController cannot find the requested view "/uploadtask".' in C:\xampp\htdocs\yii-test\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(782): CController->renderPartial('/uploadtask', NULL, true)
+#1 C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php(36): CController->render('/uploadtask')
+#2 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): UploadtaskController->actionIndex()
+#3 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): CController->run('index')
+#7 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController('uploadtask/inde...')
+#8 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/uploadtask/index
+HTTP_REFERER=http://testdrive.mf/uploadtask/index
+---
+2013/08/15 09:37:43 [warning] [application] Failed to set unsafe attribute "document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 09:39:26 [warning] [application] Failed to set unsafe attribute "document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 09:39:42 [warning] [application] Failed to set unsafe attribute "document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 09:40:07 [warning] [application] Failed to set unsafe attribute "document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 09:41:59 [warning] [application] Failed to set unsafe attribute "document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 09:42:57 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 09:43:45 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 09:43:57 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 09:45:19 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 09:45:31 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 09:45:35 [error] [php] Undefined index: Document (C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php:47)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): UploadtaskController->runAction()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): UploadtaskController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): UploadtaskController->run()
+#3 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/uploadtask/download/document/Doc3.docx
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (47)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 09:47:14 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (74)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 09:51:28 [error] [php] Array to string conversion (C:\xampp\htdocs\yii-test\framework\web\CHttpRequest.php:855)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): UploadtaskController->runAction()
+#2 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): UploadtaskController->runActionWithFilters()
+#3 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): UploadtaskController->run()
+#4 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/uploadtask/download/document/Doc3.docx
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (51)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 09:54:12 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (74)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 09:54:16 [error] [php] Array to string conversion (C:\xampp\htdocs\yii-test\framework\web\CHttpRequest.php:855)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): UploadtaskController->runAction()
+#2 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): UploadtaskController->runActionWithFilters()
+#3 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): UploadtaskController->run()
+#4 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/uploadtask/download/document/Doc3.docx
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (52)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 09:55:26 [error] [php] Array to string conversion (C:\xampp\htdocs\yii-test\framework\web\CHttpRequest.php:855)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): UploadtaskController->runAction()
+#2 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): UploadtaskController->runActionWithFilters()
+#3 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): UploadtaskController->run()
+#4 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/uploadtask/download/document/Doc3.docx
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (52)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 09:55:29 [error] [php] Array to string conversion (C:\xampp\htdocs\yii-test\framework\web\CHttpRequest.php:855)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): UploadtaskController->runAction()
+#2 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): UploadtaskController->runActionWithFilters()
+#3 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): UploadtaskController->run()
+#4 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/uploadtask/download/document/Doc3.docx
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (52)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 09:55:44 [error] [php] Array to string conversion (C:\xampp\htdocs\yii-test\framework\web\CHttpRequest.php:855)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): UploadtaskController->runAction()
+#2 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): UploadtaskController->runActionWithFilters()
+#3 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): UploadtaskController->run()
+#4 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/uploadtask/download/document/Doc3.docx
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (52)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 09:55:50 [error] [php] Array to string conversion (C:\xampp\htdocs\yii-test\framework\web\CHttpRequest.php:855)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): UploadtaskController->runAction()
+#2 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): UploadtaskController->runActionWithFilters()
+#3 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): UploadtaskController->run()
+#4 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/uploadtask/download/document/Doc3.docx
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (52)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 09:55:51 [error] [php] Array to string conversion (C:\xampp\htdocs\yii-test\framework\web\CHttpRequest.php:855)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): UploadtaskController->runAction()
+#2 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): UploadtaskController->runActionWithFilters()
+#3 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): UploadtaskController->run()
+#4 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/uploadtask/download/document/Doc3.docx
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (52)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 09:56:51 [error] [php] Array to string conversion (C:\xampp\htdocs\yii-test\framework\web\CHttpRequest.php:855)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): UploadtaskController->runAction()
+#2 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): UploadtaskController->runActionWithFilters()
+#3 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): UploadtaskController->run()
+#4 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/uploadtask/download/document/Doc3.docx
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (52)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 09:56:53 [error] [php] Array to string conversion (C:\xampp\htdocs\yii-test\framework\web\CHttpRequest.php:855)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): UploadtaskController->runAction()
+#2 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): UploadtaskController->runActionWithFilters()
+#3 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): UploadtaskController->run()
+#4 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/uploadtask/download/document/Doc3.docx
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (52)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 09:56:54 [error] [php] Array to string conversion (C:\xampp\htdocs\yii-test\framework\web\CHttpRequest.php:855)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): UploadtaskController->runAction()
+#2 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): UploadtaskController->runActionWithFilters()
+#3 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): UploadtaskController->run()
+#4 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/uploadtask/download/document/Doc3.docx
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (52)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 09:56:55 [error] [php] Array to string conversion (C:\xampp\htdocs\yii-test\framework\web\CHttpRequest.php:855)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): UploadtaskController->runAction()
+#2 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): UploadtaskController->runActionWithFilters()
+#3 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): UploadtaskController->run()
+#4 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/uploadtask/download/document/Doc3.docx
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (52)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 09:56:56 [error] [php] Array to string conversion (C:\xampp\htdocs\yii-test\framework\web\CHttpRequest.php:855)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): UploadtaskController->runAction()
+#2 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): UploadtaskController->runActionWithFilters()
+#3 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): UploadtaskController->run()
+#4 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/uploadtask/download/document/Doc3.docx
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (52)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 09:57:08 [error] [php] Array to string conversion (C:\xampp\htdocs\yii-test\framework\web\CHttpRequest.php:855)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): UploadtaskController->runAction()
+#2 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): UploadtaskController->runActionWithFilters()
+#3 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): UploadtaskController->run()
+#4 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/uploadtask/download/document/Doc3.docx
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (52)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 09:57:27 [error] [exception.CException] exception 'CException' with message 'CHttpRequest and its behaviors do not have a method or closure named "xendFile".' in C:\xampp\htdocs\yii-test\framework\base\CComponent.php:265
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php(52): CComponent->__call('xendFile', Array)
+#1 C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php(52): CHttpRequest->xendFile('C:\xampp\htdocs...', 'PK??????????!??...', Array)
+#2 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): UploadtaskController->actionDownload()
+#3 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): CController->run('download')
+#7 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController('uploadtask/down...')
+#8 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/uploadtask/download/document/Doc3.docx
+HTTP_REFERER=http://testdrive.mf/uploadtask/index
+---
+2013/08/15 09:57:28 [error] [exception.CException] exception 'CException' with message 'CHttpRequest and its behaviors do not have a method or closure named "xendFile".' in C:\xampp\htdocs\yii-test\framework\base\CComponent.php:265
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php(52): CComponent->__call('xendFile', Array)
+#1 C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php(52): CHttpRequest->xendFile('C:\xampp\htdocs...', 'PK??????????!??...', Array)
+#2 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): UploadtaskController->actionDownload()
+#3 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): CController->run('download')
+#7 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController('uploadtask/down...')
+#8 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/uploadtask/download/document/Doc3.docx
+HTTP_REFERER=http://testdrive.mf/uploadtask/index
+---
+2013/08/15 09:57:37 [error] [php] Illegal string offset 'saveName' (C:\xampp\htdocs\yii-test\framework\web\CHttpRequest.php:939)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): UploadtaskController->runAction()
+#2 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): UploadtaskController->runActionWithFilters()
+#3 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): UploadtaskController->run()
+#4 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/uploadtask/download/document/Doc3.docx
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (52)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 09:59:57 [error] [php] Illegal string offset 'saveName' (C:\xampp\htdocs\yii-test\framework\web\CHttpRequest.php:939)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): UploadtaskController->runAction()
+#2 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): UploadtaskController->runActionWithFilters()
+#3 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): UploadtaskController->run()
+#4 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/uploadtask/download/document/Doc3.docx
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (48)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 10:00:25 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (74)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 10:27:11 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (C:\xampp\htdocs\yii-test\framework\web\helpers\CHtml.php:98)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\helpers\CHtml.php(153): renderAttributes()
+#1 C:\xampp\htdocs\yii-test\framework\web\helpers\CHtml.php(1983): tag()
+#2 C:\xampp\htdocs\yii-test\framework\web\helpers\CHtml.php(1439): activeInputField()
+#3 C:\xampp\htdocs\yii-test\framework\web\widgets\CActiveForm.php(717): activeFileField()
+#4 C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\input\TbInputVertical.php(71): TbActiveForm->fileField()
+#5 C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\input\TbInput.php(205): TbInputVertical->fileField()
+#6 C:\xampp\htdocs\yii-test\framework\web\CBaseController.php(173): TbInputVertical->run()
+#7 C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\TbActiveForm.php(497): UploadtaskController->widget()
+#8 C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\TbActiveForm.php(124): TbActiveForm->inputRow()
+#9 C:\xampp\htdocs\yii-test\testdrive\protected\views\uploadtask\uploadtask.php(15): TbActiveForm->fileFieldRow()
+#10 C:\xampp\htdocs\yii-test\framework\web\CBaseController.php(126): require()
+#11 C:\xampp\htdocs\yii-test\framework\web\CBaseController.php(95): UploadtaskController->renderInternal()
+#12 C:\xampp\htdocs\yii-test\framework\web\CController.php(869): UploadtaskController->renderFile()
+#13 C:\xampp\htdocs\yii-test\framework\web\CController.php(782): UploadtaskController->renderPartial()
+#14 C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php(41): UploadtaskController->render()
+#15 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): UploadtaskController->actionIndex()
+#16 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#17 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): UploadtaskController->runAction()
+#18 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): UploadtaskController->runActionWithFilters()
+#19 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): UploadtaskController->run()
+#20 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/uploadtask/index
+in C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\input\TbInputVertical.php (71)
+in C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\input\TbInput.php (205)
+in C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\TbActiveForm.php (497)
+2013/08/15 10:27:26 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (C:\xampp\htdocs\yii-test\framework\web\helpers\CHtml.php:98)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\helpers\CHtml.php(153): renderAttributes()
+#1 C:\xampp\htdocs\yii-test\framework\web\helpers\CHtml.php(1983): tag()
+#2 C:\xampp\htdocs\yii-test\framework\web\helpers\CHtml.php(1439): activeInputField()
+#3 C:\xampp\htdocs\yii-test\framework\web\widgets\CActiveForm.php(717): activeFileField()
+#4 C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\input\TbInputVertical.php(71): TbActiveForm->fileField()
+#5 C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\input\TbInput.php(205): TbInputVertical->fileField()
+#6 C:\xampp\htdocs\yii-test\framework\web\CBaseController.php(173): TbInputVertical->run()
+#7 C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\TbActiveForm.php(497): UploadtaskController->widget()
+#8 C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\TbActiveForm.php(124): TbActiveForm->inputRow()
+#9 C:\xampp\htdocs\yii-test\testdrive\protected\views\uploadtask\uploadtask.php(15): TbActiveForm->fileFieldRow()
+#10 C:\xampp\htdocs\yii-test\framework\web\CBaseController.php(126): require()
+#11 C:\xampp\htdocs\yii-test\framework\web\CBaseController.php(95): UploadtaskController->renderInternal()
+#12 C:\xampp\htdocs\yii-test\framework\web\CController.php(869): UploadtaskController->renderFile()
+#13 C:\xampp\htdocs\yii-test\framework\web\CController.php(782): UploadtaskController->renderPartial()
+#14 C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php(41): UploadtaskController->render()
+#15 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): UploadtaskController->actionIndex()
+#16 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#17 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): UploadtaskController->runAction()
+#18 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): UploadtaskController->runActionWithFilters()
+#19 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): UploadtaskController->run()
+#20 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/uploadtask/index
+in C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\input\TbInputVertical.php (71)
+in C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\input\TbInput.php (205)
+in C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\TbActiveForm.php (497)
+2013/08/15 10:28:28 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (C:\xampp\htdocs\yii-test\framework\web\helpers\CHtml.php:98)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\helpers\CHtml.php(153): renderAttributes()
+#1 C:\xampp\htdocs\yii-test\framework\web\helpers\CHtml.php(1983): tag()
+#2 C:\xampp\htdocs\yii-test\framework\web\helpers\CHtml.php(1439): activeInputField()
+#3 C:\xampp\htdocs\yii-test\framework\web\widgets\CActiveForm.php(717): activeFileField()
+#4 C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\input\TbInputVertical.php(71): TbActiveForm->fileField()
+#5 C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\input\TbInput.php(205): TbInputVertical->fileField()
+#6 C:\xampp\htdocs\yii-test\framework\web\CBaseController.php(173): TbInputVertical->run()
+#7 C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\TbActiveForm.php(497): UploadtaskController->widget()
+#8 C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\TbActiveForm.php(124): TbActiveForm->inputRow()
+#9 C:\xampp\htdocs\yii-test\testdrive\protected\views\uploadtask\uploadtask.php(15): TbActiveForm->fileFieldRow()
+#10 C:\xampp\htdocs\yii-test\framework\web\CBaseController.php(126): require()
+#11 C:\xampp\htdocs\yii-test\framework\web\CBaseController.php(95): UploadtaskController->renderInternal()
+#12 C:\xampp\htdocs\yii-test\framework\web\CController.php(869): UploadtaskController->renderFile()
+#13 C:\xampp\htdocs\yii-test\framework\web\CController.php(782): UploadtaskController->renderPartial()
+#14 C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php(41): UploadtaskController->render()
+#15 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): UploadtaskController->actionIndex()
+#16 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#17 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): UploadtaskController->runAction()
+#18 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): UploadtaskController->runActionWithFilters()
+#19 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): UploadtaskController->run()
+#20 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/uploadtask/index
+in C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\input\TbInputVertical.php (71)
+in C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\input\TbInput.php (205)
+in C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\TbActiveForm.php (497)
+2013/08/15 10:28:57 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (C:\xampp\htdocs\yii-test\framework\web\helpers\CHtml.php:98)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\helpers\CHtml.php(153): renderAttributes()
+#1 C:\xampp\htdocs\yii-test\framework\web\helpers\CHtml.php(1983): tag()
+#2 C:\xampp\htdocs\yii-test\framework\web\helpers\CHtml.php(1439): activeInputField()
+#3 C:\xampp\htdocs\yii-test\framework\web\widgets\CActiveForm.php(717): activeFileField()
+#4 C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\input\TbInputVertical.php(71): TbActiveForm->fileField()
+#5 C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\input\TbInput.php(205): TbInputVertical->fileField()
+#6 C:\xampp\htdocs\yii-test\framework\web\CBaseController.php(173): TbInputVertical->run()
+#7 C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\TbActiveForm.php(497): UploadtaskController->widget()
+#8 C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\TbActiveForm.php(124): TbActiveForm->inputRow()
+#9 C:\xampp\htdocs\yii-test\testdrive\protected\views\uploadtask\uploadtask.php(15): TbActiveForm->fileFieldRow()
+#10 C:\xampp\htdocs\yii-test\framework\web\CBaseController.php(126): require()
+#11 C:\xampp\htdocs\yii-test\framework\web\CBaseController.php(95): UploadtaskController->renderInternal()
+#12 C:\xampp\htdocs\yii-test\framework\web\CController.php(869): UploadtaskController->renderFile()
+#13 C:\xampp\htdocs\yii-test\framework\web\CController.php(782): UploadtaskController->renderPartial()
+#14 C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php(41): UploadtaskController->render()
+#15 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): UploadtaskController->actionIndex()
+#16 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#17 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): UploadtaskController->runAction()
+#18 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): UploadtaskController->runActionWithFilters()
+#19 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): UploadtaskController->run()
+#20 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/uploadtask/index
+in C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\input\TbInputVertical.php (71)
+in C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\input\TbInput.php (205)
+in C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\TbActiveForm.php (497)
+2013/08/15 10:29:22 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (C:\xampp\htdocs\yii-test\framework\web\helpers\CHtml.php:98)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\helpers\CHtml.php(153): renderAttributes()
+#1 C:\xampp\htdocs\yii-test\framework\web\helpers\CHtml.php(1983): tag()
+#2 C:\xampp\htdocs\yii-test\framework\web\helpers\CHtml.php(1439): activeInputField()
+#3 C:\xampp\htdocs\yii-test\framework\web\widgets\CActiveForm.php(717): activeFileField()
+#4 C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\input\TbInputVertical.php(71): TbActiveForm->fileField()
+#5 C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\input\TbInput.php(205): TbInputVertical->fileField()
+#6 C:\xampp\htdocs\yii-test\framework\web\CBaseController.php(173): TbInputVertical->run()
+#7 C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\TbActiveForm.php(497): UploadtaskController->widget()
+#8 C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\TbActiveForm.php(124): TbActiveForm->inputRow()
+#9 C:\xampp\htdocs\yii-test\testdrive\protected\views\uploadtask\uploadtask.php(15): TbActiveForm->fileFieldRow()
+#10 C:\xampp\htdocs\yii-test\framework\web\CBaseController.php(126): require()
+#11 C:\xampp\htdocs\yii-test\framework\web\CBaseController.php(95): UploadtaskController->renderInternal()
+#12 C:\xampp\htdocs\yii-test\framework\web\CController.php(869): UploadtaskController->renderFile()
+#13 C:\xampp\htdocs\yii-test\framework\web\CController.php(782): UploadtaskController->renderPartial()
+#14 C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php(41): UploadtaskController->render()
+#15 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): UploadtaskController->actionIndex()
+#16 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#17 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): UploadtaskController->runAction()
+#18 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): UploadtaskController->runActionWithFilters()
+#19 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): UploadtaskController->run()
+#20 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/uploadtask/index
+in C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\input\TbInputVertical.php (71)
+in C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\input\TbInput.php (205)
+in C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\TbActiveForm.php (497)
+2013/08/15 10:31:28 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (C:\xampp\htdocs\yii-test\framework\web\helpers\CHtml.php:98)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\helpers\CHtml.php(153): renderAttributes()
+#1 C:\xampp\htdocs\yii-test\framework\web\helpers\CHtml.php(1983): tag()
+#2 C:\xampp\htdocs\yii-test\framework\web\helpers\CHtml.php(1439): activeInputField()
+#3 C:\xampp\htdocs\yii-test\framework\web\widgets\CActiveForm.php(717): activeFileField()
+#4 C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\input\TbInputVertical.php(71): TbActiveForm->fileField()
+#5 C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\input\TbInput.php(205): TbInputVertical->fileField()
+#6 C:\xampp\htdocs\yii-test\framework\web\CBaseController.php(173): TbInputVertical->run()
+#7 C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\TbActiveForm.php(497): UploadtaskController->widget()
+#8 C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\TbActiveForm.php(124): TbActiveForm->inputRow()
+#9 C:\xampp\htdocs\yii-test\testdrive\protected\views\uploadtask\uploadtask.php(16): TbActiveForm->fileFieldRow()
+#10 C:\xampp\htdocs\yii-test\framework\web\CBaseController.php(126): require()
+#11 C:\xampp\htdocs\yii-test\framework\web\CBaseController.php(95): UploadtaskController->renderInternal()
+#12 C:\xampp\htdocs\yii-test\framework\web\CController.php(869): UploadtaskController->renderFile()
+#13 C:\xampp\htdocs\yii-test\framework\web\CController.php(782): UploadtaskController->renderPartial()
+#14 C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php(41): UploadtaskController->render()
+#15 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): UploadtaskController->actionIndex()
+#16 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#17 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): UploadtaskController->runAction()
+#18 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): UploadtaskController->runActionWithFilters()
+#19 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): UploadtaskController->run()
+#20 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/uploadtask/index
+in C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\input\TbInputVertical.php (71)
+in C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\input\TbInput.php (205)
+in C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\TbActiveForm.php (497)
+2013/08/15 10:38:30 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (74)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 10:38:44 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (74)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 10:38:50 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (74)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 10:40:47 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)

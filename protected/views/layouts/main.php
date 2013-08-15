@@ -46,7 +46,7 @@
                     //array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
                     //array('label'=>'Contact', 'url'=>array('/site/contact')),
                     array('label' => 'Login', 'url'=>array('/site/login/'), 'visible'=>Yii::app()->user->isGuest),
-                    //array('label' => 'Translate Phrases', 'url' => array('/translations/index'), 'visible' => !Yii::app()->user->isGuest),
+                    array('label' => 'Translate Phrases', 'url' => array('/translations/index'), 'visible' => !Yii::app()->user->isGuest),
                     array('label' => 'Text Translation', 'url' => array('/textstatustranslations/index'), 'visible' => (Yii::app()->user->getState('Role') == 'T')),
                     //array('label' => 'Task', 'url' => array('/task/index'), 'visible' => (Yii::app()->user->getState('Role') == 'A')),
                     //array('label' => 'Statuses', 'url' => array('/textstatustranslations/index'), 'visible' => (Yii::app()->user->getState('Role') == 'A')),
@@ -56,6 +56,7 @@
                         ),
                     ),
                     //array('label' => 'User Management', 'url' => array('/users/index'), 'visible' => (Yii::app()->user->getState('Role') == 'A')),
+                    array('label' => 'Upload Task', 'url' => array('/uploadtask/index'), 'visible' => (Yii::app()->user->getState('Role') == 'A')),
                     array('label' => 'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest),
 
                 ),

@@ -45,12 +45,6 @@ return array(
 
 	// application components
 	'components'=>array(
-        'Phpmailer' => array(
-            'class' => 'PHPMailer',
-            'SMTP' => array(
-                'class' => 'SMTP',
-            ),
-        ),
 
         'log' => array(
             'class' => 'CLogRouter',
