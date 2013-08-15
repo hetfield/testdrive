@@ -81,6 +81,9 @@ class UploadtaskController extends Controller
 //                        ),
                     );
 
+                    include (Yii::app()->basePath.'/components/Phpmailer.php');
+                    include (Yii::app()->basePath.'/components/Smtp.php');
+
                     foreach ($taskTo as $translator){
                         if (isset($mailArray[$translator])){
                             $phpMailer = new PHPMailer();

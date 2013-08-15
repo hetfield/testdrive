@@ -11,7 +11,7 @@
  * @property string $TextId
  */
 
-class Uploadtask extends CActiveRecord
+class Uploadar extends CActiveRecord
 {
     public $Document;
 
@@ -25,7 +25,6 @@ class Uploadtask extends CActiveRecord
     {
         return array(
             array('Document', 'file', 'types'=>'doc, docx'),
-            array('Document', 'unique'),
         );
     }
 }

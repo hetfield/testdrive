@@ -265,12 +265,28 @@ class TextstatustranslationsController extends Controller
         }
     }
 
-    public function actionUpload()
+    public function actionUploadar()
     {
-        $modelName = 'Uploadtask';
+        $modelName = 'Uploadar';
+        /** @var Uploadtask $model */
         $model = new $modelName;
 
-        $this->render('upload', array(
+        $id = 1;
+
+        if(isset($_POST[$modelName])){
+            $path = Yii::app()->basePath.'\translations\\';
+            $model->attributes=$_POST[$modelName];
+            $model->Document = CUploadedFile::getInstance($model,'Document');
+            $model->TextId = $id;
+
+            if ($model->validate()){
+                    if ($model->save()){
+                        $model->Document->saveAs($path.$id.'_Ar.docx');
+                    }
+            }
+        }
+
+        $this->render('uploadar', array(
                 'model' => $model,
             )
         );

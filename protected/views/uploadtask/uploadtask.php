@@ -1,13 +1,4 @@
 <?php
-//Yii::import('ext.imperavi-redactor-widget.ImperaviRedactorWidget');
-
-//Yii::app()->clientScript->registerScript('adjust_currencies_ready', <<<JS
-//
-//$('.languages label.check input[checked=checked]').parent().addClass("active");
-//JS
-//    , CClientScript::POS_READY);
-//
-//
 
 $this->pageTitle=Yii::app()->name . ' - Task';
 $this->breadcrumbs=array(

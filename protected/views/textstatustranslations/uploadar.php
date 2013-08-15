@@ -9,7 +9,7 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
     <!--<?//= $form->radioButtonListInlineRow($model, 'Languages', $langsToEdit); ?>-->
 
     <div class="uplod">
-        <?= $form->fileFieldRow($model, 'LangAr'); ?>
+        <?= $form->fileFieldRow($model, 'Document'); ?>
     </div>
 
 
