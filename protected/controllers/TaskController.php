@@ -18,13 +18,13 @@ class TaskController extends Controller
         $model = new TaskForm;
 
         if (isset($_POST[$modelName])){
-
             $model->setAttributes($_POST[$modelName]);
             if ($model->validate()){
 
                 $recordText = new TextTranslations;
-                $recordText->Title = htmlspecialchars($_POST[$modelName]['title']);
-                $recordText->Customer = htmlspecialchars($_POST[$modelName]['customer']);
+                $recordText->Title = htmlspecialchars($model->title);
+                $recordText->Customer = htmlspecialchars($model->customer);
+                $recordText->TaskTo = json_encode($model->languages);
 
                 $newDeadLine = new DeadLines();
 

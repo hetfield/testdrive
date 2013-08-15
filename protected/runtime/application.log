@@ -5631,3 +5631,9 @@ in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
 2013/08/15 13:37:06 [warning] [application] Не удалось присвоить небезопасный атрибут "Document" класса "Uploadtask".
 in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
 in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 13:41:19 [warning] [application] Не удалось присвоить небезопасный атрибут "Document" класса "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/15 13:52:09 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (74)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)

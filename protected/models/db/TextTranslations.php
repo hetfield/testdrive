@@ -8,7 +8,7 @@
  *
  * @property integer $ID
  * @property string $Title
- * @property string $Text
+ * @property string $TaskTo
  * @property string $LangAr
  * @property string $LangEn
  * @property string $LangEs
@@ -18,6 +18,7 @@
  * @property string $LangCn
  * @property string $LangAz
  * @property string $Customer
+ *
  */
 
 class TextTranslations extends CActiveRecord
