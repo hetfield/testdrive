@@ -265,33 +265,66 @@ class TextstatustranslationsController extends Controller
         }
     }
 
-    public function actionUploadar()
+    public function uploadTranslation($modelName,$post,$get,$lang,$view)
     {
-        $modelName = 'Uploadar';
-        /** @var Uploadar $model */
         $model = new $modelName;
 
-        if (isset($_GET['id'])) $id = $_GET['id'];
+        if (isset($get['id'])) $id = $get['id'];
 
-        if(isset($_POST[$modelName])){
+        if(isset($post[$modelName]) && isset($id)){
             $path = Yii::app()->basePath.'\translations\\';
-            $model->attributes = $_POST[$modelName];
+            $model->attributes = $post[$modelName];
             $model->Document = CUploadedFile::getInstance($model,'Document');
             $docName = explode('.',CUploadedFile::getInstance($model,'Document'));
             $parts = count($docName);
             $model->TextId = $id;
             if ($model->validate()){
-                $model->Document->saveAs($path.$id.'id_Ar.'.$docName[$parts-1]);
-                $model->Document = $path.$id.'id_Ar.docx';
+                $model->Document->saveAs($path.$id.'id_'.$lang.'.'.$docName[$parts-1]);
+                $model->Document = $id.'id_'.$lang.'.'.$docName[$parts-1];
                 $model->save();
-                $this->changeStatusText($id,'ar',2);
+                $this->changeStatusText($id,$lang,2);
                 $this->redirect(Yii::app()->createUrl("textstatustranslations/index"));
             }
         }
 
-        $this->render('uploadar', array(
+        $this->render($view, array(
                 'model' => $model,
             )
         );
+    }
+
+    public function actionUploadar()
+    {
+        $this->uploadTranslation('Uploadar',$_POST,$_GET,'ar','uploadar');
+    }
+
+    public function actionUploaden()
+    {
+        $this->uploadTranslation('Uploaden',$_POST,$_GET,'en','uploaden');
+    }
+
+    public function actionUploades()
+    {
+        $this->uploadTranslation('Uploades',$_POST,$_GET,'es','uploades');
+    }
+
+    public function actionUploadcn()
+    {
+        $this->uploadTranslation('Uploadcn',$_POST,$_GET,'cn','uploadcn');
+    }
+
+    public function actionUploadmy()
+    {
+        $this->uploadTranslation('Uploadmy',$_POST,$_GET,'my','uploadmy');
+    }
+
+    public function actionUploadid()
+    {
+        $this->uploadTranslation('Uploadid',$_POST,$_GET,'id','uploadid');
+    }
+
+    public function actionUploadaz()
+    {
+        $this->uploadTranslation('Uploadaz',$_POST,$_GET,'az','uploadaz');
     }
 }

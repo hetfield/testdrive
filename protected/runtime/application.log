@@ -5889,3 +5889,85 @@ in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
 2013/08/16 09:28:45 [warning] [application] Не удалось присвоить небезопасный атрибут "Document" класса "Uploadar".
 in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (278)
 in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/16 10:19:15 [warning] [application] Не удалось присвоить небезопасный атрибут "Document" класса "Uploadar".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (306)
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (328)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/16 10:19:15 [error] [php] Array to string conversion (C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php:312)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): TextstatustranslationsController->runAction()
+#2 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): TextstatustranslationsController->runActionWithFilters()
+#3 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): TextstatustranslationsController->run()
+#4 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/textstatustranslations/uploadar/id/4
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (312)
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (328)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/16 10:24:39 [warning] [application] Не удалось присвоить небезопасный атрибут "Document" класса "Uploadar".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (306)
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (329)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/16 10:24:58 [warning] [application] Не удалось присвоить небезопасный атрибут "Document" класса "Uploadar".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (306)
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (329)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/16 10:27:46 [warning] [application] Не удалось присвоить небезопасный атрибут "Document" класса "Uploadar".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (306)
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (328)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/16 10:27:46 [error] [php] Array to string conversion (C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php:312)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): TextstatustranslationsController->runAction()
+#2 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): TextstatustranslationsController->runActionWithFilters()
+#3 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): TextstatustranslationsController->run()
+#4 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/textstatustranslations/uploadar/id/4
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (312)
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (328)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/16 10:30:20 [warning] [application] Не удалось присвоить небезопасный атрибут "Document" класса "Uploadar".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (306)
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (329)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/16 10:30:50 [warning] [application] Не удалось присвоить небезопасный атрибут "Document" класса "Uploadar".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (306)
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (328)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/16 10:40:34 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (74)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/16 10:40:41 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (74)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/16 10:41:41 [warning] [application] Не удалось присвоить небезопасный атрибут "Languages" класса "UsersForm".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UsersController.php (45)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/16 10:41:45 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (74)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/16 10:41:51 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (74)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/16 10:42:08 [error] [exception.CException] exception 'CException' with message 'Контроллер TextstatustranslationsController не может найти представление "uploadid".' in C:\xampp\htdocs\yii-test\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(782): CController->renderPartial('uploadid', Array, true)
+#1 C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php(293): CController->render('uploadid', Array)
+#2 C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php(323): TextstatustranslationsController->uploadTranslation('Uploadid', Array, Array, 'id', 'uploadid')
+#3 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): TextstatustranslationsController->actionUploadid()
+#4 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): CController->run('uploadid')
+#8 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController('textstatustrans...')
+#9 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/textstatustranslations/uploadid/id/1
+HTTP_REFERER=http://testdrive.mf/textstatustranslations/index
+---
