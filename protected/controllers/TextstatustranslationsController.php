@@ -273,6 +273,10 @@ class TextstatustranslationsController extends Controller
 
         if(isset($post[$modelName]) && isset($id)){
             $path = Yii::app()->basePath.'\translations\\';
+            if (!is_dir($path.$id)){
+                mkdir($path.$id);
+            }
+            $path .= $id.'\\';
             $model->attributes = $post[$modelName];
             $model->Document = CUploadedFile::getInstance($model,'Document');
             $docName = explode('.',CUploadedFile::getInstance($model,'Document'));

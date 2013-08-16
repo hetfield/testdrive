@@ -5971,3 +5971,30 @@ Stack trace:
 REQUEST_URI=/textstatustranslations/uploadid/id/1
 HTTP_REFERER=http://testdrive.mf/textstatustranslations/index
 ---
+2013/08/16 10:43:54 [warning] [application] Не удалось присвоить небезопасный атрибут "Document" класса "Uploadid".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (276)
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (323)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/16 10:46:35 [warning] [application] Не удалось присвоить небезопасный атрибут "Document" класса "Uploadid".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (276)
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (323)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/16 10:46:35 [error] [php] move_uploaded_file(C:\xampp\htdocs\yii-test\testdrive\protected\translations\2\2id_id.docx): failed to open stream: No such file or directory (C:\xampp\htdocs\yii-test\framework\web\CUploadedFile.php:196)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php(323): TextstatustranslationsController->uploadTranslation()
+#1 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): TextstatustranslationsController->actionUploadid()
+#2 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): TextstatustranslationsController->runAction()
+#4 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): TextstatustranslationsController->runActionWithFilters()
+#5 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): TextstatustranslationsController->run()
+#6 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/textstatustranslations/uploadid/id/2
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (282)
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (323)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/16 10:52:41 [warning] [application] Не удалось присвоить небезопасный атрибут "Document" класса "Uploadid".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (280)
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (327)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
