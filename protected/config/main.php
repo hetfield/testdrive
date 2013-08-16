@@ -41,8 +41,7 @@ return array(
 		*/
 	),
 
-    'language'=>'ru',
-    'sourceLanguage'=>'ru',
+
 
 
 	// application components
