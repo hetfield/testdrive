@@ -5816,3 +5816,76 @@ in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
 2013/08/15 16:28:53 [warning] [application] Не удалось присвоить небезопасный атрибут "Document" класса "Uploadar".
 in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (278)
 in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/16 07:48:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "upload".' in C:\xampp\htdocs\yii-test\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(270): CController->missingAction('upload')
+#1 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): CController->run('upload')
+#2 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController('textstatustrans...')
+#3 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/textstatustranslations/upload
+---
+2013/08/16 07:48:48 [warning] [application] Не удалось присвоить небезопасный атрибут "Document" класса "Uploadar".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (278)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/16 07:50:34 [warning] [application] Не удалось присвоить небезопасный атрибут "Document" класса "Uploadar".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (278)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/16 07:50:47 [warning] [application] Не удалось присвоить небезопасный атрибут "Document" класса "Uploadar".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (278)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/16 07:50:55 [warning] [application] Не удалось присвоить небезопасный атрибут "Document" класса "Uploadar".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (278)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/16 08:36:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "upload".' in C:\xampp\htdocs\yii-test\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(270): CController->missingAction('upload')
+#1 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): CController->run('upload')
+#2 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController('textstatustrans...')
+#3 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/textstatustranslations/upload
+---
+2013/08/16 08:36:52 [warning] [application] Не удалось присвоить небезопасный атрибут "Document" класса "Uploadar".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (275)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/16 08:42:25 [warning] [application] Не удалось присвоить небезопасный атрибут "Document" класса "Uploadar".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (276)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/16 08:43:29 [warning] [application] Не удалось присвоить небезопасный атрибут "Document" класса "Uploadar".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (276)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/16 08:50:31 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (74)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/16 08:50:37 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (74)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/16 09:17:17 [warning] [application] Не удалось присвоить небезопасный атрибут "Document" класса "Uploadar".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (278)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/16 09:17:17 [error] [php] Undefined offset: 2 (C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php:281)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): TextstatustranslationsController->runAction()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): TextstatustranslationsController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): TextstatustranslationsController->run()
+#3 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/textstatustranslations/uploadar/id/1
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (281)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/16 09:17:44 [warning] [application] Не удалось присвоить небезопасный атрибут "Document" класса "Uploadar".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (278)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/16 09:23:43 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (74)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/16 09:24:46 [warning] [application] Не удалось присвоить небезопасный атрибут "Document" класса "Uploadar".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (278)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/16 09:28:45 [warning] [application] Не удалось присвоить небезопасный атрибут "Document" класса "Uploadar".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (278)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)

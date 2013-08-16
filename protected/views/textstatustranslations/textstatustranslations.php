@@ -164,8 +164,9 @@ $buttonsA = array(
         'header' => 'Buttons',
         'buttons' => array(
             'update' => array(
-                'label' => 'Edit text',
+                'label' => 'Upload Translation',
                 'url' => 'Yii::app()->createUrl("textstatustranslations/update", array("id"=>$data->TextId))',
+                'visible' => 'false',
             ),
             'view' => array(
                 'visible' => 'false',
@@ -176,6 +177,45 @@ $buttonsA = array(
         ),
     ),
 );
+
+$forUpdateArray = array();
+$translatorsLang = json_decode(Yii::app()->user->getState('Languages'));
+if ($translatorsLang[0] == 'ar'){
+    $forUpdateArray = $forUpdateArray + array(
+            'label' => 'Upload Translation',
+            'url' => 'Yii::app()->createUrl("textstatustranslations/uploadar", array("id"=>$data->TextId))',
+        );
+} elseif ($translatorsLang[0] == 'en'){
+    $forUpdateArray = $forUpdateArray + array(
+            'label' => 'Upload Translation',
+            'url' => 'Yii::app()->createUrl("textstatustranslations/uploaden", array("id"=>$data->TextId))',
+        );
+} elseif ($translatorsLang[0] == 'es'){
+    $forUpdateArray = $forUpdateArray + array(
+            'label' => 'Upload Translation',
+            'url' => 'Yii::app()->createUrl("textstatustranslations/uploades", array("id"=>$data->TextId))',
+        );
+}elseif ($translatorsLang[0] == 'cn'){
+    $forUpdateArray = $forUpdateArray + array(
+            'label' => 'Upload Translation',
+            'url' => 'Yii::app()->createUrl("textstatustranslations/uploadcn", array("id"=>$data->TextId))',
+        );
+}elseif ($translatorsLang[0] == 'my'){
+    $forUpdateArray = $forUpdateArray + array(
+            'label' => 'Upload Translation',
+            'url' => 'Yii::app()->createUrl("textstatustranslations/uploadmy", array("id"=>$data->TextId))',
+        );
+}elseif ($translatorsLang[0] == 'id'){
+    $forUpdateArray = $forUpdateArray + array(
+            'label' => 'Upload Translation',
+            'url' => 'Yii::app()->createUrl("textstatustranslations/uploadid", array("id"=>$data->TextId))',
+        );
+}elseif ($translatorsLang[0] == 'az'){
+    $forUpdateArray = $forUpdateArray + array(
+            'label' => 'Upload Translation',
+            'url' => 'Yii::app()->createUrl("textstatustranslations/uploadaz", array("id"=>$data->TextId))',
+        );
+}
 
 $buttonsT = array(
     array(
@@ -189,9 +229,7 @@ $buttonsT = array(
             'delete' => array(
                 'visible' => 'false',
             ),
-            'update' => array(
-                'label' => 'Edit text',
-            ),
+            'update' => $forUpdateArray,
         ),
     ),
 );

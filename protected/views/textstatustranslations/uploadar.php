@@ -2,11 +2,9 @@
 /** @var TbActiveForm $form */
 $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
     'id'=>'verticalForm',
-    'htmlOptions'=>array('class'=>'well'),
+    'htmlOptions'=>array('class'=>'well', 'enctype' => 'multipart/form-data',),
 )); ?>
     <br>
-
-    <!--<?//= $form->radioButtonListInlineRow($model, 'Languages', $langsToEdit); ?>-->
 
     <div class="uplod">
         <?= $form->fileFieldRow($model, 'Document'); ?>

@@ -268,21 +268,24 @@ class TextstatustranslationsController extends Controller
     public function actionUploadar()
     {
         $modelName = 'Uploadar';
-        /** @var Uploadtask $model */
+        /** @var Uploadar $model */
         $model = new $modelName;
 
-        $id = 1;
+        if (isset($_GET['id'])) $id = $_GET['id'];
 
         if(isset($_POST[$modelName])){
             $path = Yii::app()->basePath.'\translations\\';
-            $model->attributes=$_POST[$modelName];
+            $model->attributes = $_POST[$modelName];
             $model->Document = CUploadedFile::getInstance($model,'Document');
+            $docName = explode('.',CUploadedFile::getInstance($model,'Document'));
+            $parts = count($docName);
             $model->TextId = $id;
-
             if ($model->validate()){
-                    if ($model->save()){
-                        $model->Document->saveAs($path.$id.'_Ar.docx');
-                    }
+                $model->Document->saveAs($path.$id.'id_Ar.'.$docName[$parts-1]);
+                $model->Document = $path.$id.'id_Ar.docx';
+                $model->save();
+                $this->changeStatusText($id,'ar',2);
+                $this->redirect(Yii::app()->createUrl("textstatustranslations/index"));
             }
         }
 
