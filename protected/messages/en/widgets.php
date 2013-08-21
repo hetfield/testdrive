@@ -62,7 +62,7 @@ return array(
     'Счёт'=>'Account',
     'Валюта'=>'Currency',
     'Мои торговые счета'=>'My trading accounts',
-    'Добавить и аттестовать платежные реквизиты'=>'payment details',
+    'Добавить и аттестовать платежные реквизиты'=>'Payment details',
     'Балансовые операции'=>'Balance operations',
     'Конвертация валют ЛК'=>'Personal wallet balance currency conversion',
     'Торговые операции'=>'Trading operations',

@@ -9,6 +9,7 @@ return array(
     'Скачать торговый терминал' => 'Download terminal transaksi',
     'Инструкция для личного кабинета' => 'Instruksi untuk kabinet pribadi',
     'FAQ' => 'FAQ',
+    'Новости' => 'Berita',
     'Пройти аттестацию пользователя' => 'Sertifikasi akaun pengguna',
     'Пройти аттестацию платежных реквизитов' => 'Sertifikasi sistem rekening pembayaran',
     'Перенести торговый счет' => 'Pemindahan akaun trading lama',
@@ -38,7 +39,7 @@ return array(
     'Пожалуйста, загрузите Ваш документ' => 'Mohon mengupload dokumen Anda (KTP/SIM/Passport) untuk sertifikasi akaun pengguna dalam jangka waktu 10 hari setelah pendaftaran.  Jika Anda belum/tidak sempat mengupload dokumen  dalam jangka waktu yang ditentukan maka kemungkinan masuk ke kabinet pribadi Anda akan kami tutup.',
     'Изменить пароль/данные' => 'Modifikasi detil personal dan password',
     'Скачать форму заявления на смену паролей/личных или контактных данных в формате PDF' => 'Download surat permintaan untuk mengganti password / data pribadi Anda dalam format PDF',
-    'Настройка интерфейса'=>'PENGATURAN INTERFACE',
+    'Настройки'=>'Pengaturar',
     'Изменить аватар'=>'Mengubah gambar pengguna',
     'Аватар' => 'Gambar pengguna',
     'Скрыть/Отобразить валюты ЛК'=>'Tampilkan/sembunyikan mata uang',
@@ -103,5 +104,16 @@ Layanan dengan kondisi ketentuan yang diatur pada halaman website ini disediakan
     'Если вы не мусульманин и хотите вести торговлю без начисления swap-пунктов, примите участие в нашей акции "Неделя без свопов!".' => 'Jika Anda non Muslim dan ingin trading tanpa poin swap, silahkan ambil bagian dalam penawaran promosi  “Minggu swap free!”',
     'Ознакомиться с условиями акции' => 'Baca selanjutnya mengenai syarat promo',
     'Change Password' => 'Ubah sandi',
+
+    'У вас нет ни одного торгового счета. Создайте счет прямо сейчас.'=>'Anda tidak memiliki akun trading. Bukalah sebuah akun sekarang.',
+    'Добро пожаловать в личный кабинет трейдера. Для начала работы откройте торговый счет.'=>'Selamat datang di kabinet personal. Pertama sekali silahkan buka sebuah akun trading.',
+    'Для начала торговли пополните свой торговый счет.'=>'Untuk memulai trading, tambahkan dana ke akun trading Anda. ',
+    'На ваших торговых счетах мало средств. Пополните свои счета прямо сейчас.'=>'Dana pada akun trading Anda tidak cukup. Segera tambahkan dana ke akun trading Anda.',
+    'Соревнуйтесь с другими трейдерами в наших турнирах.'=>'Bersainglah dengan trader lainnya pada turnamen kami.',
+    'Добро пожаловать в личный кабинет. В личном кабинете вы можете управлять торговыми счетами, совершать операции ввода и вывода средств, принимать участие в акциях и турнирах, подключать новые услуги, и многое другое!'=>'Selamat datang di kabinet personal. Dengan kabinet personal, Anda dapat mengatur akun trading Anda, menjalankan operasi deposit dan penarikan, mengikuti promosi dan turnamen, menikmati layanan baru, dan masih banyak lainnya!',
+
+    'Dashboard' => 'Dasbor',
+    'Complete the cell phone verification in the "Certification of user"' => 'Lengkapi verifikasi ponsel dalam "Sertifikasi pengguna"'
+
 );
 

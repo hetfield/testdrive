@@ -62,7 +62,7 @@ return array(
     'Счёт' => 'Rekening',
     'Валюта' => 'Mata uang',
     'Мои торговые счета' => 'Rekening perdagangan saya',
-    'Добавить и аттестовать платежные реквизиты' => 'rincian pembayaran',
+    'Добавить и аттестовать платежные реквизиты' => 'Rincian pembayaran',
     'Балансовые операции' => 'Saldo operasi',
     'Конвертация валют ЛК' => 'Dompet pribadi saldo mata uang konversi',
     'Торговые операции' => 'Operai perdagangan',

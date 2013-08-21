@@ -62,7 +62,7 @@ return array(
     'Счёт' => 'Cuenta',
     'Валюта' => 'Moneda',
     'Мои торговые счета' => 'Mis cuentas de operaciones',
-    'Добавить и аттестовать платежные реквизиты' => 'datos de pago',
+    'Добавить и аттестовать платежные реквизиты' => 'Datos de pago',
     'Балансовые операции' => 'Operaciones de balance',
     'Конвертация валют ЛК' => 'Conversión de monedas del monedero personal',
     'Торговые операции' => 'Operaciones de trading',

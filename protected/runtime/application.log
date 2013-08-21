@@ -5998,3 +5998,22 @@ in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
 in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (280)
 in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (327)
 in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/21 10:47:07 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (74)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/21 10:47:13 [error] [php] require(C:\xampp\htdocs\yii-test\testdrive\protected\messages\pt\services.php): failed to open stream: No such file or directory (C:\xampp\htdocs\yii-test\testdrive\protected\controllers\ParserController.php:34)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#1 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#2 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#3 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/parser
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\ParserController.php (34)
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\ParserController.php (34)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/21 10:49:40 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (74)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/21 10:49:45 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (74)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)

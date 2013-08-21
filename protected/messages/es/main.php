@@ -21,6 +21,7 @@ return array(
     'Изменить' => 'Cambiar',
     'Со свопом' => 'Con swap',
     'Закрыть' => 'Cerrar',
+    'Новости' => 'Noticias',
     'Заявка на изменение статуса Swap-free успешно создана.' => 'La solicitud de cambio de Swap-free fue generado exitosamente. Por favor, asegúrese de no tener posiciones abiertas en esta cuenta de operaciones. Los cambios entrarán en vigor en 1 hora.',
     'Заявка на изменение кредитного плеча успешно отправлена.' => 'El cambio de apalancamiento fue enviado exitosamente. Por favor, asegúrese de no tener posiciones abiertas en esta cuenta de operaciones. Los cambios entrarán en vigor en 1 hora.',
     'Изменить плечо' => 'Cambio de apalancamiento',
@@ -38,7 +39,7 @@ return array(
     'Пожалуйста, загрузите Ваш документ' => 'Por favor, cargue su documento de identificación para poder efectuar certificación de su usuario durante un periodo de 10 días después de haberse registrado. En caso de que no se certifique su usuario en el periodo indicado, el ingreso a su Cabinet será bloqueado.',
     'Изменить пароль/данные' => 'Cambiar contraseña/información personal',
     'Скачать форму заявления на смену паролей/личных или контактных данных в формате PDF' => 'Descargar el formulario para el cambio de contraseña/información personal en formato PDF',
-    'Настройка интерфейса'=>'CONFIGURACIÓN DE LA INTERFAZ',
+    'Настройки'=>'Configuracion',
     'Изменить аватар'=>'Cambiar imagen',
     'Аватар' => 'Imagen de usuario',
     'Скрыть/Отобразить валюты ЛК'=>'Ocultar/Mostrar divisas del Cabinet Personal',
@@ -103,5 +104,15 @@ Los servicios y las condiciones de prestación que se describen en esta web vien
     'Если вы не мусульманин и хотите вести торговлю без начисления swap-пунктов, примите участие в нашей акции "Неделя без свопов!".' => 'Si usted no es musulmán y desea operar sin puntos swap, participe en nuestra promoción “¡Semana sin swaps!”.',
     'Ознакомиться с условиями акции' => 'Leer las condiciones de la promoción',
     'Change Password' => 'Cambiar contraseña',
+
+    'У вас нет ни одного торгового счета. Создайте счет прямо сейчас.'=>'Usted no posee ninguna cuenta de operaciones. Cree una cuenta ahora.',
+    'Добро пожаловать в личный кабинет трейдера. Для начала работы откройте торговый счет.'=>'Bienvenido al Cabinet personal del trader. Para comenzar a trabajar, abra una cuenta de operaciones. ',
+    'Для начала торговли пополните свой торговый счет.'=>'Para comenzar a operar, recargue su cuenta de operaciones.',
+    'На ваших торговых счетах мало средств. Пополните свои счета прямо сейчас.'=>'Cuenta con pocos fondos en sus cuentas de operaciones. Recargue sus cuentas ahora.',
+    'Соревнуйтесь с другими трейдерами в наших турнирах.'=>'Compita con otros traderes en nuestros torneos.',
+    'Добро пожаловать в личный кабинет. В личном кабинете вы можете управлять торговыми счетами, совершать операции ввода и вывода средств, принимать участие в акциях и турнирах, подключать новые услуги, и многое другое!'=>'Bienvenido al Cabinet personal. ¡En el Cabinet personal usted puede gestionar sus cuentas de operaciones, realizar ingresos y retiradas de fondos, participar en promociones y torneos, activar nuevos servicios y mucho más!',
+
+
+
 );
 

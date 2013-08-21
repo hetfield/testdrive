@@ -29,6 +29,7 @@ return array (
     'Ваши пожелания'=>'Cadangan anda',
     'Выйти' => 'Keluar',
     'Выход'=>'Keluar',
+    'Новости' => 'Berita',
     'Главная'=>'Muka utama',
     'Депозиты застрахованы'=>'Deposits are insured',
     'Документы'=>'Dokumen',
@@ -55,7 +56,7 @@ return array (
     'Мы в соц. сетях'=>'Cari kami di laman web',
     'На сайт MasterForex'=>'Pergi ke laman web MasterForex',
     'Напомнить позже' => '',
-    'Настройка интерфейса'=>'Setting antaramuka',
+    'Настройки'=>'Setting',
     'НАСТРОЙКА ИНТЕРФЕЙСА'=>'Setting antaramuka',
     'НАСТРОЙКА ИНТЕРФЕЙСА ЛИЧНОГО КАБИНЕТА'=>'TETAPAN ANTARAMUKA KABINET PERIBADI',
     'Настройка панели быстрого доступа'=>'Tetapan panel akses Pantas',
@@ -116,4 +117,12 @@ Perkhidmatan dengan syarat peruntukan yang dinyatakan di muka surat keempat lama
     'Если вы не мусульманин и хотите вести торговлю без начисления swap-пунктов, примите участие в нашей акции "Неделя без свопов!".' => 'Sekiranya anda bukan Muslim dan bercadang untuk berdagang tanpa swap, sila ambil bahagian di dalam tawaran promosi “Minggu Bebas-Swap!” kami.',
     'Ознакомиться с условиями акции' => 'Baca syarat-syarat promosi',
     'Change Password' => 'Tukar kata laluan',
+
+    'У вас нет ни одного торгового счета. Создайте счет прямо сейчас.'=>'Anda tidak mempunyai akaun dagangan.  Buka akaun sekarang.',
+    'Добро пожаловать в личный кабинет трейдера. Для начала работы откройте торговый счет.'=>'Selamat datang ke kabinet peribadi. Pertama kali, buka akaun dagangan.',
+    'Для начала торговли пополните свой торговый счет.'=>'Untuk memulakan dagangan, tambahkan dana ke akaun dagangan anda.',
+    'На ваших торговых счетах мало средств. Пополните свои счета прямо сейчас.'=>'Tidak ada dana di dalam akaun dagangan anda.  Tambahkan dana ke akaun dagangan anda sekarang.',
+    'Соревнуйтесь с другими трейдерами в наших турнирах.'=>'Bersaing dengan pedagang yang lain di dalam pertandingan anjuran kami.',
+    'Добро пожаловать в личный кабинет. В личном кабинете вы можете управлять торговыми счетами, совершать операции ввода и вывода средств, принимать участие в акциях и турнирах, подключать новые услуги, и многое другое!'=>'Selamat datang ke kabinet peribadi.  Dengan menggunakan kabinet peribadi anda boleh mengurus akaun dagangan anda, melakukan operasi deposit dan pengeluaran, menyertai promosi dan pertandingan, mengambil peluang ke atas perkhidmatan yang baru serta banyak lagi!',
+
 );

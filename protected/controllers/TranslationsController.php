@@ -167,6 +167,7 @@ class TranslationsController extends Controller
 //            $record->LangEn = $record->Key;
 //            $record->save();
 //        }
+//        /** @var Translations $record */
 //        $records = Translations::model()->findAllByAttributes(array('LangRu' => ''));
 //        foreach ($records as $record){
 //            $record->LangRu = $record->Key;

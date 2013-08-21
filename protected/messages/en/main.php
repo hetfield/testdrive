@@ -21,6 +21,7 @@ return array(
     'Изменить' => 'Change',
     'Со свопом' => 'With swap',
     'Закрыть' => 'Close',
+    'Новости' => 'News',
     'Заявка на изменение статуса Swap-free успешно создана.' => 'Swap-free status change request was generated successfully.',
     'Заявка на изменение кредитного плеча успешно отправлена.' => 'Credit leverage change request was submitted successfully.',
     'Изменить плечо' => 'Change leverage',
@@ -38,7 +39,7 @@ return array(
     'Пожалуйста, загрузите Ваш документ' => 'Please, upload your personal identification document for certification of user in 10 days period since the cabinet registration.  In case you fail to pass the user certification procedure in the period mentioned above, your personal cabinet will be blocked.',
     'Изменить пароль/данные' => 'Personal details and passwords modification',
     'Скачать форму заявления на смену паролей/личных или контактных данных в формате PDF' => 'Download the request form for password/personal or contact details change (PDF)',
-    'Настройка интерфейса'=>'INTERFACE SETTINGS',
+    'Настройки'=>'Settings',
     'Изменить аватар'=>'Change user picture',
     'Аватар' => 'User picture',
     'Скрыть/Отобразить валюты ЛК'=>'Show/Hide currencies',
@@ -106,6 +107,14 @@ Services with provision conditions set forth on pages of this website are provid
     'Change Password' => '',
 
     'You have no any trading accounts. <a href="{link}">Create new trading account right now.</a>' => '',
-    'Change password' => ''
+    'Change password' => '',
+    'У вас нет ни одного торгового счета. Создайте счет прямо сейчас.'=>'You have no trading accounts. Open an account right now.',
+    'Добро пожаловать в личный кабинет трейдера. Для начала работы откройте торговый счет.'=>'Welcome to the personal cabinet  First of all, open a trading account.  ',
+    'Для начала торговли пополните свой торговый счет.'=>'in order to start trading, add funds to your trading account. ',
+    'На ваших торговых счетах мало средств. Пополните свои счета прямо сейчас.'=>'Insufficient funds on your trading accounts.  Add funds to your trading accounts right now.',
+    'Соревнуйтесь с другими трейдерами в наших турнирах.'=>'Compete with other traders in our tournaments. ',
+    'Добро пожаловать в личный кабинет. В личном кабинете вы можете управлять торговыми счетами, совершать операции ввода и вывода средств, принимать участие в акциях и турнирах, подключать новые услуги, и многое другое!'=>'Welcome to the personal cabinet. Using the personal cabinet you can manage your trading accounts, carry out depositing and withdrawal operations, take part in promotions and tournaments, take advantage of new services and many more! ',
+
+
 );
 

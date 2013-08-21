@@ -1,5 +1,6 @@
 <?php
 return array(
+    'Sent SMS Code'=>'Mengirimkan kode SMS',
     'E-mail' => 'E-mail',
     'Спасибо, что связались с нами. Мы ответим Вам как можно скорее.' => 'Terima kasih telah menghubungi kami! Kami akan segera menjawab.',
     'Введите код' => 'Masukkan kode dari CAPTCHA',
@@ -75,7 +76,7 @@ return array(
     'Your country' => 'Negara asal Anda',
     'Your telephone number' => 'Telepon Anda',
     'Message or question' => 'Pesan atau pertanyaan',
-    'Ask for a call-back' => 'Permintaan layanan call back',
+    'Ask for a call-back' => 'Permintaan <span>layanan callback</span>',
     'LiveZilla Chat' => 'Chatting LiveZilla',
     'Call-back request' => 'Callback',
     'Your suggestions' => 'Buku saran',
@@ -88,7 +89,7 @@ return array(
     'Имя пользователя (логин)' => 'Login atau Nomor rekening MF',
     'Пароль для личного кабинета' => 'Password kabinet pribadi',
     'Регистрация нового клиента в личном кабинете' => 'Pendaftaran Klien baru di kabinet pribadi',
-    'Внимание! Доводим до вашего сведения, что MFX Broker не оказывает свои услуги гражданам США и Ирана. Открытие счетов, а также совершение торговых операций не разрешены всем гражданам США и Ирана. При возникновении вопросов, пожалуйста, обращайтесь в Отдел по работе с клиентами.' => 'Peringatan! Warga Amerika Serikat dan Iran tidak diizinkan untuk membuka akun dan melakukan perdagangan kami. Untuk pertanyaan lebih lanjut, silahkan, menghubungi <a href="https://cabinet.masterforex.org">departemen support kami</a>',
+    'При возникновении вопросов, пожалуйста, обращайтесь в Отдел по работе с клиентами.' => 'Untuk pertanyaan lebih lanjut, silahkan, menghubungi <a href="https://cabinet.masterforex.org">departemen support kami</a>',
     'Ввод средств'=>'Deposit dana',
     'Вывод средств'=>'Menarik dana',
     'Внутренние переводы'=>'Transfer internal',

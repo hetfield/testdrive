@@ -3,7 +3,7 @@
 return array (
 
     'Сервисы' => 'Services',
-
+    'Услуги' => 'Services',
     'Автоматическое пополнение счёта' => 'Automatic funds addition',
     'Подключенные счёта' => 'Accounts subscribed to the service',
     'Счёт' => 'Account',

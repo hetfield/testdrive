@@ -3,7 +3,7 @@
 return array (
 
     'Сервисы' => 'Layanan',
-
+    'Услуги' => 'Layanan',
     'Автоматическое пополнение счёта' => 'Penambahan dana otomatis',
     'Подключенные счёта' => 'Akun terdaftar pada layanan',
     'Счёт' => 'Akun',

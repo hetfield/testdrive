@@ -116,7 +116,10 @@ return array (
     'Если вы не мусульманин и хотите вести торговлю без начисления swap-пунктов, примите участие в нашей акции "Неделя без свопов!".' => '',
     'Ознакомиться с условиями акции' => '',
     'Настройка оповещений' => '',
-
+    'Dashboard' => 'Рабочий стол',
+    'Change Password' => 'Смена пароля',
     'You have no any trading accounts. <a href="{link}">Create new trading account right now.</a>' => 'У Вас нет торговых счетов. <a href="{link}">Откройте счёт прямо сейчас.</a>',
-    'Change password' => 'Смена пароля'
+
+    'Change password' => 'Смена пароля',
+    'Complete the cell phone verification in the "Certification of user"' => 'Пройдите верификацию сотового телефона в разделе "Аттестация пользователя"'
 );

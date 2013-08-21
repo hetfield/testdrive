@@ -67,7 +67,7 @@ return array (
     'Валюта'=>'Matawang',
     'Входящие'=>'Peti masuk',
     'Выберите торговый счет'=>'Pilih akaun dagangan',
-    'Добавить и аттестовать платежные реквизиты'=>'pengesahan pembayaran',
+    'Добавить и аттестовать платежные реквизиты'=>'Pengesahan pembayaran',
     'Закрыть'=>'Tutup',
     'История торговых операций'=>'Sejarah operasi dagangan',
     'Калькулятор трейдера'=>'Kalkulator pedagang',

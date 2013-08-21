@@ -131,6 +131,7 @@ $this->breadcrumbs = array(
             'notice' => 'notice',
             'notify' => 'notify',
             'other' => 'other',
+            'pamm' => 'pamm',
             'partner' => 'partner',
             'requests' => 'requests',
             'services' => 'services',

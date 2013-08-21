@@ -39,6 +39,7 @@ class Translations extends CActiveRecord
         'notice' => 'notice',
         'notify' => 'notify',
         'other' => 'other',
+        'pamm' => 'pamm',
         'partner' => 'partner',
         'registration' => 'registration',
         'requests' => 'requests',

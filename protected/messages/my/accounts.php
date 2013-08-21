@@ -22,4 +22,31 @@ return array (
   'Стандарт' => 'Standard',
         'Contest' => 'Contest',
         'CFD' => '',
+
+    'infoМикро' => 'Adakah anda ingin berdagang Forex, tetapi takut untuk melabur lebih?
+Atau anda perlu menguji strategi dagangan dengan pelaburan yang minimum?
+Jika demikian, ini adalah jenis akaun yang sesuai untuk anda.
+Deposit minimum hanya 1 USD.
+',
+    'infoСтандарт' => 'Anda seorang pedagang berpengalaman dengan pengetahuan pasaran, tetapi anda biasa menggunakan skim dagangan klasik, bukan?
+Buka akaun Standard, gunakan pengetahuan dan pengalaman anda berdagang dalam suasana yang anda biasa.
+Deposit minimum hanya 100 USD.
+',
+    'infoMetaTrader5' => 'Anda berminat dengan inovasi dan ingin mencuba produk terbaru pasaran Forex.  Cubalah platform dagangan MetaTrader5, mungkin ia adalah kunci kepada kejayaan anda!
+Deposit minimum hanya 100 USD.
+',
+    'infoMetaTrader5 Demo' => '',
+
+    'infoStrict' => 'Anda biasanya bertindak balas dengan pasaran yang turun naik walaupun sedikit. Adakah strategi dagangan anda sesuai dengan persepuluh mata? Strict sesuai untuk anda. Kuota 5 digit angka memberikan anda kawalan sepenuhnya ke atas pasaran!',
+    'infoECN' => 'Adakah anda tahu apakah pelaksanaan pasaran dan Tahap 2? Adakah anda tertarik dengan pasaran mata wang asing antara-bank? Buka akaun ECN, gunakan pengetahuan anda seperti lazimnya di platform MetaTrader4. ',
+    'infoCFD' => 'Adakah anda ini berdagang dengan saham CFD, komoditi dan indeks?  Akaun CFD adalah yang anda perlukan. ',
+    'Подробные условия' => 'Syarat-syarat terperinci',
+
+    'Micro' => 'Mikro',
+    'Standard' => 'Standard',
+    'MT5' => 'MT5',
+    'Strict' => 'Strict',
+    'ECN' => 'ECN',
+    'CFD' => 'CFD',
+
 );
