@@ -165,13 +165,17 @@ class TranslationsController extends Controller
 //        $records = Translations::model()->findAllByAttributes(array('LangEn' => ''));
 //        foreach ($records as $record){
 //            $record->LangEn = $record->Key;
-//            $record->save();
+//            if (!$record->save()){
+//                var_dump(1);
+//            }
 //        }
 //        /** @var Translations $record */
 //        $records = Translations::model()->findAllByAttributes(array('LangRu' => ''));
 //        foreach ($records as $record){
 //            $record->LangRu = $record->Key;
-//            $record->save();
+//            if (!$record->save()){
+//                var_dump(1);
+//            }
 //        }
 //    }
 
