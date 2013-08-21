@@ -6017,3 +6017,12 @@ in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
 2013/08/21 10:49:45 [error] [application] Started
 in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (74)
 in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/21 11:22:09 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (74)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/21 11:39:38 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (74)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/21 11:39:50 [warning] [application] Failed to set unsafe attribute "textField" of "Translations".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TranslationsController.php (96)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
