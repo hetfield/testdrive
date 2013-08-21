@@ -25,6 +25,7 @@ class Translations extends CActiveRecord
     public $form;
     public $textField;
     public $Category;
+    public $Key;
 
     public $CategoryNames = array(
         'accounts' => 'accounts',
@@ -85,11 +86,10 @@ class Translations extends CActiveRecord
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
             array('ID, Category, Key, LangRu, LangEn, LangAr, LangId, LangEs, LangMy, LangCn, LangAz', 'safe', 'on'=>'search'),
-            array('textField', 'required'),
+            array('Key', 'required'),
         );
     }
 
@@ -102,8 +102,4 @@ class Translations extends CActiveRecord
     {
         return $this->CategoryNames[$this->CategoryNames];
     }
-
-
-
-
 }

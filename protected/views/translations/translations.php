@@ -94,6 +94,7 @@ $this->breadcrumbs = array(
 <?php if (Yii::app()->user->hasFlash('error')) : ?>
     <div class="flash-error">
         <?= Yii::app()->user->getFlash('error'); ?>
+        <?= Yii::app()->user->getFlash('Berror'); ?>
     </div>
 <?php endif; ?>
 
