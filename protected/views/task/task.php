@@ -163,7 +163,7 @@ $this->breadcrumbs=array(
     <div class="row buttons">
         <?php $this->widget('bootstrap.widgets.TbButton', array(
             'buttonType'=>'submit',
-            'label'=>'Send',
+            'label'=>'Next',
             'type'=>'primary', // null, 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
             'size'=>'small', // null, 'large', 'small' or 'mini'
         )); ?>

@@ -30,7 +30,11 @@ class SiteController extends Controller
 
         /** @var UserAccounts $table */
 
-
+        if (Yii::app()->user->isGuest){
+            $this->redirect(Yii::app()->createUrl('site/login'));
+        } else {
+            $this->redirect(Yii::app()->createUrl('translations/index'));
+        }
 //        $table = new Users();
 //        $table->Username = 'e.fentisov';
 //        $table->Password = crypt('e.fentisov', 'newsaltfortest');

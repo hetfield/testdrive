@@ -6218,3 +6218,26 @@ in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
 2013/08/21 12:46:37 [warning] [application] Failed to set unsafe attribute "textField" of "Translations".
 in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TranslationsController.php (95)
 in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/22 09:02:23 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (74)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/22 09:02:36 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (74)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/22 09:02:43 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (74)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/22 09:04:48 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadar".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (280)
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (302)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/22 09:05:35 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadar".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (280)
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (302)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/22 09:10:01 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (74)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/22 09:10:06 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (74)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
