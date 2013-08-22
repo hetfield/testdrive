@@ -1,14 +1,4 @@
 <?php
-//Yii::import('ext.imperavi-redactor-widget.ImperaviRedactorWidget');
-
-//Yii::app()->clientScript->registerScript('adjust_currencies_ready', <<<JS
-//
-//$('.languages label.check input[checked=checked]').parent().addClass("active");
-//JS
-//    , CClientScript::POS_READY);
-//
-//
-
 $this->pageTitle=Yii::app()->name . ' - Task';
 $this->breadcrumbs=array(
     'Task',
@@ -57,7 +47,6 @@ $this->breadcrumbs=array(
             'd.kulagin@mfxbroker.com,Денис Кулагин' => 'Денис Кулагин',
             's.maslov@mfxbroker.com,Степа Маслов' => 'Степа Маслов',
             'e.fentisov@mfxbroker.com,Егор Финтисов' => 'Егор Финтисов',
-            'translations@mfxbroker.com' => 'Робот'
         )); ?>
     </div>
     <br>

@@ -44,41 +44,33 @@ class UploadtaskController extends Controller
 
                     $mailArray = array(
                         'ar' => array(
-                            'email' => 'translations@mfxbroker.com',
+                            'email' => 'ahmedsaied44@gmail.com',
                             'name' => 'Mado Saied'
                         ),
                         'en' => array(
-                            'email' => 'translations@mfxbroker.com',
+                            'email' => 'e.fentisov@mfxbroker.com',
                             'name' => 'Егор Фентисов'
                         ),
-//                        'ar' => array(
-//                            'email' => 'ahmedsaied44@gmail.com',
-//                            'name' => 'Mado Saied'
-//                        ),
-//                        'en' => array(
-//                            'email' => 'e.fentisov@mfxbroker.com',
-//                            'name' => 'Егор Фентисов'
-//                        ),
-//                        'es' => array(
-//                            'email' => 'iria_me9@hotmail.com',
-//                            'name' => 'Iria Martinez Espinar'
-//                        ),
-//                        'cn' => array(
-//                            'email' => 'huayu@masterforex.org',
-//                            'name' => 'huayu@masterforex.org',
-//                        ),
-//                        'my' => array(
-//                            'email' => 'kamnfx@gmail.com',
-//                            'name' => 'Jeff Nash'
-//                        ),
-//                        'id' => array(
-//                            'email' => 'juliana_djulie@yahoo.com',
-//                            'name' => 'Juliana Saja'
-//                        ),
-//                        'az' => array(
-//                            'email' => '',
-//                            'name' => ''
-//                        ),
+                        'es' => array(
+                            'email' => 'iria_me9@hotmail.com',
+                            'name' => 'Iria Martinez Espinar'
+                        ),
+                        'cn' => array(
+                            'email' => 'huayu@masterforex.org',
+                            'name' => 'huayu@masterforex.org',
+                        ),
+                        'my' => array(
+                            'email' => 'kamnfx@gmail.com',
+                            'name' => 'Jeff Nash'
+                        ),
+                        'id' => array(
+                            'email' => 'juliana_djulie@yahoo.com',
+                            'name' => 'Juliana Saja'
+                        ),
+                        'az' => array(
+                            'email' => '',
+                            'name' => ''
+                        ),
                     );
 
                     include (Yii::app()->basePath.'/components/Phpmailer.php');
@@ -113,8 +105,8 @@ class UploadtaskController extends Controller
                                     'my' => 'LangMy',
                                     'id' => 'LangId',
                                 );
-                                $phpMailer->Body    = 'Hello! <br>Please translate text with title "'.$task->Title.'" and Text Id = '.$task->ID.'. Deadline: '.$deadline->$deadlineKey[$translator].'. <br>You can do this on website <a href="http://translations.masterforex.com/">http://translations.masterforex.com/</a>.<br>Thank you!';
-                                $phpMailer->AltBody = 'Hello! Please translate text with title "'.$task->Title.'" and Text Id = '.$task->ID.'. Deadline: '.$deadline->$deadlineKey[$translator].'. You can do this on website http://translations.masterforex.com/. Thank you!';
+                                $phpMailer->Body    = 'Hello! <br>Please translate text with title "'.$task->Title.'" and Text Id = '.$task->ID.'. Deadline: '.$deadline->$deadlineKey[$translator].'. <br>You can do this on website <a href="http://translations.masterforex.com/">http://translations.masterforex.com/</a> in section Text Translation. <br>Thank you!';
+                                $phpMailer->AltBody = 'Hello! Please translate text with title "'.$task->Title.'" and Text Id = '.$task->ID.'. Deadline: '.$deadline->$deadlineKey[$translator].'. You can do this on website http://translations.masterforex.com/ in section Text Translation. Thank you!';
                             } else {
                                 $deadlineKey = array(
                                     'en' => 'LangEn',
@@ -122,8 +114,8 @@ class UploadtaskController extends Controller
                                     'es' => 'LangEs',
                                     'az' => 'LangAz',
                                 );
-                                $phpMailer->Body    = 'Добрый день!<br>Просьба перевести тест c заголовком "'.$task->Title.'" и Text Id = '.$task->ID.' до '.$deadline->$deadlineKey[$translator].' на сайте <a href="http://translations.masterforex.com/">http://translations.masterforex.com/</a>.<br>Спасибо!';
-                                $phpMailer->AltBody = 'Добрый день! Просьба перевести тест c заголовком "'.$task->Title.'" и Text Id = '.$task->ID.' до '.$deadline->$deadlineKey[$translator].' на сайте http://translations.masterforex.com/. Спасибо!';
+                                $phpMailer->Body    = 'Добрый день!<br>Просьба перевести тест c заголовком "'.$task->Title.'" и Text Id = '.$task->ID.' до '.$deadline->$deadlineKey[$translator].' на сайте <a href="http://translations.masterforex.com/">http://translations.masterforex.com/</a> в разделе Text Translation.<br>Спасибо!';
+                                $phpMailer->AltBody = 'Добрый день! Просьба перевести тест c заголовком "'.$task->Title.'" и Text Id = '.$task->ID.' до '.$deadline->$deadlineKey[$translator].' на сайте http://translations.masterforex.com/ в разделе Text Translation. Спасибо!';
                             }
 
                             /** @var Uploadtask $fileName */
