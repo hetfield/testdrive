@@ -6241,3 +6241,6 @@ in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
 2013/08/22 09:10:06 [error] [application] Started
 in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (74)
 in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/22 09:28:37 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
