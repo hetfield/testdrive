@@ -56,7 +56,7 @@
                         ),
                     ),
                     //array('label' => 'User Management', 'url' => array('/users/index'), 'visible' => (Yii::app()->user->getState('Role') == 'A')),
-                    array('label' => 'Upload Task', 'url' => array('/uploadtask/index'), 'visible' => (Yii::app()->user->getState('Role') == 'A')),
+                    //array('label' => 'Upload Task', 'url' => array('/uploadtask/index'), 'visible' => (Yii::app()->user->getState('Role') == 'A')),
                     array('label' => 'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest),
 
                 ),
