@@ -6244,3 +6244,158 @@ in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
 2013/08/22 09:28:37 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadtask".
 in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
 in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/22 10:41:19 [warning] [application] Failed to set unsafe attribute "Languages" of "UsersForm".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UsersController.php (45)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/22 10:43:56 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadmy".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (294)
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (336)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/22 10:43:56 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php:247)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): TextstatustranslationsController->actionUploadmy()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): TextstatustranslationsController->runAction()
+#3 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): TextstatustranslationsController->runActionWithFilters()
+#4 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): TextstatustranslationsController->run()
+#5 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/textstatustranslations/uploadmy/id/1
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (247)
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (303)
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (336)
+2013/08/22 10:46:16 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/22 10:48:12 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/22 10:49:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tusers".' in C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController('tusers')
+#1 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/tusers
+---
+2013/08/22 10:50:06 [warning] [application] Failed to set unsafe attribute "Languages" of "UsersForm".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UsersController.php (45)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/22 10:50:58 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadar".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (294)
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (316)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/22 10:51:24 [warning] [application] Failed to set unsafe attribute "Languages" of "UsersForm".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UsersController.php (45)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/22 10:52:03 [warning] [application] Failed to set unsafe attribute "Document" of "Uploaden".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (294)
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (321)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/22 10:52:40 [warning] [application] Failed to set unsafe attribute "Languages" of "UsersForm".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UsersController.php (45)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/22 10:53:14 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadid".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (294)
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (341)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/22 10:53:47 [warning] [application] Failed to set unsafe attribute "Languages" of "UsersForm".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UsersController.php (45)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/22 10:54:24 [warning] [application] Failed to set unsafe attribute "Document" of "Uploades".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (294)
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (326)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/22 10:54:52 [warning] [application] Failed to set unsafe attribute "Languages" of "UsersForm".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UsersController.php (45)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/22 10:55:22 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadmy".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (294)
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (336)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/22 10:56:58 [warning] [application] Failed to set unsafe attribute "Languages" of "UsersForm".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UsersController.php (45)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/22 10:57:45 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadcn".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (294)
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (331)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/22 10:57:45 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php:244)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): TextstatustranslationsController->actionUploadcn()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): TextstatustranslationsController->runAction()
+#3 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): TextstatustranslationsController->runActionWithFilters()
+#4 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): TextstatustranslationsController->run()
+#5 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/textstatustranslations/uploadcn/id/16
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (244)
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (303)
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (331)
+2013/08/22 11:00:25 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadcn".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (295)
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (332)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/22 11:01:15 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadcn".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (295)
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (332)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/22 11:02:07 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadcn".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (294)
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (331)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/22 11:08:58 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadcn".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (295)
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (332)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/22 11:13:21 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadcn".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (295)
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (332)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/22 11:14:48 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadcn".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (294)
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (331)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/22 11:16:33 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadcn".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (295)
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (332)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/22 11:19:34 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadcn".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (296)
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (333)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/22 11:21:01 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadcn".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (295)
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (332)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/22 11:23:46 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadcn".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (294)
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (331)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/22 11:24:57 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadcn".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (294)
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (331)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/22 11:26:50 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadcn".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (295)
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (332)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/22 11:27:50 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadcn".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (295)
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (332)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/22 11:29:55 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadcn".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (295)
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (332)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/22 11:31:39 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadcn".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (294)
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (331)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/22 11:33:36 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadcn".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (294)
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (331)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)

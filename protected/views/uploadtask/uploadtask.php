@@ -67,8 +67,8 @@ $files = Uploadtask::model()->findAll();
     <br>
 
 <?php
-/** @var Uploadtask $file */
-foreach ($files as $file){
-    echo '<p><a href="'.Yii::app()->createUrl('uploadtask/download', array('document' => $file->Document)).'">'.$file->Document.'</a></p>';
-}
+///** @var Uploadtask $file */
+//foreach ($files as $file){
+//    echo '<p><a href="'.Yii::app()->createUrl('uploadtask/download', array('document' => $file->Document)).'">'.$file->Document.'</a></p>';
+//}
 ?>

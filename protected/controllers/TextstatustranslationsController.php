@@ -240,24 +240,24 @@ class TextstatustranslationsController extends Controller
 
             $path = Yii::app()->basePath.'\translations\\';
 
-            $tr = Uploadar::model()->findByPk($textId);
-            if (file_exists($path.$tr->Document))
-                $phpMailer->AddAttachment($path.$tr->Document, $tr->Document);
-            $tr = Uploaden::model()->findByPk($textId);
-            if (file_exists($path.$tr->Document))
-                $phpMailer->AddAttachment($path.$tr->Document, $tr->Document);
-            $tr = Uploades::model()->findByPk($textId);
-            if (file_exists($path.$tr->Document))
-                $phpMailer->AddAttachment($path.$tr->Document, $tr->Document);
-            $tr = Uploadid::model()->findByPk($textId);
-            if (file_exists($path.$tr->Document))
-                $phpMailer->AddAttachment($path.$tr->Document, $tr->Document);
-            $tr = Uploadmy::model()->findByPk($textId);
-            if (file_exists($path.$tr->Document))
-                $phpMailer->AddAttachment($path.$tr->Document, $tr->Document);
-            $tr = Uploadcn::model()->findByPk($textId);
-            if (file_exists($path.$tr->Document))
-                $phpMailer->AddAttachment($path.$tr->Document, $tr->Document);
+            $tr = Uploadar::model()->findByAttributes(array('TextId' => $textId));
+            if (is_file($path.$textId.'\\'.$tr->Document))
+                $phpMailer->AddAttachment($path.$textId.'\\'.$tr->Document, $tr->Document);
+            $tr = Uploaden::model()->findByAttributes(array('TextId' => $textId));
+            if (is_file($path.$textId.'\\'.$tr->Document))
+                $phpMailer->AddAttachment($path.$textId.'\\'.$tr->Document, $tr->Document);
+            $tr = Uploades::model()->findByAttributes(array('TextId' => $textId));
+            if (is_file($path.$textId.'\\'.$tr->Document))
+                $phpMailer->AddAttachment($path.$textId.'\\'.$tr->Document, $tr->Document);
+            $tr = Uploadid::model()->findByAttributes(array('TextId' => $textId));
+            if (is_file($path.$textId.'\\'.$tr->Document))
+                $phpMailer->AddAttachment($path.$textId.'\\'.$tr->Document, $tr->Document);
+            $tr = Uploadmy::model()->findByAttributes(array('TextId' => $textId));;
+            if (is_file($path.$textId.'\\'.$tr->Document))
+                $phpMailer->AddAttachment($path.$textId.'\\'.$tr->Document, $tr->Document);
+            $tr = Uploadcn::model()->findByAttributes(array('TextId' => $textId));
+            if (is_file($path.$textId.'\\'.$tr->Document))
+                $phpMailer->AddAttachment($path.$textId.'\\'.$tr->Document, $tr->Document);
 
 
             $customer = explode(',', $translations->Customer);
@@ -298,7 +298,7 @@ class TextstatustranslationsController extends Controller
             $model->TextId = $id;
             if ($model->validate()){
                 $model->Document->saveAs($path.$id.'_'.$lang.'.'.$docName[$parts-1]);
-                $model->Document = $id.'id_'.$lang.'.'.$docName[$parts-1];
+                $model->Document = $id.'_'.$lang.'.'.$docName[$parts-1];
                 $model->save();
                 $this->changeStatusText($id,$lang,2);
                 $this->redirect(Yii::app()->createUrl("textstatustranslations/index"));
