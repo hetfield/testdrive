@@ -39,7 +39,7 @@ class TextStatusTranslations extends CActiveRecord
         $criteria->compare('StatusId',$this->StatusId,true);
         $criteria->compare('StatusAr',$this->StatusAr,true);
         $criteria->compare('StatusAz',$this->StatusAz,true);
-        $criteria->compare('Status',$this->Status,true);
+        $criteria->compare('Status','<2',true);
 
         return new CActiveDataProvider(get_class($this), array(
             'criteria'=>$criteria,
