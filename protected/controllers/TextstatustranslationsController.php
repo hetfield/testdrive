@@ -283,7 +283,7 @@ class TextstatustranslationsController extends Controller
             $parts = count($docName);
             $model->TextId = $id;
             if ($model->validate()){
-                $model->Document->saveAs($path.$id.'id_'.$lang.'.'.$docName[$parts-1]);
+                $model->Document->saveAs($path.$id.'_'.$lang.'.'.$docName[$parts-1]);
                 $model->Document = $id.'id_'.$lang.'.'.$docName[$parts-1];
                 $model->save();
                 $this->changeStatusText($id,$lang,2);
