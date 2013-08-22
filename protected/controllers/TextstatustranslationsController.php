@@ -236,15 +236,29 @@ class TextstatustranslationsController extends Controller
             /** @var TextTranslations $translations */
             $translations = TextTranslations::model()->findByPk($textId);
 
-            $phpMailer->Body    = 'Переводы которые были Вами заказаны:<br><br>
-                Текст на английском языке:<br><br>'.htmlspecialchars_decode($translations->LangEn).'<br><br>
-                Текст на испанском языке:<br><br>'.htmlspecialchars_decode($translations->LangEs).'<br><br>
-                Текст на китайском языке:<br><br>'.htmlspecialchars_decode($translations->LangCn).'<br><br>
-                Текст на малазийском языке:<br><br>'.htmlspecialchars_decode($translations->LangMy).'<br><br>
-                Текст на индонезийском языке:<br><br>'.htmlspecialchars_decode($translations->LangId).'<br><br>
-                Текст на арабском языке:<br><br>'.htmlspecialchars_decode($translations->LangAr).'<br><br>
-                Текст на азербайджанском:<br><br>'.htmlspecialchars_decode($translations->LangAz).'<br><br>
-            ';
+            $phpMailer->Body    = 'Переводы которые были Вами заказаны во вложениях';
+
+            $path = Yii::app()->basePath.'\translations\\';
+
+            $tr = Uploadar::model()->findByPk($textId);
+            if (file_exists($path.$tr->Document))
+                $phpMailer->AddAttachment($path.$tr->Document, $tr->Document);
+            $tr = Uploaden::model()->findByPk($textId);
+            if (file_exists($path.$tr->Document))
+                $phpMailer->AddAttachment($path.$tr->Document, $tr->Document);
+            $tr = Uploades::model()->findByPk($textId);
+            if (file_exists($path.$tr->Document))
+                $phpMailer->AddAttachment($path.$tr->Document, $tr->Document);
+            $tr = Uploadid::model()->findByPk($textId);
+            if (file_exists($path.$tr->Document))
+                $phpMailer->AddAttachment($path.$tr->Document, $tr->Document);
+            $tr = Uploadmy::model()->findByPk($textId);
+            if (file_exists($path.$tr->Document))
+                $phpMailer->AddAttachment($path.$tr->Document, $tr->Document);
+            $tr = Uploadcn::model()->findByPk($textId);
+            if (file_exists($path.$tr->Document))
+                $phpMailer->AddAttachment($path.$tr->Document, $tr->Document);
+
 
             $customer = explode(',', $translations->Customer);
             $phpMailer->AddAddress($customer[0], $customer[1]);
@@ -331,4 +345,17 @@ class TextstatustranslationsController extends Controller
     {
         $this->uploadTranslation('Uploadaz',$_POST,$_GET,'az','uploadaz');
     }
+
+//    public function AddAttachment($id, $lang)
+//    {
+//        $fileDoc = '.doc';
+//        $fileDocx = '.docx';
+//        $path = Yii::app()->basePath.'\translations';
+//        $file = $path.'\\'.$id.'\\'.$id.'_'.$lang;
+//        $fileName = $id.'_'.$lang;
+//        if (file_exists($file.$fileDocx))
+//            $phpMailer->AddAttachment($file.$fileDocx, $fileName.$fileDocx);
+//        if (file_exists($file.$fileDoc))
+//            $phpMailer->AddAttachment($file.$fileDoc, $fileName.$fileDoc);
+//    }
 }
