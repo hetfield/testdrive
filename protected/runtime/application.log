@@ -6555,3 +6555,36 @@ in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
 2013/08/26 12:36:59 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadtask".
 in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
 in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/26 12:59:45 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/26 13:00:21 [warning] [application] Failed to set unsafe attribute "Languages" of "UsersForm".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UsersController.php (45)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/26 13:00:56 [warning] [application] Failed to set unsafe attribute "Document" of "Uploaden".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (404)
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (431)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/26 13:01:28 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadar".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (404)
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (426)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/26 13:01:28 [error] [php] Illegal string offset 'email' (C:\xampp\htdocs\yii-test\testdrive\protected\components\Mailer.php:30)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php(426): TextstatustranslationsController->uploadTranslation()
+#1 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): TextstatustranslationsController->actionUploadar()
+#2 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): TextstatustranslationsController->runAction()
+#4 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): TextstatustranslationsController->runActionWithFilters()
+#5 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): TextstatustranslationsController->run()
+#6 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/textstatustranslations/uploadar/id/8
+in C:\xampp\htdocs\yii-test\testdrive\protected\components\Mailer.php (30)
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (312)
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (413)
+2013/08/26 13:04:13 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadar".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (406)
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (428)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)

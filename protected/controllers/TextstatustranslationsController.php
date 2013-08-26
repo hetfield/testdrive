@@ -236,76 +236,81 @@ class TextstatustranslationsController extends Controller
             }
         }
 
-//        var_dump($textToArray,$i, $textId);die;
 
         if ($countTextTo == $i){
 
             $changeStatus->Status = 2;
+
             //отправка письма заказчику
-            include_once (realpath(dirname(__FILE__).'/../components/Phpmailer.php'));
+            include_once (realpath(dirname(__FILE__).'/../components/Mailer.php'));
             include_once (realpath(dirname(__FILE__).'/../components/Smtp.php'));
 
-            $phpMailer = new PHPMailer();
-
-            $phpMailer->CharSet="utf8";
-            $phpMailer->IsSMTP();
-            $phpMailer->Port       = 587;
-            $phpMailer->SMTPSecure = true;
-            $phpMailer->Host = 'smtp.mfxbroker.com';//'smtp.mfxbroker.com';
-            $phpMailer->Username = 'translations@mfxbroker.com';                            // SMTP username
-            $phpMailer->Password = 'aiutsraghuy545#';                           // SMTP password
-            $phpMailer->SMTPSecure = 'tls';
-            $phpMailer->SMTPAuth   = true;
-            $phpMailer->From = 'translations@mfxbroker.com';
-            $phpMailer->FromName = 'MasterForex';
-            $phpMailer->IsHTML(true);
-            $phpMailer->Subject = 'Переводы готовы по Text Id = '.$textId;
-
-            /** @var TextTranslations $translations */
-            $translations = $getTextTo;
-
-            $phpMailer->Body    = 'Переводы которые были Вами заказаны во вложениях';
-
+            $mailer = new Mailer();
+            $subject = 'Переводы готовы по Text Id = '.$textId;
+            $body    = 'Переводы которые были Вами заказаны во вложениях';
             $path = Yii::app()->basePath.'\translations\\';
-
+            $attachments = array();
             foreach ($textToArray as $value){
                 switch ($value){
                     case 'en':
                         $tr = Uploaden::model()->findByAttributes(array('TextId' => $textId));
-                        if (is_file($path.$textId.'\\'.$tr->Document)) $phpMailer->AddAttachment($path.$textId.'\\'.$tr->Document, $tr->Document);
+                        if (is_file($path.$textId.'\\'.$tr->Document)) $attachments[] = $attachments + array(
+                            'path' => $path.$textId.'\\'.$tr->Document,
+                            'file' => $tr->Document,
+                        );
                         break;
                     case 'es':
                         $tr = Uploades::model()->findByAttributes(array('TextId' => $textId));
-                        if (is_file($path.$textId.'\\'.$tr->Document)) $phpMailer->AddAttachment($path.$textId.'\\'.$tr->Document, $tr->Document);
+                        if (is_file($path.$textId.'\\'.$tr->Document)) $attachments[] = $attachments + array(
+                                'path' => $path.$textId.'\\'.$tr->Document,
+                                'file' => $tr->Document,
+                            );
                         break;
                     case 'cn':
                         $tr = Uploadcn::model()->findByAttributes(array('TextId' => $textId));
-                        if (is_file($path.$textId.'\\'.$tr->Document)) $phpMailer->AddAttachment($path.$textId.'\\'.$tr->Document, $tr->Document);
+                        if (is_file($path.$textId.'\\'.$tr->Document)) $attachments[] = $attachments + array(
+                                'path' => $path.$textId.'\\'.$tr->Document,
+                                'file' => $tr->Document,
+                            );
                         break;
                     case 'my':
                         $tr = Uploadmy::model()->findByAttributes(array('TextId' => $textId));
-                        if (is_file($path.$textId.'\\'.$tr->Document)) $phpMailer->AddAttachment($path.$textId.'\\'.$tr->Document, $tr->Document);
+                        if (is_file($path.$textId.'\\'.$tr->Document)) $attachments[] = $attachments + array(
+                                'path' => $path.$textId.'\\'.$tr->Document,
+                                'file' => $tr->Document,
+                            );
                         break;
                     case 'id':
                         $tr = Uploadid::model()->findByAttributes(array('TextId' => $textId));
-                        if (is_file($path.$textId.'\\'.$tr->Document)) $phpMailer->AddAttachment($path.$textId.'\\'.$tr->Document, $tr->Document);
+                        if (is_file($path.$textId.'\\'.$tr->Document)) $attachments[] = $attachments + array(
+                                'path' => $path.$textId.'\\'.$tr->Document,
+                                'file' => $tr->Document,
+                            );
                         break;
                     case 'ar':
                         $tr = Uploadar::model()->findByAttributes(array('TextId' => $textId));
-                        if (is_file($path.$textId.'\\'.$tr->Document)) $phpMailer->AddAttachment($path.$textId.'\\'.$tr->Document, $tr->Document);
+                        if (is_file($path.$textId.'\\'.$tr->Document)) $attachments[] = $attachments + array(
+                                'path' => $path.$textId.'\\'.$tr->Document,
+                                'file' => $tr->Document,
+                            );
                         break;
                     case 'az':
                         $tr = Uploadaz::model()->findByAttributes(array('TextId' => $textId));
-                        if (is_file($path.$textId.'\\'.$tr->Document)) $phpMailer->AddAttachment($path.$textId.'\\'.$tr->Document, $tr->Document);
+                        if (is_file($path.$textId.'\\'.$tr->Document)) $attachments[] = $attachments + array(
+                                'path' => $path.$textId.'\\'.$tr->Document,
+                                'file' => $tr->Document,
+                            );
                         break;
                 }
             }
-
-
-            $customer = explode(',', $translations->Customer);
-            $phpMailer->AddAddress($customer[0], $customer[1]);
-
-            $phpMailer->Send();
+            $customer = explode(',', $getTextTo->Customer);
+            $addresses = array(
+                array(
+                    'email' => $customer[0],
+                    'name' => $customer[1],
+                ),
+            );
+            $mailer->NewMail($subject,$addresses,$body, '',$attachments);
         }
         $changeStatus->save();
     }
