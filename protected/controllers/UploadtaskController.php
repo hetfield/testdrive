@@ -30,13 +30,15 @@ class UploadtaskController extends Controller
             $path = Yii::app()->basePath.'\documents\\';
             $model->attributes=$_POST[$modelName];
             $model->Document = CUploadedFile::getInstance($model,'Document');
+            $docName = explode('.',CUploadedFile::getInstance($model,'Document'));
+            $parts = count($docName);
             $model->TextId = $id;
             if ($model->validate()){
                 try {
                     if (!$model->save()){
                         throw new CException('Error during file saving.');
                     }
-                    $model->Document->saveAs($path.$model->Document);
+                    $model->Document->saveAs($path.$id.'.'.$docName[$parts-1]);
 
                     /** @var TextTranslations $task */
                     $task = TextTranslations::model()->findByPk($id);
@@ -44,77 +46,53 @@ class UploadtaskController extends Controller
 
                     $mailArray = array(
                         'ar' => array(
-                            'email' => 'translations@mfxbroker.com',
+                            'email' => 'ahmedsaied44@gmail.com',
                             'name' => 'Mado Saied'
                         ),
                         'en' => array(
-                            'email' => 'translations@mfxbroker.com',
+                            'email' => 'e.fentisov@mfxbroker.com',
                             'name' => 'Егор Фентисов'
                         ),
-//                        'ar' => array(
-//                            'email' => 'ahmedsaied44@gmail.com',
-//                            'name' => 'Mado Saied'
-//                        ),
-//                        'en' => array(
-//                            'email' => 'e.fentisov@mfxbroker.com',
-//                            'name' => 'Егор Фентисов'
-//                        ),
-//                        'es' => array(
-//                            'email' => 'iria_me9@hotmail.com',
-//                            'name' => 'Iria Martinez Espinar'
-//                        ),
-//                        'cn' => array(
-//                            'email' => 'huayu@masterforex.org',
-//                            'name' => 'huayu@masterforex.org',
-//                        ),
-//                        'my' => array(
-//                            'email' => 'kamnfx@gmail.com',
-//                            'name' => 'Jeff Nash'
-//                        ),
-//                        'id' => array(
-//                            'email' => 'juliana_djulie@yahoo.com',
-//                            'name' => 'Juliana Saja'
-//                        ),
-//                        'az' => array(
-//                            'email' => 'e.zhidkov@mfxbroker.com',
-//                            'name' => 'e.zhidkov@mfxbroker.com'
-//                        ),
+                        'es' => array(
+                            'email' => 'iria_me9@hotmail.com',
+                            'name' => 'Iria Martinez Espinar'
+                        ),
+                        'cn' => array(
+                            'email' => 'huayu@masterforex.org',
+                            'name' => 'huayu@masterforex.org',
+                        ),
+                        'my' => array(
+                            'email' => 'kamnfx@gmail.com',
+                            'name' => 'Jeff Nash'
+                        ),
+                        'id' => array(
+                            'email' => 'juliana_djulie@yahoo.com',
+                            'name' => 'Juliana Saja'
+                        ),
+                        'az' => array(
+                            'email' => 'e.zhidkov@mfxbroker.com',
+                            'name' => 'e.zhidkov@mfxbroker.com'
+                        ),
                     );
 
-                    include (Yii::app()->basePath.'/components/Phpmailer.php');
-                    include (Yii::app()->basePath.'/components/Smtp.php');
+                    include_once (Yii::app()->basePath.'/components/Mailer.php');
+                    include_once (Yii::app()->basePath.'/components/Smtp.php');
 
                     foreach ($taskTo as $translator){
                         if (isset($mailArray[$translator])){
-                            $phpMailer = new PHPMailer();
-                            /** @var DeadLines $deadline */
                             $deadline = DeadLines::model()->findByAttributes(array('TextID' => $id));
 
+                            $mailer = new Mailer();
 
-
-                            $phpMailer->CharSet="utf8";
-                            $phpMailer->IsSMTP();
-                            $phpMailer->Port       = 587;
-                            $phpMailer->SMTPSecure = true;
-                            $phpMailer->Host = 'smtp.mfxbroker.com';//'smtp.mfxbroker.com';
-                            $phpMailer->Username = 'translations@mfxbroker.com';                            // SMTP username
-                            $phpMailer->Password = 'aiutsraghuy545#';                           // SMTP password
-                            $phpMailer->SMTPSecure = 'tls';
-                            $phpMailer->SMTPAuth   = true;
-                            $phpMailer->From = 'translations@mfxbroker.com';
-                            $phpMailer->FromName = 'MasterForex';
-                            $phpMailer->IsHTML(true);
-                            $phpMailer->Subject = 'New Task from MasterForex';
-
-
+                            $subject = 'New Task from MasterForex';
                             if ($translator == 'ar' || $translator == 'my' || $translator == 'id'){
                                 $deadlineKey = array(
                                     'ar' => 'LangAr',
                                     'my' => 'LangMy',
                                     'id' => 'LangId',
                                 );
-                                $phpMailer->Body    = 'Hello! <br>Please translate text with title "'.$task->Title.'" and Text Id = '.$task->ID.'. Deadline: '.$deadline->$deadlineKey[$translator].'. <br>You can do this on website <a href="http://translations.masterforex.com/">http://translations.masterforex.com/</a> in section Text Translation. <br>Thank you!';
-                                $phpMailer->AltBody = 'Hello! Please translate text with title "'.$task->Title.'" and Text Id = '.$task->ID.'. Deadline: '.$deadline->$deadlineKey[$translator].'. You can do this on website http://translations.masterforex.com/ in section Text Translation. Thank you!';
+                                $body    = 'Hello! <br>Please translate text with title "'.$task->Title.'" and Text Id = '.$task->ID.'. Deadline: '.$deadline->$deadlineKey[$translator].'. <br>You can do this on website <a href="http://translations.masterforex.com/">http://translations.masterforex.com/</a> in section Text Translation. <br>Thank you!';
+                                $altBody = 'Hello! Please translate text with title "'.$task->Title.'" and Text Id = '.$task->ID.'. Deadline: '.$deadline->$deadlineKey[$translator].'. You can do this on website http://translations.masterforex.com/ in section Text Translation. Thank you!';
                             } else {
                                 $deadlineKey = array(
                                     'en' => 'LangEn',
@@ -122,17 +100,25 @@ class UploadtaskController extends Controller
                                     'es' => 'LangEs',
                                     'az' => 'LangAz',
                                 );
-                                $phpMailer->Body    = 'Добрый день!<br>Просьба перевести тест c заголовком "'.$task->Title.'" и Text Id = '.$task->ID.' до '.$deadline->$deadlineKey[$translator].' на сайте <a href="http://translations.masterforex.com/">http://translations.masterforex.com/</a> в разделе Text Translation.<br>Спасибо!';
-                                $phpMailer->AltBody = 'Добрый день! Просьба перевести тест c заголовком "'.$task->Title.'" и Text Id = '.$task->ID.' до '.$deadline->$deadlineKey[$translator].' на сайте http://translations.masterforex.com/ в разделе Text Translation. Спасибо!';
+                                $body    = 'Добрый день!<br>Просьба перевести тест c заголовком "'.$task->Title.'" и Text Id = '.$task->ID.' до '.$deadline->$deadlineKey[$translator].' на сайте <a href="http://translations.masterforex.com/">http://translations.masterforex.com/</a> в разделе Text Translation.<br>Спасибо!';
+                                $altBody = 'Добрый день! Просьба перевести тест c заголовком "'.$task->Title.'" и Text Id = '.$task->ID.' до '.$deadline->$deadlineKey[$translator].' на сайте http://translations.masterforex.com/ в разделе Text Translation. Спасибо!';
                             }
+                            $attachments = array(
+                                array(
+                                    'path' => $path.$id.'.'.$docName[$parts-1],
+                                    'file' => $id.'.'.$docName[$parts-1],
+                                ),
+                            );
+                            $addresses = array(
+                                array(
+                                    'email' => $mailArray[$translator]['email'],
+                                    'name' => $mailArray[$translator]['name'],
+                                ),
+                            );
 
-                            /** @var Uploadtask $fileName */
-                            $fileName = Uploadtask::model()->findByAttributes(array('TextId' => $id));
-                            //var_dump($fileName->Document);die;
-                            $phpMailer->AddAttachment($path.$fileName->Document, $fileName->Document);
-                            $phpMailer->AddAddress($mailArray[$translator]['email'], $mailArray[$translator]['name']);
+
                             try{
-                                if (!$phpMailer->Send()){
+                                if (!$mailer->NewMail($subject, $addresses, $body, $altBody, $attachments)){
                                     throw new CException('Error during email sending.');
                                 }
 
@@ -141,7 +127,6 @@ class UploadtaskController extends Controller
                                 Yii::app()->user->setFlash('Eerror', 'Failed to send Emails');
 
                             }
-                            unset($phpMailer);
                         }
                     }
 

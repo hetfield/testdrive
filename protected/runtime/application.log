@@ -6487,3 +6487,71 @@ in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
 in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (356)
 in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (378)
 in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/26 12:11:07 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/26 12:11:29 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/26 12:11:29 [error] [php] Undefined index: name (C:\xampp\htdocs\yii-test\testdrive\protected\components\Mailer.php:30)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): UploadtaskController->runAction()
+#2 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): UploadtaskController->runActionWithFilters()
+#3 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): UploadtaskController->run()
+#4 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/uploadtask/index/id/3
+in C:\xampp\htdocs\yii-test\testdrive\protected\components\Mailer.php (30)
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (176)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/26 12:12:32 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/26 12:12:54 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/26 12:12:54 [error] [php] Illegal string offset 'email' (C:\xampp\htdocs\yii-test\testdrive\protected\components\Mailer.php:30)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): UploadtaskController->runAction()
+#2 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): UploadtaskController->runActionWithFilters()
+#3 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): UploadtaskController->run()
+#4 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/uploadtask/index/id/3
+in C:\xampp\htdocs\yii-test\testdrive\protected\components\Mailer.php (30)
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (176)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/26 12:13:59 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/26 12:15:22 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/26 12:17:21 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/26 12:17:36 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/26 12:22:23 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/26 12:22:40 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/26 12:25:55 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/26 12:32:09 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/26 12:33:54 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/26 12:36:59 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
