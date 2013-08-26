@@ -6,6 +6,7 @@
  * Time: 13:19
  * To change this template use File | Settings | File Templates.
  */
+include_once ('Phpmailer.php');
 
 class Mailer extends PHPMailer{
 

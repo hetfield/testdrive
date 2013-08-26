@@ -6588,3 +6588,9 @@ in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\Textstatustranslatio
 in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (406)
 in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (428)
 in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/26 14:02:01 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/26 14:05:24 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)

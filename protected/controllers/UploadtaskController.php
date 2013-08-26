@@ -46,33 +46,41 @@ class UploadtaskController extends Controller
 
                     $mailArray = array(
                         'ar' => array(
-                            'email' => 'ahmedsaied44@gmail.com',
+                            'email' => 'translations@mfxbroker.com',
                             'name' => 'Mado Saied'
                         ),
                         'en' => array(
-                            'email' => 'e.fentisov@mfxbroker.com',
+                            'email' => 'translations@mfxbroker.com',
                             'name' => 'Егор Фентисов'
                         ),
-                        'es' => array(
-                            'email' => 'iria_me9@hotmail.com',
-                            'name' => 'Iria Martinez Espinar'
-                        ),
-                        'cn' => array(
-                            'email' => 'huayu@masterforex.org',
-                            'name' => 'huayu@masterforex.org',
-                        ),
-                        'my' => array(
-                            'email' => 'kamnfx@gmail.com',
-                            'name' => 'Jeff Nash'
-                        ),
-                        'id' => array(
-                            'email' => 'juliana_djulie@yahoo.com',
-                            'name' => 'Juliana Saja'
-                        ),
-                        'az' => array(
-                            'email' => 'e.zhidkov@mfxbroker.com',
-                            'name' => 'e.zhidkov@mfxbroker.com'
-                        ),
+//                        'ar' => array(
+//                            'email' => 'ahmedsaied44@gmail.com',
+//                            'name' => 'Mado Saied'
+//                        ),
+//                        'en' => array(
+//                            'email' => 'e.fentisov@mfxbroker.com',
+//                            'name' => 'Егор Фентисов'
+//                        ),
+//                        'es' => array(
+//                            'email' => 'iria_me9@hotmail.com',
+//                            'name' => 'Iria Martinez Espinar'
+//                        ),
+//                        'cn' => array(
+//                            'email' => 'huayu@masterforex.org',
+//                            'name' => 'huayu@masterforex.org',
+//                        ),
+//                        'my' => array(
+//                            'email' => 'kamnfx@gmail.com',
+//                            'name' => 'Jeff Nash'
+//                        ),
+//                        'id' => array(
+//                            'email' => 'juliana_djulie@yahoo.com',
+//                            'name' => 'Juliana Saja'
+//                        ),
+//                        'az' => array(
+//                            'email' => 'e.zhidkov@mfxbroker.com',
+//                            'name' => 'e.zhidkov@mfxbroker.com'
+//                        ),
                     );
 
                     include_once (Yii::app()->basePath.'/components/Mailer.php');
@@ -84,7 +92,7 @@ class UploadtaskController extends Controller
 
                             $mailer = new Mailer();
 
-                            $subject = 'New Task from MasterForex';
+                            $subject = 'New Task "'.$task->Title.'"';
                             if ($translator == 'ar' || $translator == 'my' || $translator == 'id'){
                                 $deadlineKey = array(
                                     'ar' => 'LangAr',
