@@ -204,18 +204,46 @@ class TextstatustranslationsController extends Controller
                 break;
         }
 
-        if ($changeStatus->StatusEn == 2 &&
-            $changeStatus->StatusEs == 2 &&
-            $changeStatus->StatusCn == 2 &&
-            $changeStatus->StatusMy == 2 &&
-            $changeStatus->StatusId == 2 &&
-            $changeStatus->StatusAr == 2 //&&
-            //$changeStatus->StatusAz == 2
-        ){
+        /** @var TextTranslations $getTextTo */
+        $getTextTo = TextTranslations::model()->findByPk($textId);
+        $textToArray = json_decode($getTextTo->TaskTo);
+        $countTextTo = count($textToArray);
+        $i = 0;
+
+        foreach ($textToArray as $value){
+            switch ($value){
+                case 'en':
+                    if ($changeStatus->StatusEn == 2) $i++;
+                    break;
+                case 'es':
+                    if ($changeStatus->StatusEs == 2) $i++;
+                    break;
+                case 'cn':
+                    if ($changeStatus->StatusCn == 2) $i++;
+                    break;
+                case 'my':
+                    if ($changeStatus->StatusMy == 2) $i++;
+                    break;
+                case 'id':
+                    if ($changeStatus->StatusId == 2) $i++;
+                    break;
+                case 'ar':
+                    if ($changeStatus->StatusAr == 2) $i++;
+                    break;
+                case 'az':
+                    if ($changeStatus->StatusAz == 2) $i++;
+                    break;
+            }
+        }
+
+//        var_dump($textToArray,$i, $textId);die;
+
+        if ($countTextTo == $i){
+
             $changeStatus->Status = 2;
             //отправка письма заказчику
-            include (realpath(dirname(__FILE__).'/../components/Phpmailer.php'));
-            include (realpath(dirname(__FILE__).'/../components/Smtp.php'));
+            include_once (realpath(dirname(__FILE__).'/../components/Phpmailer.php'));
+            include_once (realpath(dirname(__FILE__).'/../components/Smtp.php'));
 
             $phpMailer = new PHPMailer();
 
@@ -234,30 +262,44 @@ class TextstatustranslationsController extends Controller
             $phpMailer->Subject = 'Переводы готовы по Text Id = '.$textId;
 
             /** @var TextTranslations $translations */
-            $translations = TextTranslations::model()->findByPk($textId);
+            $translations = $getTextTo;
 
             $phpMailer->Body    = 'Переводы которые были Вами заказаны во вложениях';
 
             $path = Yii::app()->basePath.'\translations\\';
 
-            $tr = Uploadar::model()->findByAttributes(array('TextId' => $textId));
-            if (is_file($path.$textId.'\\'.$tr->Document))
-                $phpMailer->AddAttachment($path.$textId.'\\'.$tr->Document, $tr->Document);
-            $tr = Uploaden::model()->findByAttributes(array('TextId' => $textId));
-            if (is_file($path.$textId.'\\'.$tr->Document))
-                $phpMailer->AddAttachment($path.$textId.'\\'.$tr->Document, $tr->Document);
-            $tr = Uploades::model()->findByAttributes(array('TextId' => $textId));
-            if (is_file($path.$textId.'\\'.$tr->Document))
-                $phpMailer->AddAttachment($path.$textId.'\\'.$tr->Document, $tr->Document);
-            $tr = Uploadid::model()->findByAttributes(array('TextId' => $textId));
-            if (is_file($path.$textId.'\\'.$tr->Document))
-                $phpMailer->AddAttachment($path.$textId.'\\'.$tr->Document, $tr->Document);
-            $tr = Uploadmy::model()->findByAttributes(array('TextId' => $textId));;
-            if (is_file($path.$textId.'\\'.$tr->Document))
-                $phpMailer->AddAttachment($path.$textId.'\\'.$tr->Document, $tr->Document);
-            $tr = Uploadcn::model()->findByAttributes(array('TextId' => $textId));
-            if (is_file($path.$textId.'\\'.$tr->Document))
-                $phpMailer->AddAttachment($path.$textId.'\\'.$tr->Document, $tr->Document);
+            foreach ($textToArray as $value){
+                switch ($value){
+                    case 'en':
+                        $tr = Uploaden::model()->findByAttributes(array('TextId' => $textId));
+                        if (is_file($path.$textId.'\\'.$tr->Document)) $phpMailer->AddAttachment($path.$textId.'\\'.$tr->Document, $tr->Document);
+                        break;
+                    case 'es':
+                        $tr = Uploades::model()->findByAttributes(array('TextId' => $textId));
+                        if (is_file($path.$textId.'\\'.$tr->Document)) $phpMailer->AddAttachment($path.$textId.'\\'.$tr->Document, $tr->Document);
+                        break;
+                    case 'cn':
+                        $tr = Uploadcn::model()->findByAttributes(array('TextId' => $textId));
+                        if (is_file($path.$textId.'\\'.$tr->Document)) $phpMailer->AddAttachment($path.$textId.'\\'.$tr->Document, $tr->Document);
+                        break;
+                    case 'my':
+                        $tr = Uploadmy::model()->findByAttributes(array('TextId' => $textId));
+                        if (is_file($path.$textId.'\\'.$tr->Document)) $phpMailer->AddAttachment($path.$textId.'\\'.$tr->Document, $tr->Document);
+                        break;
+                    case 'id':
+                        $tr = Uploadid::model()->findByAttributes(array('TextId' => $textId));
+                        if (is_file($path.$textId.'\\'.$tr->Document)) $phpMailer->AddAttachment($path.$textId.'\\'.$tr->Document, $tr->Document);
+                        break;
+                    case 'ar':
+                        $tr = Uploadar::model()->findByAttributes(array('TextId' => $textId));
+                        if (is_file($path.$textId.'\\'.$tr->Document)) $phpMailer->AddAttachment($path.$textId.'\\'.$tr->Document, $tr->Document);
+                        break;
+                    case 'az':
+                        $tr = Uploadaz::model()->findByAttributes(array('TextId' => $textId));
+                        if (is_file($path.$textId.'\\'.$tr->Document)) $phpMailer->AddAttachment($path.$textId.'\\'.$tr->Document, $tr->Document);
+                        break;
+                }
+            }
 
 
             $customer = explode(',', $translations->Customer);
@@ -345,17 +387,4 @@ class TextstatustranslationsController extends Controller
     {
         $this->uploadTranslation('Uploadaz',$_POST,$_GET,'az','uploadaz');
     }
-
-//    public function AddAttachment($id, $lang)
-//    {
-//        $fileDoc = '.doc';
-//        $fileDocx = '.docx';
-//        $path = Yii::app()->basePath.'\translations';
-//        $file = $path.'\\'.$id.'\\'.$id.'_'.$lang;
-//        $fileName = $id.'_'.$lang;
-//        if (file_exists($file.$fileDocx))
-//            $phpMailer->AddAttachment($file.$fileDocx, $fileName.$fileDocx);
-//        if (file_exists($file.$fileDoc))
-//            $phpMailer->AddAttachment($file.$fileDoc, $fileName.$fileDoc);
-//    }
 }

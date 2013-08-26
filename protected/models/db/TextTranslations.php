@@ -8,7 +8,7 @@
  *
  * @property integer $ID
  * @property string $Title
- * @property string $TaskTi
+ * @property string $TaskTo
  * @property string $LangAr
  * @property string $LangEn
  * @property string $LangEs

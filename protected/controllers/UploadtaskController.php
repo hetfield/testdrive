@@ -44,33 +44,41 @@ class UploadtaskController extends Controller
 
                     $mailArray = array(
                         'ar' => array(
-                            'email' => 'ahmedsaied44@gmail.com',
+                            'email' => 'translations@mfxbroker.com',
                             'name' => 'Mado Saied'
                         ),
                         'en' => array(
-                            'email' => 'e.fentisov@mfxbroker.com',
+                            'email' => 'translations@mfxbroker.com',
                             'name' => 'Егор Фентисов'
                         ),
-                        'es' => array(
-                            'email' => 'iria_me9@hotmail.com',
-                            'name' => 'Iria Martinez Espinar'
-                        ),
-                        'cn' => array(
-                            'email' => 'huayu@masterforex.org',
-                            'name' => 'huayu@masterforex.org',
-                        ),
-                        'my' => array(
-                            'email' => 'kamnfx@gmail.com',
-                            'name' => 'Jeff Nash'
-                        ),
-                        'id' => array(
-                            'email' => 'juliana_djulie@yahoo.com',
-                            'name' => 'Juliana Saja'
-                        ),
-                        'az' => array(
-                            'email' => '',
-                            'name' => ''
-                        ),
+//                        'ar' => array(
+//                            'email' => 'ahmedsaied44@gmail.com',
+//                            'name' => 'Mado Saied'
+//                        ),
+//                        'en' => array(
+//                            'email' => 'e.fentisov@mfxbroker.com',
+//                            'name' => 'Егор Фентисов'
+//                        ),
+//                        'es' => array(
+//                            'email' => 'iria_me9@hotmail.com',
+//                            'name' => 'Iria Martinez Espinar'
+//                        ),
+//                        'cn' => array(
+//                            'email' => 'huayu@masterforex.org',
+//                            'name' => 'huayu@masterforex.org',
+//                        ),
+//                        'my' => array(
+//                            'email' => 'kamnfx@gmail.com',
+//                            'name' => 'Jeff Nash'
+//                        ),
+//                        'id' => array(
+//                            'email' => 'juliana_djulie@yahoo.com',
+//                            'name' => 'Juliana Saja'
+//                        ),
+//                        'az' => array(
+//                            'email' => 'e.zhidkov@mfxbroker.com',
+//                            'name' => 'e.zhidkov@mfxbroker.com'
+//                        ),
                     );
 
                     include (Yii::app()->basePath.'/components/Phpmailer.php');

@@ -46,7 +46,8 @@ $this->breadcrumbs=array(
             'e.lozovaya@mfxbroker.com,Екатерина Лозовая' => 'Екатерина Лозовая',
             'd.kulagin@mfxbroker.com,Денис Кулагин' => 'Денис Кулагин',
             's.maslov@mfxbroker.com,Степа Маслов' => 'Степа Маслов',
-            'e.fentisov@mfxbroker.com,Егор Финтисов' => 'Егор Финтисов',
+            'e.fentisov@mfxbroker.com,Егор Финтисов' => 'Егор Фентисов',
+            'translations@mfxbroker.com,Робот' => 'Робот',
         )); ?>
     </div>
     <br>
@@ -85,7 +86,7 @@ $this->breadcrumbs=array(
         <table>
             <tr>
                 <td style="width: 130px;">
-                    <input TaskForm_languages_1" value="en" checked="checked" type="checkbox" name="TaskForm[languages][]" />
+                    <input TaskForm_languages_1" value="en" type="checkbox" name="TaskForm[languages][]" />
                     <label style="display: inline;" for="TaskForm_languages_1">English</label>
                 </td>
                 <td>
@@ -94,7 +95,7 @@ $this->breadcrumbs=array(
             </tr>
             <tr>
                 <td>
-                    <input id="TaskForm_languages_3" value="es" checked="checked" type="checkbox" name="TaskForm[languages][]" />
+                    <input id="TaskForm_languages_3" value="es" type="checkbox" name="TaskForm[languages][]" />
                     <label style="display: inline;" for="TaskForm_languages_3">Spanish</label></label>
                 </td>
                 <td>
@@ -103,7 +104,7 @@ $this->breadcrumbs=array(
             </tr>
             <tr>
                 <td>
-                    <input id="TaskForm_languages_5" value="cn" checked="checked" type="checkbox" name="TaskForm[languages][]" />
+                    <input id="TaskForm_languages_5" value="cn" type="checkbox" name="TaskForm[languages][]" />
                     <label style="display: inline;" for="TaskForm_languages_5">Chinese</label></label>
                 </td>
                 <td>
@@ -112,7 +113,7 @@ $this->breadcrumbs=array(
             </tr>
             <tr>
                 <td>
-                    <input id="TaskForm_languages_8" value="cn" checked="checked" type="checkbox" name="TaskForm[languages][]" />
+                    <input id="TaskForm_languages_8" value="cn" type="checkbox" name="TaskForm[languages][]" />
                     <label style="display: inline;" for="TaskForm_languages_8">Azerbaijani</label></label>
                 </td>
                 <td>
@@ -121,7 +122,7 @@ $this->breadcrumbs=array(
             </tr>
             <tr>
                 <td>
-                    <input id="TaskForm_languages_0" value="ar" checked="checked" type="checkbox" name="TaskForm[languages][]" />
+                    <input id="TaskForm_languages_0" value="ar" type="checkbox" name="TaskForm[languages][]" />
                     <label style="display: inline;" for="TaskForm_languages_0">Arabic</label></label>
                 </td>
                 <td>
@@ -130,7 +131,7 @@ $this->breadcrumbs=array(
             </tr>
             <tr>
                 <td>
-                    <input id="TaskForm_languages_2" value="id" checked="checked" type="checkbox" name="TaskForm[languages][]" />
+                    <input id="TaskForm_languages_2" value="id" type="checkbox" name="TaskForm[languages][]" />
                     <label style="display: inline;" for="TaskForm_languages_2">Indonesian</label></label>
                 </td>
                 <td>
@@ -139,7 +140,7 @@ $this->breadcrumbs=array(
             </tr>
             <tr>
                 <td>
-                    <input id="TaskForm_languages_4" value="my" checked="checked" type="checkbox" name="TaskForm[languages][]" />
+                    <input id="TaskForm_languages_4" value="my" type="checkbox" name="TaskForm[languages][]" />
                     <label style="display: inline;" for="TaskForm_languages_4">Malaysian</label></label>
                 </td>
                 <td>
