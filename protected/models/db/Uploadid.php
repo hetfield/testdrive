@@ -27,4 +27,9 @@ class Uploadid extends CActiveRecord
             array('Document', 'file', 'types'=>'doc, docx'),
         );
     }
+
+    public function tableName()
+    {
+        return 'uploadid';
+    }
 }
