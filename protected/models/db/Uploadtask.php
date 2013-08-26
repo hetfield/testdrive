@@ -28,4 +28,9 @@ class Uploadtask extends CActiveRecord
             array('Document', 'unique'),
         );
     }
+
+    public function tableName()
+    {
+        return 'uploadtask';
+    }
 }

@@ -15,7 +15,7 @@ $('body').bind('mousedown',function(){
 $('.table tr').each(function(k)
 	{
         if(k > 1)
-            $(this).find('td').each( function(k,i){
+            $(this).find('td').each( function(k){
                     if (k > {$role}) {
                         var lang = $(this).closest('table').find('tr').eq(0).find('th').eq(k).find('a').html();
                         lang = lang.split('<');
@@ -99,7 +99,7 @@ $this->breadcrumbs = array(
 <?php endif; ?>
 
 <?php if (Yii::app()->user->getState('Role') == 'A'): ?>
-<div class="addbtn">
+<div class="addedbtn">
     <?php $this->widget('bootstrap.widgets.TbButton', array(
         'buttonType'=>'submit',
         'label'=>'Add phrase',
