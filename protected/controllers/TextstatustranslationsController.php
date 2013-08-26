@@ -180,9 +180,63 @@ class TextstatustranslationsController extends Controller
         /** @var TextStatusTranslations $changeStatus */
         $changeStatus = TextStatusTranslations::model()->findByAttributes(array('TextId' => $textId));
 
+        /** @var TextTranslations $getTextTo */
+        $getTextTo = TextTranslations::model()->findByPk($textId);
+        $textToArray = json_decode($getTextTo->TaskTo);
+        $countTextTo = count($textToArray);
+        $i = 0;
+
         switch ($lang){
             case 'en':
                 $changeStatus->StatusEn = $status;
+
+                if ($status == 2) {
+                    foreach ($textToArray as $to) {
+                        if ($to == 'ar' ||
+                            $to == 'id' ||
+                            $to == 'my'
+                        ) {
+                            /** @var DeadLines $deadline */
+                            $deadline = DeadLines::model()->findByAttributes(array('TextID' => $textId));
+                            switch ($to) {
+                                case 'ar':
+                                    $deadlineFor = $deadline->LangAr;
+                                    break;
+                                case 'id':
+                                    $deadlineFor = $deadline->LangId;
+                                    break;
+                                case 'my':
+                                    $deadlineFor = $deadline->LangMy;
+                                    break;
+                            }
+                            include_once (realpath(dirname(__FILE__).'/../components/Mailer.php'));
+                            include_once (realpath(dirname(__FILE__).'/../components/Smtp.php'));
+                            $mailer = new Mailer();
+                            $subject = 'New Task "' . $getTextTo->Title . '"';
+                            $body = 'Hello! <br>Please translate text with title "' . $getTextTo->Title . '" and Text Id = ' . $getTextTo->ID . '. Deadline: ' . $deadlineFor . '. <br>You can do this on website <a href="http://translations.masterforex.com/">http://translations.masterforex.com/</a> in section Text Translation. <br>Thank you!';
+                            $altBody = 'Hello! Please translate text with title "' . $getTextTo->Title . '" and Text Id = ' . $getTextTo->ID . '. Deadline: ' . $deadlineFor . '. You can do this on website http://translations.masterforex.com/ in section Text Translation. Thank you!';
+                            $customer = explode(',', $getTextTo->Customer);
+                            $addresses = array(
+                                array(
+                                    'email' => $customer[0],
+                                    'name' => $customer[1],
+                                ),
+                            );
+                            $path = $path = Yii::app()->basePath . '\translations\\';
+                            $typeFile = 'docx';
+                            if (!is_file($path . $textId . '\\' . $textId . '_en.' . $typeFile)) {
+                                $typeFile = 'doc';
+                            }
+                            $attachments = array(
+                                array(
+                                    'path' => $path . $textId . '\\' . $textId . '_en.' . $typeFile,
+                                    'file' => $textId.'_en.'.$typeFile,
+                                ),
+                            );
+                            $mailer->NewMail($subject,$addresses,$body,$altBody,$attachments);
+                        }
+                    }
+                }
                 break;
             case 'es':
                 $changeStatus->StatusEs = $status;
@@ -203,12 +257,6 @@ class TextstatustranslationsController extends Controller
                 $changeStatus->StatusAz = $status;
                 break;
         }
-
-        /** @var TextTranslations $getTextTo */
-        $getTextTo = TextTranslations::model()->findByPk($textId);
-        $textToArray = json_decode($getTextTo->TaskTo);
-        $countTextTo = count($textToArray);
-        $i = 0;
 
         foreach ($textToArray as $value){
             switch ($value){
