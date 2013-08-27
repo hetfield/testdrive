@@ -87,7 +87,7 @@ $this->breadcrumbs=array(
             <tr>
                 <td style="width: 130px;">
                     <input TaskForm_languages_1" value="en" type="checkbox" name="TaskForm[languages][]" />
-                    <label style="display: inline;" for="TaskForm_languages_1">English</label>
+                    <label style="display: inline;" for="TaskForm_languages_1">En</label>
                 </td>
                 <td>
                     <input style="width: 145px;" type="datetime" name="TaskForm[calendar][LangEn]" value="<?= date("Y-m-d H:i", mktime(0, 0, 0, date("m"), date("d")+1, date("Y"))); ?>">
@@ -96,7 +96,7 @@ $this->breadcrumbs=array(
             <tr>
                 <td>
                     <input id="TaskForm_languages_3" value="es" type="checkbox" name="TaskForm[languages][]" />
-                    <label style="display: inline;" for="TaskForm_languages_3">Spanish</label></label>
+                    <label style="display: inline;" for="TaskForm_languages_3">Sp</label></label>
                 </td>
                 <td>
                     <input style="width: 145px;" type="datetime" name="TaskForm[calendar][LangEs]" value="<?= date("Y-m-d H:i", mktime(0, 0, 0, date("m"), date("d")+1, date("Y"))); ?>">
@@ -105,7 +105,7 @@ $this->breadcrumbs=array(
             <tr>
                 <td>
                     <input id="TaskForm_languages_5" value="cn" type="checkbox" name="TaskForm[languages][]" />
-                    <label style="display: inline;" for="TaskForm_languages_5">Chinese</label></label>
+                    <label style="display: inline;" for="TaskForm_languages_5">Cn</label></label>
                 </td>
                 <td>
                     <input style="width: 145px;" type="datetime" name="TaskForm[calendar][LangCn]" value="<?= date("Y-m-d H:i", mktime(0, 0, 0, date("m"), date("d")+1, date("Y"))); ?>">
@@ -114,7 +114,7 @@ $this->breadcrumbs=array(
             <tr>
                 <td>
                     <input id="TaskForm_languages_8" value="cn" type="checkbox" name="TaskForm[languages][]" />
-                    <label style="display: inline;" for="TaskForm_languages_8">Azerbaijani</label></label>
+                    <label style="display: inline;" for="TaskForm_languages_8">Az</label></label>
                 </td>
                 <td>
                     <input style="width: 145px;" type="datetime" name="TaskForm[calendar][LangAz]" value="<?= date("Y-m-d H:i", mktime(0, 0, 0, date("m"), date("d")+1, date("Y"))); ?>">
@@ -123,7 +123,7 @@ $this->breadcrumbs=array(
             <tr>
                 <td>
                     <input id="TaskForm_languages_0" value="ar" type="checkbox" name="TaskForm[languages][]" />
-                    <label style="display: inline;" for="TaskForm_languages_0">Arabic</label></label>
+                    <label style="display: inline;" for="TaskForm_languages_0">Ar</label></label>
                 </td>
                 <td>
                     <input style="width: 145px;" type="datetime" name="TaskForm[calendar][LangAr]" value="<?= date("Y-m-d H:i", mktime(0, 0, 0, date("m"), date("d")+2, date("Y"))); ?>">
@@ -132,7 +132,7 @@ $this->breadcrumbs=array(
             <tr>
                 <td>
                     <input id="TaskForm_languages_2" value="id" type="checkbox" name="TaskForm[languages][]" />
-                    <label style="display: inline;" for="TaskForm_languages_2">Indonesian</label></label>
+                    <label style="display: inline;" for="TaskForm_languages_2">Id</label></label>
                 </td>
                 <td>
                     <input style="width: 145px;" type="datetime" name="TaskForm[calendar][LangId]" value="<?= date("Y-m-d H:i", mktime(0, 0, 0, date("m"), date("d")+2, date("Y"))); ?>">
@@ -141,7 +141,7 @@ $this->breadcrumbs=array(
             <tr>
                 <td>
                     <input id="TaskForm_languages_4" value="my" type="checkbox" name="TaskForm[languages][]" />
-                    <label style="display: inline;" for="TaskForm_languages_4">Malaysian</label></label>
+                    <label style="display: inline;" for="TaskForm_languages_4">My</label></label>
                 </td>
                 <td>
                     <input style="width: 145px;" type="datetime" name="TaskForm[calendar][LangMy]" value="<?= date("Y-m-d H:i", mktime(0, 0, 0, date("m"), date("d")+2, date("Y"))); ?>">

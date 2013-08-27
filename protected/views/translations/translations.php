@@ -60,23 +60,18 @@ $('.table tr').each(function(k)
 	})
 });
 
-$('.addbtn .btn').click(function(){
+$('.addedbtn .btn').click(function(){
         if ($('#formAddText').is(':visible')) {
                 $('#formAddText').hide("slow",function(){
-                    $(".addbtn .btn").html("Add phrase");
+                    $(".addedbtn .btn").html("Add phrase");
             });
         }else{
                 $('#formAddText').show("slow",function(){
-                    $(".addbtn .btn").html("Hide form");
+                    $(".addedbtn .btn").html("Hide form");
             });
         }
 });
 
-//setInterval(hiddenFirstColumn,30);
-//function hiddenFirstColumn(){
-//$('#translatorsTable').find('th').eq(0).hide();
-//$('#translatorsTable').find('td').eq(0).hide();
-//}
 JS
     , CClientScript::POS_READY);
 
@@ -108,7 +103,7 @@ $this->breadcrumbs = array(
     )); ?>
 </div>
 
-<div id="formAddText">
+<div id="formAddText" style="width: 410px;">
     <?php
     $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
         'id'=>'verticalForm',
@@ -117,7 +112,7 @@ $this->breadcrumbs = array(
 
 
     <div class="textField">
-        <?= $form->textAreaRow($model, 'textField', array('class'=>'span4', 'rows'=>5)); ?>
+        <?= $form->textAreaRow($model, 'textField', array('class'=>'span4', 'rows'=>5, 'required' => 'required')); ?>
     </div>
     <div class="btn-toolbar">
         <?= $form->dropDownList($model,'Category',array(
@@ -162,6 +157,7 @@ $this->breadcrumbs = array(
     $this->widget('bootstrap.widgets.TbGridView', array(
         'type'=>'striped bordered condensed',
         'dataProvider'=>$model->search(),
+        'template'=>"{pager}\n{items}\n{pager}",
         'filter' => $model,
         'columns'=>$columns,
         'enableSorting' => true,

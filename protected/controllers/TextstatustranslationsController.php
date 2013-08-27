@@ -189,7 +189,7 @@ class TextstatustranslationsController extends Controller
         switch ($lang){
             case 'en':
                 $changeStatus->StatusEn = $status;
-
+                //отправка английского перевода тем, кто переводит с английского
                 if ($status == 2) {
                     foreach ($textToArray as $to) {
                         if ($to == 'ar' ||
@@ -201,12 +201,30 @@ class TextstatustranslationsController extends Controller
                             switch ($to) {
                                 case 'ar':
                                     $deadlineFor = $deadline->LangAr;
+                                    $addresses = array(
+                                        array(
+                                            'email' => 'ahmedsaied44@gmail.com',
+                                            'name' => 'Mado Saied',
+                                        ),
+                                    );
                                     break;
                                 case 'id':
                                     $deadlineFor = $deadline->LangId;
+                                    $addresses = array(
+                                        array(
+                                            'email' => 'juliana_djulie@yahoo.com',
+                                            'name' => 'Juliana Saja',
+                                        ),
+                                    );
                                     break;
                                 case 'my':
                                     $deadlineFor = $deadline->LangMy;
+                                    $addresses = array(
+                                        array(
+                                            'email' => 'kamnfx@gmail.com',
+                                            'name' => 'Jeff Nash',
+                                        ),
+                                    );
                                     break;
                             }
                             include_once (realpath(dirname(__FILE__).'/../components/Mailer.php'));
@@ -215,18 +233,11 @@ class TextstatustranslationsController extends Controller
                             $subject = 'New Task "' . $getTextTo->Title . '"';
                             $body = 'Hello! <br>Please translate text with title "' . $getTextTo->Title . '" and Text Id = ' . $getTextTo->ID . '. Deadline: ' . $deadlineFor . '. <br>You can do this on website <a href="http://translations.masterforex.com/">http://translations.masterforex.com/</a> in section Text Translation. <br>Thank you!';
                             $altBody = 'Hello! Please translate text with title "' . $getTextTo->Title . '" and Text Id = ' . $getTextTo->ID . '. Deadline: ' . $deadlineFor . '. You can do this on website http://translations.masterforex.com/ in section Text Translation. Thank you!';
-                            $customer = explode(',', $getTextTo->Customer);
-                            $addresses = array(
-                                array(
-                                    'email' => $customer[0],
-                                    'name' => $customer[1],
-                                ),
-                            );
-                            $path = $path = Yii::app()->basePath . '\translations\\';
-                            $typeFile = 'docx';
-                            if (!is_file($path . $textId . '\\' . $textId . '_en.' . $typeFile)) {
-                                $typeFile = 'doc';
-                            }
+                            /** @var Uploaden $enFile */
+                            $enFile = Uploaden::model()->findByAttributes(array('TextId' => $textId));
+                            $partsFile = explode('.', $enFile->Document);
+                            $typeFile = end($partsFile);
+                            $path = Yii::app()->basePath . '\translations\\';
                             $attachments = array(
                                 array(
                                     'path' => $path . $textId . '\\' . $textId . '_en.' . $typeFile,
@@ -303,9 +314,9 @@ class TextstatustranslationsController extends Controller
                     case 'en':
                         $tr = Uploaden::model()->findByAttributes(array('TextId' => $textId));
                         if (is_file($path.$textId.'\\'.$tr->Document)) $attachments[] = $attachments + array(
-                            'path' => $path.$textId.'\\'.$tr->Document,
-                            'file' => $tr->Document,
-                        );
+                                'path' => $path.$textId.'\\'.$tr->Document,
+                                'file' => $tr->Document,
+                            );
                         break;
                     case 'es':
                         $tr = Uploades::model()->findByAttributes(array('TextId' => $textId));

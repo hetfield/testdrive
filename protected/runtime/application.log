@@ -6601,3 +6601,11 @@ in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
 in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (390)
 in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (417)
 in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/08/27 08:14:05 [error] [php] Undefined variable: enFile (C:\xampp\htdocs\yii-test\testdrive\protected\controllers\ParserController.php:106)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#1 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/parser
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\ParserController.php (106)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
