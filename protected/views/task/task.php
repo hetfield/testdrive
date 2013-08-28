@@ -47,7 +47,7 @@ $this->breadcrumbs=array(
             'd.kulagin@mfxbroker.com,Денис Кулагин' => 'Денис Кулагин',
             's.maslov@mfxbroker.com,Степа Маслов' => 'Степа Маслов',
             'e.fentisov@mfxbroker.com,Егор Финтисов' => 'Егор Фентисов',
-            'translations@mfxbroker.com,Робот' => 'Робот',
+            'd.sukhov@mfxbroker.com,Сухов Дмитрий' => 'Сухов Дмитрий',
         )); ?>
     </div>
     <br>
