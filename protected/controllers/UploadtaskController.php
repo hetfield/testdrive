@@ -121,8 +121,12 @@ class UploadtaskController extends Controller
                                     'my' => 'LangMy',
                                     'id' => 'LangId',
                                 );
-                                $body    = 'Hello! <br>Please translate text with title "'.$task->Title.'" and Text Id = '.$task->ID.'. Deadline: '.$deadline->$deadlineKey[$translator].'. <br>You can do this on website <a href="http://translations.masterforex.com/">http://translations.masterforex.com/</a> in section Text Translation. <br>Thank you!';
-                                $altBody = 'Hello! Please translate text with title "'.$task->Title.'" and Text Id = '.$task->ID.'. Deadline: '.$deadline->$deadlineKey[$translator].'. You can do this on website http://translations.masterforex.com/ in section Text Translation. Thank you!';
+                                $body    = 'Hello! <br>Please translate text with title "'.$task->Title.'" and Text Id = '.$task->ID.'. Deadline: '.$deadline->$deadlineKey[$translator].'. <br>You can do this on website <a href="http://translations.masterforex.com/">http://translations.masterforex.com/</a> in section Text Translation.<br>Do not answer to this message, please attach your translation in this programme: http://translations.masterforex.com/.<br>Thank you!';
+                                $altBody = 'Hello!
+                                Please translate text with title "'.$task->Title.'" and Text Id = '.$task->ID.'. Deadline: '.$deadline->$deadlineKey[$translator].'.
+                                You can do this on website http://translations.masterforex.com/ in section Text Translation.
+                                Do not answer to this message, please attach your translation in this programme: http://translations.masterforex.com/.
+                                Thank you!';
                             } else {
                                 $deadlineKey = array(
                                     'en' => 'LangEn',
@@ -130,8 +134,11 @@ class UploadtaskController extends Controller
                                     'es' => 'LangEs',
                                     'az' => 'LangAz',
                                 );
-                                $body    = 'Добрый день!<br>Просьба перевести тест c заголовком "'.$task->Title.'" и Text Id = '.$task->ID.' до '.$deadline->$deadlineKey[$translator].' на сайте <a href="http://translations.masterforex.com/">http://translations.masterforex.com/</a> в разделе Text Translation.<br>Спасибо!';
-                                $altBody = 'Добрый день! Просьба перевести тест c заголовком "'.$task->Title.'" и Text Id = '.$task->ID.' до '.$deadline->$deadlineKey[$translator].' на сайте http://translations.masterforex.com/ в разделе Text Translation. Спасибо!';
+                                $body    = 'Добрый день!<br>Просьба перевести тест c заголовком "'.$task->Title.'" и Text Id = '.$task->ID.' до '.$deadline->$deadlineKey[$translator].' на сайте <a href="http://translations.masterforex.com/">http://translations.masterforex.com/</a> в разделе Text Translation.<br>Не отвечайте на это сообщение. Загрузите ваш перевод на сайте, указанном выше.<br>Спасибо!';
+                                $altBody = 'Добрый день!
+                                Просьба перевести тест c заголовком "'.$task->Title.'" и Text Id = '.$task->ID.' до '.$deadline->$deadlineKey[$translator].' на сайте http://translations.masterforex.com/ в разделе Text Translation.
+                                Не отвечайте на это сообщение. Загрузите ваш перевод на сайте, указанном выше.
+                                Спасибо!';
                             }
                             $attachments = array(
                                 array(
