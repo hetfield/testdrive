@@ -245,6 +245,7 @@ class TextstatustranslationsController extends Controller
                                 ),
                             );
                             $mailer->NewMail($subject,$addresses,$body,$altBody,$attachments);
+
                         }
                     }
                 }
@@ -305,7 +306,7 @@ class TextstatustranslationsController extends Controller
             include_once (realpath(dirname(__FILE__).'/../components/Smtp.php'));
 
             $mailer = new Mailer();
-            $subject = $getTextTo->Title;
+            $subject = 'ID: '.$getTextTo->ID.' - Task: "'.$getTextTo->Title.'"';
             $body    = 'Переводы которые были Вами заказаны во вложениях';
             $path = Yii::app()->basePath.DIRECTORY_SEPARATOR.'translations'.DIRECTORY_SEPARATOR;
             $attachments = array();
