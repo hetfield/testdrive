@@ -24,7 +24,7 @@ class Mailer extends PHPMailer{
         $this->From = 'translations@mfxbroker.com';
         $this->FromName = 'MasterForex';
         $this->IsHTML(true);
-        $this->Subject = 'New Task from MasterForex';
+        $this->Subject = $subject;
 
         if ($addresses != array()) {
             foreach ($addresses as $address) {
