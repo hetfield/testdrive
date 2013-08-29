@@ -33,7 +33,7 @@ class SiteController extends Controller
         if (Yii::app()->user->isGuest){
             $this->redirect(Yii::app()->createUrl('site/login'));
         } else {
-            $this->redirect(Yii::app()->createUrl('translations/index'));
+            $this->redirect(Yii::app()->createUrl('textstatustranslations/index'));
         }
 //        $table = new Users();
 //        $table->Username = 'e.fentisov';
