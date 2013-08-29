@@ -8,7 +8,7 @@
 //mysql_query('set names utf8');
 //
 //if (mysql_query('TRUNCATE translations')){
-//    $path = Yii::app()->basePath.'\messages\\';
+//    $path = Yii::app()->basePath.DIRECTORY_SEPARATOR.'messages'.DIRECTORY_SEPARATOR;
 //
 //    $temp = scandir($path);
 //
@@ -19,7 +19,7 @@
 //
 //
 //
-//    $categories = $temp = scandir($path.$langs[0].'\\');
+//    $categories = $temp = scandir($path.$langs[0].DIRECTORY_SEPARATOR);
 //    unset($categories[0]);
 //    unset($categories[1]);
 //
@@ -31,7 +31,7 @@
 //        $cat_name = substr($category, 0,count($category)-5);
 //
 //        foreach ($langs as $lang){
-//            $words_category = require($path.$lang.'\\'.$category);
+//            $words_category = require($path.$lang.DIRECTORY_SEPARATOR.$category);
 //            foreach ($words_category as $key => $word) {
 //                $key = htmlspecialchars($key);
 //                $phrase[$key][$lang] = htmlspecialchars($word);

@@ -237,10 +237,10 @@ class TextstatustranslationsController extends Controller
                             $enFile = Uploaden::model()->findByAttributes(array('TextId' => $textId));
                             $partsFile = explode('.', $enFile->Document);
                             $typeFile = end($partsFile);
-                            $path = Yii::app()->basePath . '\translations\\';
+                            $path = Yii::app()->basePath . DIRECTORY_SEPARATOR.'translations'.DIRECTORY_SEPARATOR;
                             $attachments = array(
                                 array(
-                                    'path' => $path . $textId . '\\' . $textId . '_en.' . $typeFile,
+                                    'path' => $path . $textId . DIRECTORY_SEPARATOR . $textId . '_en.' . $typeFile,
                                     'file' => $textId.'_en.'.$typeFile,
                                 ),
                             );
@@ -307,56 +307,56 @@ class TextstatustranslationsController extends Controller
             $mailer = new Mailer();
             $subject = $getTextTo->Title;
             $body    = 'Переводы которые были Вами заказаны во вложениях';
-            $path = Yii::app()->basePath.'\translations\\';
+            $path = Yii::app()->basePath.DIRECTORY_SEPARATOR.'translations'.DIRECTORY_SEPARATOR;
             $attachments = array();
             foreach ($textToArray as $value){
                 switch ($value){
                     case 'en':
                         $tr = Uploaden::model()->findByAttributes(array('TextId' => $textId));
-                        if (is_file($path.$textId.'\\'.$tr->Document)) $attachments[] = $attachments + array(
-                                'path' => $path.$textId.'\\'.$tr->Document,
+                        if (is_file($path.$textId.DIRECTORY_SEPARATOR.$tr->Document)) $attachments[] = $attachments + array(
+                                'path' => $path.$textId.DIRECTORY_SEPARATOR.$tr->Document,
                                 'file' => $tr->Document,
                             );
                         break;
                     case 'es':
                         $tr = Uploades::model()->findByAttributes(array('TextId' => $textId));
-                        if (is_file($path.$textId.'\\'.$tr->Document)) $attachments[] = $attachments + array(
-                                'path' => $path.$textId.'\\'.$tr->Document,
+                        if (is_file($path.$textId.DIRECTORY_SEPARATOR.$tr->Document)) $attachments[] = $attachments + array(
+                                'path' => $path.$textId.DIRECTORY_SEPARATOR.$tr->Document,
                                 'file' => $tr->Document,
                             );
                         break;
                     case 'cn':
                         $tr = Uploadcn::model()->findByAttributes(array('TextId' => $textId));
-                        if (is_file($path.$textId.'\\'.$tr->Document)) $attachments[] = $attachments + array(
-                                'path' => $path.$textId.'\\'.$tr->Document,
+                        if (is_file($path.$textId.DIRECTORY_SEPARATOR.$tr->Document)) $attachments[] = $attachments + array(
+                                'path' => $path.$textId.DIRECTORY_SEPARATOR.$tr->Document,
                                 'file' => $tr->Document,
                             );
                         break;
                     case 'my':
                         $tr = Uploadmy::model()->findByAttributes(array('TextId' => $textId));
-                        if (is_file($path.$textId.'\\'.$tr->Document)) $attachments[] = $attachments + array(
-                                'path' => $path.$textId.'\\'.$tr->Document,
+                        if (is_file($path.$textId.DIRECTORY_SEPARATOR.$tr->Document)) $attachments[] = $attachments + array(
+                                'path' => $path.$textId.DIRECTORY_SEPARATOR.$tr->Document,
                                 'file' => $tr->Document,
                             );
                         break;
                     case 'id':
                         $tr = Uploadid::model()->findByAttributes(array('TextId' => $textId));
-                        if (is_file($path.$textId.'\\'.$tr->Document)) $attachments[] = $attachments + array(
-                                'path' => $path.$textId.'\\'.$tr->Document,
+                        if (is_file($path.$textId.DIRECTORY_SEPARATOR.$tr->Document)) $attachments[] = $attachments + array(
+                                'path' => $path.$textId.DIRECTORY_SEPARATOR.$tr->Document,
                                 'file' => $tr->Document,
                             );
                         break;
                     case 'ar':
                         $tr = Uploadar::model()->findByAttributes(array('TextId' => $textId));
-                        if (is_file($path.$textId.'\\'.$tr->Document)) $attachments[] = $attachments + array(
-                                'path' => $path.$textId.'\\'.$tr->Document,
+                        if (is_file($path.$textId.DIRECTORY_SEPARATOR.$tr->Document)) $attachments[] = $attachments + array(
+                                'path' => $path.$textId.DIRECTORY_SEPARATOR.$tr->Document,
                                 'file' => $tr->Document,
                             );
                         break;
                     case 'az':
                         $tr = Uploadaz::model()->findByAttributes(array('TextId' => $textId));
-                        if (is_file($path.$textId.'\\'.$tr->Document)) $attachments[] = $attachments + array(
-                                'path' => $path.$textId.'\\'.$tr->Document,
+                        if (is_file($path.$textId.DIRECTORY_SEPARATOR.$tr->Document)) $attachments[] = $attachments + array(
+                                'path' => $path.$textId.DIRECTORY_SEPARATOR.$tr->Document,
                                 'file' => $tr->Document,
                             );
                         break;
@@ -392,11 +392,11 @@ class TextstatustranslationsController extends Controller
         if (isset($get['id'])) $id = $get['id'];
 
         if(isset($post[$modelName]) && isset($id)){
-            $path = Yii::app()->basePath.'\translations\\';
+            $path = Yii::app()->basePath.DIRECTORY_SEPARATOR.'translations'.DIRECTORY_SEPARATOR;
             if (!is_dir($path.$id)){
                 mkdir($path.$id);
             }
-            $path .= $id.'\\';
+            $path .= $id.DIRECTORY_SEPARATOR;
             $model->attributes = $post[$modelName];
             $model->Document = CUploadedFile::getInstance($model,'Document');
             $docName = explode('.',CUploadedFile::getInstance($model,'Document'));

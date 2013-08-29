@@ -27,7 +27,7 @@ class UploadtaskController extends Controller
         if (isset($_GET['id'])) $id = $_GET['id'];
 
         if(isset($_POST[$modelName]) && isset($id)){
-            $path = Yii::app()->basePath.'\documents\\';
+            $path = Yii::app()->basePath.DIRECTORY_SEPARATOR.'documents'.DIRECTORY_SEPARATOR;
             $model->attributes=$_POST[$modelName];
             $model->Document = CUploadedFile::getInstance($model,'Document');
             $docName = explode('.',CUploadedFile::getInstance($model,'Document'));
@@ -184,7 +184,7 @@ class UploadtaskController extends Controller
     public function actionDownload()
     {
         if (isset($_GET)){
-            $file = Yii::app()->basePath.'\documents\\'.$_GET['document'];
+            $file = Yii::app()->basePath.DIRECTORY_SEPARATOR.'documents'.DIRECTORY_SEPARATOR.$_GET['document'];
             Yii::app()->request->sendFile(basename($file),file_get_contents($file));
         }
     }

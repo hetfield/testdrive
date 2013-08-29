@@ -27,7 +27,7 @@
 ////$phraseAll - готовый массив для отправки
 //
 ////выгрузка массива в файлы
-//$path = Yii::app()->basePath.'\fromdb\\';
+//$path = Yii::app()->basePath.DIRECTORY_SEPARATOR.'fromdb'.DIRECTORY_SEPARATOR;
 //
 //$arrayForFile = array();
 //
@@ -41,7 +41,7 @@
 //}
 //foreach ($arrayForFile as $lang => $categories){
 //    foreach($categories as $category => $phrase){
-//        $fp = fopen($path.$lang."\\".$category.".php", "w");
+//        $fp = fopen($path.$lang.DIRECTORY_SEPARATOR.$category.".php", "w");
 //        $text = "<?php\nreturn array(\n    ".implode(",\n  ",$phrase)."\n);";
 //        fwrite($fp, $text);
 //        fclose($fp);
@@ -55,7 +55,7 @@
 //die;
 //
 ////выгрузка из файла в массив и запись обратно
-//$path = Yii::app()->basePath.'\fromdb\\';
+//$path = Yii::app()->basePath.DIRECTORY_SEPARATOR.'fromdb'.DIRECTORY_SEPARATOR;
 //
 //$test = require($path.'file.php');
 //

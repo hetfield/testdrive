@@ -59,7 +59,7 @@ $this->breadcrumbs=array(
 
 
 <?php
-$pathToDocuments = Yii::app()->basePath.'\documents\\';
+$pathToDocuments = Yii::app()->basePath.DIRECTORY_SEPARATOR.'documents'.DIRECTORY_SEPARATOR;
 
 $files = Uploadtask::model()->findAll();
 ?>
