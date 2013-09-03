@@ -20,76 +20,7 @@ class TranslationsController extends Controller
         if(isset($_GET['Translations']))
             $model->attributes=$_GET['Translations'];
 
-        $langs = array(
-//            'ru' => 'LangRu',
-//            'en' => 'LangEn',
-            'ar' => array(
-                'name' => 'LangAr',
-                'htmlOptions' => array('style' => 'max-width: 100px'),
-                'type' => 'html',
-            ),
-            'id' => array(
-                'name' => 'LangId',
-                'htmlOptions' => array('style' => 'max-width: 100px'),
-                'type' => 'html',
-            ),
-            'es' => array(
-                'name' => 'LangEs',
-                'htmlOptions' => array('style' => 'max-width: 100px'),
-                'type' => 'html',
-            ),
-            'my' => array(
-                'name' => 'LangMy',
-                'htmlOptions' => array('style' => 'max-width: 100px'),
-                'type' => 'html',
-            ),
-            'cn' => array(
-                'name' => 'LangCn',
-                'htmlOptions' => array('style' => 'max-width: 100px'),
-                'type' => 'html',
-            ),
-            'az' => array(
-                'name' => 'LangAz',
-                'htmlOptions' => array('style' => 'max-width: 100px'),
-                'type' => 'html',
-            ),
-        );
-
-        $columns = array(
-            array(
-                'name' => 'ID',
-                'htmlOptions' => array('style'=>'width: 50px; text-align: center;'),
-            ),
-            array(
-                'name'=>'Category',
-                'value'=>'$data->Category',
-                'filter' => $model->CategoryNames,
-                'htmlOptions'=>array('style'=>'width: 70px; text-align: center;'),
-            ),
-            array(
-                'name' => 'LangRu',
-                'htmlOptions' => array('style' => 'max-width: 100px'),
-                'type' => 'html',
-            ),
-            array(
-                'name' => 'LangEn',
-                'htmlOptions' => array('style' => 'max-width: 100px'),
-                'type' => 'html',
-            ),
-        );
-
-        foreach ($langs as $lang => $data){
-            if(Yii::app()->user->getState('Role') != 'T'){
-                array_push($columns, $data);
-            } else {
-                $userLanguages = json_decode(Yii::app()->user->getState('Languages'));
-                foreach ($userLanguages as $userLanguage){
-                    if ($userLanguage == $lang){
-                        array_push($columns, $data);
-                    }
-                }
-            }
-        }
+        $columns = $model->getColumns();
 
         if (isset($_POST[$modelName])) {
 
