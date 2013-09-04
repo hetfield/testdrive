@@ -61,9 +61,9 @@ class Translations extends CActiveRecord
     {
         $criteria=new CDbCriteria;
 
-        $criteria->compare('ID',$this->ID, true);
-        $criteria->compare('Category',$this->Category, true);
-        $criteria->compare('Key',$this->Key,true);
+        $criteria->compare('ID',$this->ID);
+        $criteria->compare('Category',$this->Category);
+//        $criteria->compare('Key',$this->Key,true);
         $criteria->compare('LangEn',$this->LangEn,true);
         $criteria->compare('LangAr',$this->LangAr,true);
         $criteria->compare('LangEs',$this->LangEs,true);
