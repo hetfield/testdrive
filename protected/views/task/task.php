@@ -85,7 +85,7 @@ $this->breadcrumbs=array(
         <input id="ytTaskForm_languages" type="hidden" value="" name="TaskForm[languages]" />
         <table>
             <tr>
-                <td style="width: 130px;">
+                <td style="width: 50px;">
                     <input TaskForm_languages_1" value="en" type="checkbox" name="TaskForm[languages][]" />
                     <label style="display: inline;" for="TaskForm_languages_1">En</label>
                 </td>
