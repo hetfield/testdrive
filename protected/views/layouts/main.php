@@ -51,8 +51,8 @@
                     //array('label' => 'Task', 'url' => array('/task/index'), 'visible' => (Yii::app()->user->getState('Role') == 'A')),
                     //array('label' => 'Statuses', 'url' => array('/textstatustranslations/index'), 'visible' => (Yii::app()->user->getState('Role') == 'A')),
                     array('label'=>'Translations', 'url'=>'#', 'visible' => (Yii::app()->user->getState('Role') == 'A'), 'items'=>array(
-                        array('label'=>'Translations Status', 'url'=>'/textstatustranslations/index'),
-                        array('label'=>'New Task', 'url'=>'/task'),
+                        array('label'=>'Translations Status', 'url'=>Yii::app()->createUrl('/textstatustranslations/index')),
+                        array('label'=>'New Task', 'url'=>Yii::app()->createUrl('task/index')),
                         ),
                     ),
                     //array('label' => 'User Management', 'url' => array('/users/index'), 'visible' => (Yii::app()->user->getState('Role') == 'A')),
