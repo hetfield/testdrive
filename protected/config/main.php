@@ -66,7 +66,7 @@ return array(
 			'allowAutoLogin'=>true,
 		),
         'urlManager'=>array(
-            'urlFormat'=>'path',
+//            'urlFormat'=>'path',
             'showScriptName' => false,
         ),
 		// uncomment the following to enable URLs in path-format

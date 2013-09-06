@@ -17,8 +17,10 @@ class TranslationsController extends Controller
 
         $model = new Translations('search');
         $model->unsetAttributes();  // clear any default values
-        if(isset($_GET['Translations']))
+        if(isset($_GET['Translations'])){
             $model->attributes=$_GET['Translations'];
+
+        }
 
         $columns = $model->getColumns();
 

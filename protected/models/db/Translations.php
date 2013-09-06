@@ -77,6 +77,7 @@ class Translations extends CActiveRecord
             'criteria'=>$criteria,
             'pagination'=>array(
                 'pageSize'=>'15',
+                'route' => 'translations/index'
             ),
         ));
     }
@@ -145,7 +146,7 @@ class Translations extends CActiveRecord
             ),
             array(
                 'name'=>'Category',
-                'value'=>'$data->Category',
+                //'value'=>'$data->Category',
                 'filter' => $this->CategoryNames,
                 'htmlOptions'=>array('style'=>'width: 70px; text-align: center;'),
             ),
