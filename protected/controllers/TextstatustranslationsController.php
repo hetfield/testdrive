@@ -203,8 +203,10 @@ class TextstatustranslationsController extends Controller
                                     $deadlineFor = $deadline->LangAr;
                                     $addresses = array(
                                         array(
-                                            'email' => 'ahmedsaied44@gmail.com',
+                                            'email' => 'translations@translations@mfxbroker.com',
                                             'name' => 'Mado Saied',
+//                                            'email' => 'ahmedsaied44@gmail.com',
+//                                            'name' => 'Mado Saied',
                                         ),
                                     );
                                     break;
@@ -212,6 +214,8 @@ class TextstatustranslationsController extends Controller
                                     $deadlineFor = $deadline->LangId;
                                     $addresses = array(
                                         array(
+//                                            'email' => 'translations@translations@mfxbroker.com',
+//                                            'name' => 'Juliana Saja',
                                             'email' => 'juliana_djulie@yahoo.com',
                                             'name' => 'Juliana Saja',
                                         ),
@@ -221,6 +225,8 @@ class TextstatustranslationsController extends Controller
                                     $deadlineFor = $deadline->LangMy;
                                     $addresses = array(
                                         array(
+//                                            'email' => 'translations@translations@mfxbroker.com',
+//                                            'name' => 'Jeff Nash',
                                             'email' => 'kamnfx@gmail.com',
                                             'name' => 'Jeff Nash',
                                         ),
@@ -388,6 +394,7 @@ class TextstatustranslationsController extends Controller
 
     public function uploadTranslation($modelName,$post,$get,$lang,$view)
     {
+        set_time_limit(0);
         $model = new $modelName;
 
         if (isset($get['id'])) $id = $get['id'];

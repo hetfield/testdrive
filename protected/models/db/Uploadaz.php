@@ -24,7 +24,7 @@ class Uploadaz extends CActiveRecord
     public function rules()
     {
         return array(
-            array('Document', 'file', 'types'=>'doc, docx'),
+            array('Document', 'file', 'types'=>'doc, docx, xlsx, xls'),
         );
     }
 

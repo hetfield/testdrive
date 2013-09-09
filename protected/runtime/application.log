@@ -6622,3 +6622,14 @@ REQUEST_URI=/translations/index
 in C:\xampp\htdocs\yii-test\testdrive\protected\models\db\Translations.php (149)
 in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TranslationsController.php (92)
 in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/09/06 13:16:36 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadtask".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\UploadtaskController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/09/06 13:19:10 [warning] [application] Failed to set unsafe attribute "Document" of "Uploaden".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (401)
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (428)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/09/06 13:23:06 [warning] [application] Failed to set unsafe attribute "Document" of "Uploadar".
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (407)
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php (429)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
