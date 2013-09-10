@@ -203,10 +203,10 @@ class TextstatustranslationsController extends Controller
                                     $deadlineFor = $deadline->LangAr;
                                     $addresses = array(
                                         array(
-                                            'email' => 'translations@translations@mfxbroker.com',
-                                            'name' => 'Mado Saied',
-//                                            'email' => 'ahmedsaied44@gmail.com',
+//                                            'email' => 'translations@translations@mfxbroker.com',
 //                                            'name' => 'Mado Saied',
+                                            'email' => 'ahmedsaied44@gmail.com',
+                                            'name' => 'Mado Saied',
                                         ),
                                     );
                                     break;
@@ -387,8 +387,9 @@ class TextstatustranslationsController extends Controller
             return;
         }
         if ($_GET['id']){
-            $text = TextTranslations::model()->deleteByPk($_GET['id']);
-            $status = TextStatusTranslations::model()->deleteAllByAttributes(array('TextId' => $_GET['id']));
+            TextTranslations::model()->deleteByPk($_GET['id']);
+            TextStatusTranslations::model()->deleteAllByAttributes(array('TextId' => $_GET['id']));
+            DeadLines::model()->deleteAllByAttributes(array('TextId' => $_GET['id']));
         }
     }
 
