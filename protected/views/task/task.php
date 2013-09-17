@@ -47,7 +47,8 @@ $this->breadcrumbs=array(
             'd.kulagin@mfxbroker.com,Денис Кулагин' => 'Денис Кулагин',
             's.maslov@mfxbroker.com,Степа Маслов' => 'Степа Маслов',
             'e.fentisov@mfxbroker.com,Егор Финтисов' => 'Егор Фентисов',
-            'd.sukhov@mfxbroker.com,Сухов Дмитрий' => 'Сухов Дмитрий',
+            'd.sukhov@mfxbroker.com,Дмитрий Сухов' => 'Дмитрий Сухов',
+            'v.zubkov@mfxbroker.com,Валерий Зубков' => 'Валерий Зубков',
         )); ?>
     </div>
     <br>
@@ -113,7 +114,7 @@ $this->breadcrumbs=array(
             </tr>
             <tr>
                 <td>
-                    <input id="TaskForm_languages_8" value="cn" type="checkbox" name="TaskForm[languages][]" />
+                    <input id="TaskForm_languages_8" value="az" type="checkbox" name="TaskForm[languages][]" disabled/>
                     <label style="display: inline;" for="TaskForm_languages_8">Az</label></label>
                 </td>
                 <td>

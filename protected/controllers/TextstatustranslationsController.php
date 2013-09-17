@@ -389,7 +389,7 @@ class TextstatustranslationsController extends Controller
         if ($_GET['id']){
             TextTranslations::model()->deleteByPk($_GET['id']);
             TextStatusTranslations::model()->deleteAllByAttributes(array('TextId' => $_GET['id']));
-            DeadLines::model()->deleteAllByAttributes(array('TextId' => $_GET['id']));
+            DeadLines::model()->deleteAllByAttributes(array('TextID' => $_GET['id']));
         }
     }
 
@@ -401,7 +401,8 @@ class TextstatustranslationsController extends Controller
         if (isset($get['id'])) $id = $get['id'];
 
         if(isset($post[$modelName]) && isset($id)){
-            $path = Yii::app()->basePath.DIRECTORY_SEPARATOR.'translations'.DIRECTORY_SEPARATOR;
+            $path = Yii::app()->basePath.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'translations'.DIRECTORY_SEPARATOR;
+//            $path = Yii::app()->basePath.DIRECTORY_SEPARATOR.'translations'.DIRECTORY_SEPARATOR;
             if (!is_dir($path.$id)){
                 mkdir($path.$id);
             }

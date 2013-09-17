@@ -102,4 +102,10 @@
 ////    }
 ////}
 //echo 'done!'; die;
-
+class ParserController extends Controller
+{
+    public function actionIndex()
+    {
+        $this->renderPartial('parser');
+    }
+}

@@ -8,132 +8,86 @@
  */
 
 
+function value_content($data, $translation, $attrLang, $attrStatus){
+    $status = $data->$attrStatus;
+    /** @var DeadLines $deadline */
+    $deadline = DeadLines::model()->findByAttributes(array('TextID' => $data->TextId));
+
+    $link = '';
+    $docTypes = array('doc','docx','xls','xlsx');
+    $path = Yii::app()->basePath.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'translations'.DIRECTORY_SEPARATOR.$data->TextId.DIRECTORY_SEPARATOR;
+    foreach ($docTypes as $docType){
+        if (is_file($path.$data->TextId.'_'.$translation.'.'.$docType)){
+            $link = '<br><a href="/translations/'.$data->TextId.'/'.$data->TextId.'_'.$translation.'.'.$docType.'">file</a>';
+        }
+    }
+
+    $deadlineToArray = explode(' ',$deadline->$attrLang);
+    if ($status == 0){
+        $color = 'important';
+    } elseif ($status == 1){
+        $color = 'warning';
+    } else {
+        $color = 'success';
+    }
+    return '<p><span class="badge badge-'.$color.'">'.$status.'</span></p><p><span class="badge">DeadLine:<br>'.$deadlineToArray[0].'<br>'.$deadlineToArray[1].'</span>'.$link.'</p>';
+}
+
 
 $langs = array(
     'en' => array(
         'name' => 'StatusEn',
         'htmlOptions'=>array('style'=>'width: 70px; text-align: center;'),
-        'value' => function ($data){
-            $status = $data->StatusEn;
-            /** @var DeadLines $deadline */
-            $deadline = DeadLines::model()->findByAttributes(array('TextID' => $data->TextId));
-            $deadlineToArray = explode(' ',$deadline->LangEn);
-            if ($status == 0){
-                $color = 'important';
-            } elseif ($status == 1){
-                $color = 'warning';
-            } else {
-                $color = 'success';
-            }
-            return '<p><span class="badge badge-'.$color.'">'.$status.'</span></p><p><span class="badge">DeadLine:<br>'.$deadlineToArray[0].'<br>'.$deadlineToArray[1].'</span></p>';
+        'value' => function($data){
+            return value_content($data,'en','LangEn','StatusEn');
         },
         'type' => 'html',
     ),
     'es' => array(
         'name' => 'StatusEs',
         'htmlOptions'=>array('style'=>'width: 70px; text-align: center;'),
-        'value' => function ($data){
-            $status = $data->StatusEs;
-            $deadline = DeadLines::model()->findByAttributes(array('TextID' => $data->TextId));
-            $deadlineToArray = explode(' ',$deadline->LangEs);
-            if ($status == 0){
-                $color = 'important';
-            } elseif ($status == 1){
-                $color = 'warning';
-            } else {
-                $color = 'success';
-            }
-            return '<p><span class="badge badge-'.$color.'">'.$status.'</span></p><p><span class="badge">DeadLine:<br>'.$deadlineToArray[0].'<br>'.$deadlineToArray[1].'</span></p>';
+        'value' => function($data){
+            return value_content($data,'es','LangEs','StatusEs');
         },
         'type' => 'html',
     ),
     'cn' => array(
         'name' => 'StatusCn',
         'htmlOptions'=>array('style'=>'width: 70px; text-align: center;'),
-        'value' => function ($data){
-            $status = $data->StatusCn;
-            $deadline = DeadLines::model()->findByAttributes(array('TextID' => $data->TextId));
-            $deadlineToArray = explode(' ',$deadline->LangCn);
-            if ($status == 0){
-                $color = 'important';
-            } elseif ($status == 1){
-                $color = 'warning';
-            } else {
-                $color = 'success';
-            }
-            return '<p><span class="badge badge-'.$color.'">'.$status.'</span></p><p><span class="badge">DeadLine:<br>'.$deadlineToArray[0].'<br>'.$deadlineToArray[1].'</span></p>';
+        'value' => function($data){
+            return value_content($data,'cn','LangCn','StatusCn');
         },
         'type' => 'html',
     ),
     'az' => array(
         'name' => 'StatusAz',
         'htmlOptions'=>array('style'=>'width: 70px; text-align: center;'),
-        'value' => function ($data){
-            $status = $data->StatusAz;
-            $deadline = DeadLines::model()->findByAttributes(array('TextID' => $data->TextId));
-            $deadlineToArray = explode(' ',$deadline->LangAz);
-            if ($status == 0){
-                $color = 'important';
-            } elseif ($status == 1){
-                $color = 'warning';
-            } else {
-                $color = 'success';
-            }
-            return '<p><span class="badge badge-'.$color.'">'.$status.'</span></p><p><span class="badge">DeadLine:<br>'.$deadlineToArray[0].'<br>'.$deadlineToArray[1].'</span></p>';
+        'value' => function($data){
+            return value_content($data,'az','LangAz','StatusAz');
         },
         'type' => 'html',
     ),
     'ar' => array(
         'name' => 'StatusAr',
         'htmlOptions'=>array('style'=>'width: 70px; text-align: center;'),
-        'value' => function ($data){
-            $status = $data->StatusAr;
-            $deadline = DeadLines::model()->findByAttributes(array('TextID' => $data->TextId));
-            $deadlineToArray = explode(' ',$deadline->LangAr);
-            if ($status == 0){
-                $color = 'important';
-            } elseif ($status == 1){
-                $color = 'warning';
-            } else {
-                $color = 'success';
-            }
-            return '<p><span class="badge badge-'.$color.'">'.$status.'</span></p><p><span class="badge">DeadLine:<br>'.$deadlineToArray[0].'<br>'.$deadlineToArray[1].'</span></p>';
+        'value' => function($data){
+            return value_content($data,'ar','LangAr','StatusAr');
         },
         'type' => 'html',
     ),
     'id' => array(
         'name' => 'StatusId',
         'htmlOptions'=>array('style'=>'width: 70px; text-align: center;'),
-        'value' => function ($data){
-            $status = $data->StatusId;
-            $deadline = DeadLines::model()->findByAttributes(array('TextID' => $data->TextId));
-            $deadlineToArray = explode(' ',$deadline->LangId);
-            if ($status == 0){
-                $color = 'important';
-            } elseif ($status == 1){
-                $color = 'warning';
-            } else {
-                $color = 'success';
-            }
-            return '<p><span class="badge badge-'.$color.'">'.$status.'</span></p><p><span class="badge">DeadLine:<br>'.$deadlineToArray[0].'<br>'.$deadlineToArray[1].'</span></p>';
+        'value' => function($data){
+            return value_content($data,'id','LangId','StatusId');
         },
         'type' => 'html',
     ),
     'my' => array(
         'name' => 'StatusMy',
         'htmlOptions'=>array('style'=>'width: 70px; text-align: center;'),
-        'value' => function ($data){
-            $status = $data->StatusMy;
-            $deadline = DeadLines::model()->findByAttributes(array('TextID' => $data->TextId));
-            $deadlineToArray = explode(' ',$deadline->LangMy);
-            if ($status == 0){
-                $color = 'important';
-            } elseif ($status == 1){
-                $color = 'warning';
-            } else {
-                $color = 'success';
-            }
-            return '<p><span class="badge badge-'.$color.'">'.$status.'</span></p><p><span class="badge">DeadLine:<br>'.$deadlineToArray[0].'<br>'.$deadlineToArray[1].'</span></p>';
+        'value' => function($data){
+            return value_content($data,'my','LangMy','StatusMy');
         },
         'type' => 'html',
     ),
@@ -145,7 +99,7 @@ $status = array(
         'htmlOptions'=>array('style'=>'width: 70px; text-align: center;'),
         'value' => function ($data){
             $status = $data->Status;
-            $deadline = DeadLines::model()->findByAttributes(array('TextID' => $data->TextId));
+            //$deadline = DeadLines::model()->findByAttributes(array('TextID' => $data->TextId));
             if ($status == 0){
                 $color = 'important';
             } elseif ($status == 1){
@@ -241,7 +195,21 @@ $columns = array(
         'name' => 'TextId',
         'htmlOptions'=>array('style'=>'width: 50px; text-align: center;'),
     ),
-    'Title',
+    array(
+        'name' => 'Title',
+        'value' => function($data){
+            $docTypes = array('doc','docx','xls','xlsx');
+            $file = '';
+            foreach ($docTypes as $docType){
+                $path = Yii::app()->basePath.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'documents'.DIRECTORY_SEPARATOR;
+                if (is_file($path.$data->TextId.'.'.$docType)){
+                    $file = '<br><a href="/documents/'.$data->TextId.'.'.$docType.'">file</a>';
+                }
+            }
+            return $data->Title.$file;
+        },
+        'type' => 'html',
+    ),
 );
 
 foreach ($langs as $lang => $data){

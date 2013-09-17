@@ -28,7 +28,8 @@ class UploadtaskController extends Controller
         if (isset($_GET['id'])) $id = $_GET['id'];
 
         if(isset($_POST[$modelName]) && isset($id)){
-            $path = Yii::app()->basePath.DIRECTORY_SEPARATOR.'documents'.DIRECTORY_SEPARATOR;
+            $path = Yii::app()->basePath.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'documents'.DIRECTORY_SEPARATOR;
+//            $path = Yii::app()->basePath.DIRECTORY_SEPARATOR.'documents'.DIRECTORY_SEPARATOR;
             $model->attributes=$_POST[$modelName];
             $model->Document = CUploadedFile::getInstance($model,'Document');
             $docName = explode('.',CUploadedFile::getInstance($model,'Document'));
