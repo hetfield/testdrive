@@ -243,7 +243,7 @@ class TextstatustranslationsController extends Controller
                             $enFile = Uploaden::model()->findByAttributes(array('TextId' => $textId));
                             $partsFile = explode('.', $enFile->Document);
                             $typeFile = end($partsFile);
-                            $path = Yii::app()->basePath . DIRECTORY_SEPARATOR.'translations'.DIRECTORY_SEPARATOR;
+                            $path = Yii::app()->basePath.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'translations'.DIRECTORY_SEPARATOR;
                             $attachments = array(
                                 array(
                                     'path' => $path . $textId . DIRECTORY_SEPARATOR . $textId . '_en.' . $typeFile,
@@ -314,7 +314,7 @@ class TextstatustranslationsController extends Controller
             $mailer = new Mailer();
             $subject = 'ID: '.$getTextTo->ID.' - Task: "'.$getTextTo->Title.'"';
             $body    = 'Переводы которые были Вами заказаны во вложениях';
-            $path = Yii::app()->basePath.DIRECTORY_SEPARATOR.'translations'.DIRECTORY_SEPARATOR;
+            $path = Yii::app()->basePath.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'translations'.DIRECTORY_SEPARATOR;
             $attachments = array();
             foreach ($textToArray as $value){
                 switch ($value){
