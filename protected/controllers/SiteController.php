@@ -32,9 +32,10 @@ class SiteController extends Controller
 
         if (Yii::app()->user->isGuest){
             $this->redirect(Yii::app()->createUrl('site/login'));
-        } else {
-            $this->redirect(Yii::app()->createUrl('textstatustranslations/index'));
         }
+//        else {
+//            $this->redirect(Yii::app()->createUrl('textstatustranslations/index'));
+//        }
 //        $table = new Users();
 //        $table->Username = 'e.fentisov';
 //        $table->Password = crypt('e.fentisov', 'newsaltfortest');
@@ -78,7 +79,7 @@ class SiteController extends Controller
         Yii::log("Started", 'error');
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
-		$this->render('index');
+		$this->redirect(Yii::app()->createUrl('textstatustranslations/index'));
 	}
 
 	/**

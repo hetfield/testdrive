@@ -25,6 +25,7 @@ class Uploadtask extends CActiveRecord
     {
         return array(
             array('Document', 'file', 'types'=>'doc, docx, xlsx, xls'),
+            array('Document','safe'),
         );
     }
 

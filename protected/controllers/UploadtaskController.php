@@ -52,57 +52,57 @@ class UploadtaskController extends Controller
                     }
                     if ($englishText){
                         $mailArray = array(
-//                            'en' => array(
-//                                'email' => 'translations@mfxbroker.com',
-//                                'name' => 'Егор Фентисов'
-//                            ),
                             'en' => array(
-                                'email' => 'e.fentisov@mfxbroker.com',
+                                'email' => 'translations@mfxbroker.com',
                                 'name' => 'Егор Фентисов'
                             ),
-                            'es' => array(
-                                'email' => 'iria_me9@hotmail.com',
-                                'name' => 'Iria Martinez Espinar'
-                            ),
-                            'cn' => array(
-                                'email' => 'huayu@masterforex.org',
-                                'name' => 'huayu@masterforex.org',
-                            ),
-                            'az' => array(
-                                'email' => 'e.zhidkov@mfxbroker.com',
-                                'name' => 'e.zhidkov@mfxbroker.com'
-                            ),
+//                            'en' => array(
+//                                'email' => 'e.fentisov@mfxbroker.com',
+//                                'name' => 'Егор Фентисов'
+//                            ),
+//                            'es' => array(
+//                                'email' => 'iria_me9@hotmail.com',
+//                                'name' => 'Iria Martinez Espinar'
+//                            ),
+//                            'cn' => array(
+//                                'email' => 'huayu@masterforex.org',
+//                                'name' => 'huayu@masterforex.org',
+//                            ),
+//                            'az' => array(
+//                                'email' => 'e.zhidkov@mfxbroker.com',
+//                                'name' => 'e.zhidkov@mfxbroker.com'
+//                            ),
                         );
                     } else {
                         $mailArray = array(
-//                            'ar' => array(
-//                                'email' => 'translations@mfxbroker.com',
-//                                'name' => 'Mado Saied'
-//                            ),
                             'ar' => array(
-                                'email' => 'ahmedsaied44@gmail.com',
+                                'email' => 'translations@mfxbroker.com',
                                 'name' => 'Mado Saied'
                             ),
-                            'es' => array(
-                                'email' => 'iria_me9@hotmail.com',
-                                'name' => 'Iria Martinez Espinar'
-                            ),
-                            'cn' => array(
-                                'email' => 'huayu@masterforex.org',
-                                'name' => 'huayu@masterforex.org',
-                            ),
-                            'my' => array(
-                                'email' => 'kamnfx@gmail.com',
-                                'name' => 'Jeff Nash'
-                            ),
-                            'id' => array(
-                                'email' => 'juliana_djulie@yahoo.com',
-                                'name' => 'Juliana Saja'
-                            ),
-                            'az' => array(
-                                'email' => 'e.zhidkov@mfxbroker.com',
-                                'name' => 'e.zhidkov@mfxbroker.com'
-                            ),
+//                            'ar' => array(
+//                                'email' => 'ahmedsaied44@gmail.com',
+//                                'name' => 'Mado Saied'
+//                            ),
+//                            'es' => array(
+//                                'email' => 'iria_me9@hotmail.com',
+//                                'name' => 'Iria Martinez Espinar'
+//                            ),
+//                            'cn' => array(
+//                                'email' => 'huayu@masterforex.org',
+//                                'name' => 'huayu@masterforex.org',
+//                            ),
+//                            'my' => array(
+//                                'email' => 'kamnfx@gmail.com',
+//                                'name' => 'Jeff Nash'
+//                            ),
+//                            'id' => array(
+//                                'email' => 'juliana_djulie@yahoo.com',
+//                                'name' => 'Juliana Saja'
+//                            ),
+//                            'az' => array(
+//                                'email' => 'e.zhidkov@mfxbroker.com',
+//                                'name' => 'e.zhidkov@mfxbroker.com'
+//                            ),
                         );
                     }
 

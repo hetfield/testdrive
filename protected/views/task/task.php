@@ -114,7 +114,7 @@ $this->breadcrumbs=array(
             </tr>
             <tr>
                 <td>
-                    <input id="TaskForm_languages_8" value="az" type="checkbox" name="TaskForm[languages][]" disabled/>
+                    <input id="TaskForm_languages_8" value="az" type="checkbox" name="TaskForm[languages][]" />
                     <label style="display: inline;" for="TaskForm_languages_8">Az</label></label>
                 </td>
                 <td>

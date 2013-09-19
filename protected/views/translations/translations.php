@@ -43,7 +43,7 @@ $('.table tr').each(function(k)
                                         var lang = $(this).attr('data-lang');
                                         var id = $(this).attr('data-id');
                                         $.ajax({
-											url: '/translations/save/',
+											url: '?r=translations/save',
 											type: 'POST',
 											data: {'id':id,'lang':lang,'text':text},
 											success:  function(res) {
