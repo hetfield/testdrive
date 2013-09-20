@@ -8,6 +8,7 @@
  */
 
 
+
 function value_content($data, $translation, $attrLang, $attrStatus){
     $status = $data->$attrStatus;
     /** @var DeadLines $deadline */
@@ -22,6 +23,17 @@ function value_content($data, $translation, $attrLang, $attrStatus){
         }
     }
 
+    $check = '';
+    /** @var TextTranslations $textTo */
+    $textTo = TextTranslations::model()->findByPk($data->TextId);
+    $textTo = json_decode($textTo->TaskTo);
+    foreach ($textTo as $value){
+        if ($value == $translation){
+            $check = '<br /><img src="/images/check.png" />';
+        }
+    }
+
+
     $deadlineToArray = explode(' ',$deadline->$attrLang);
     if ($status == 0){
         $color = 'important';
@@ -30,7 +42,7 @@ function value_content($data, $translation, $attrLang, $attrStatus){
     } else {
         $color = 'success';
     }
-    return '<p><span class="badge badge-'.$color.'">'.$status.'</span></p><p><span class="badge">DeadLine:<br>'.$deadlineToArray[0].'<br>'.$deadlineToArray[1].'</span>'.$link.'</p>';
+    return '<p><span class="badge badge-'.$color.'">'.$status.'</span></p><p><span class="badge">DeadLine:<br>'.$deadlineToArray[0].'<br>'.$deadlineToArray[1].'</span>'.$check.$link.'</p>';
 }
 
 
@@ -263,6 +275,9 @@ if (Yii::app()->user->getState('Role') == 'A'){
         'type'=>'success', // 'success', 'warning', 'important', 'info' or 'inverse'
         'label'=>'2',
     )); ?> - Translator finished
+</p>
+<p>
+    <img src="/images/check.png"> - If a task is marked with this image it means that this task needs to be translated by translator
 </p>
 
 
