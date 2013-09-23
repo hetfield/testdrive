@@ -7030,3 +7030,75 @@ in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
 2013/09/20 17:45:15 [error] [application] Started
 in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (79)
 in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/09/20 17:55:20 [error] [exception.CException] exception 'CException' with message 'Property "CSort.pagination" is not defined.' in C:\xampp\htdocs\yii-test\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CDataProvider.php(154): CComponent->__set('pagination', Array)
+#1 C:\xampp\htdocs\yii-test\framework\base\CComponent.php(152): CDataProvider->setSort(Array)
+#2 C:\xampp\htdocs\yii-test\framework\web\CActiveDataProvider.php(83): CComponent->__set('sort', Array)
+#3 C:\xampp\htdocs\yii-test\testdrive\protected\models\db\TextStatusTranslations.php(57): CActiveDataProvider->__construct('TextStatusTrans...', Array)
+#4 C:\xampp\htdocs\yii-test\testdrive\protected\views\textstatustranslations\textstatustranslations.php(288): TextStatusTranslations->search()
+#5 C:\xampp\htdocs\yii-test\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#6 C:\xampp\htdocs\yii-test\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii-test\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii-test\framework\web\CController.php(782): CController->renderPartial('textstatustrans...', Array, true)
+#9 C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php(26): CController->render('textstatustrans...', Array)
+#10 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): TextstatustranslationsController->actionIndex()
+#11 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): CController->run('index')
+#15 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController('textstatustrans...')
+#16 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/?r=textstatustranslations/index
+---
+2013/09/20 17:56:25 [error] [exception.CException] exception 'CException' with message 'Property "CSort.pagination" is not defined.' in C:\xampp\htdocs\yii-test\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CDataProvider.php(154): CComponent->__set('pagination', Array)
+#1 C:\xampp\htdocs\yii-test\framework\base\CComponent.php(152): CDataProvider->setSort(Array)
+#2 C:\xampp\htdocs\yii-test\framework\web\CActiveDataProvider.php(83): CComponent->__set('sort', Array)
+#3 C:\xampp\htdocs\yii-test\testdrive\protected\models\db\TextStatusTranslations.php(57): CActiveDataProvider->__construct('TextStatusTrans...', Array)
+#4 C:\xampp\htdocs\yii-test\testdrive\protected\views\textstatustranslations\textstatustranslations.php(288): TextStatusTranslations->search()
+#5 C:\xampp\htdocs\yii-test\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#6 C:\xampp\htdocs\yii-test\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii-test\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii-test\framework\web\CController.php(782): CController->renderPartial('textstatustrans...', Array, true)
+#9 C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php(26): CController->render('textstatustrans...', Array)
+#10 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): TextstatustranslationsController->actionIndex()
+#11 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): CController->run('index')
+#15 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController('textstatustrans...')
+#16 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/?r=textstatustranslations/index
+---
+2013/09/20 18:02:45 [error] [exception.CException] exception 'CException' with message 'Property "CSort.pagination" is not defined.' in C:\xampp\htdocs\yii-test\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CDataProvider.php(154): CComponent->__set('pagination', Array)
+#1 C:\xampp\htdocs\yii-test\framework\base\CComponent.php(152): CDataProvider->setSort(Array)
+#2 C:\xampp\htdocs\yii-test\framework\web\CActiveDataProvider.php(83): CComponent->__set('sort', Array)
+#3 C:\xampp\htdocs\yii-test\testdrive\protected\models\db\TextStatusTranslations.php(55): CActiveDataProvider->__construct('TextStatusTrans...', Array)
+#4 C:\xampp\htdocs\yii-test\testdrive\protected\views\textstatustranslations\textstatustranslations.php(288): TextStatusTranslations->search()
+#5 C:\xampp\htdocs\yii-test\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#6 C:\xampp\htdocs\yii-test\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii-test\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii-test\framework\web\CController.php(782): CController->renderPartial('textstatustrans...', Array, true)
+#9 C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TextstatustranslationsController.php(26): CController->render('textstatustrans...', Array)
+#10 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): TextstatustranslationsController->actionIndex()
+#11 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): CController->run('index')
+#15 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController('textstatustrans...')
+#16 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/?r=textstatustranslations/index
+---
+2013/09/23 10:55:32 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (79)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
