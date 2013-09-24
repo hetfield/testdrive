@@ -7182,3 +7182,6 @@ Stack trace:
 REQUEST_URI=/?r=textstatustranslations%2Findex&sort=TextId&ajax=yw0
 HTTP_REFERER=http://testdrive.mf/?r=textstatustranslations/index
 ---
+2013/09/24 08:11:36 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (79)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)

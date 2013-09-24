@@ -218,7 +218,16 @@ $columns = array(
                     $file = '<br><a href="/documents/'.$data->TextId.'.'.$docType.'">file</a>';
                 }
             }
-            return $data->Title.$file;
+            $path = Yii::app()->basePath.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'translations'.DIRECTORY_SEPARATOR.$data->TextId.DIRECTORY_SEPARATOR;
+            $file_en = '';
+            foreach ($docTypes as $docType){
+                if (is_file($path.$data->TextId.'_en.'.$docType)){
+                    $file_en = ', <br><a href="/translations/'.$data->TextId.'/'.$data->TextId.'_en.'.$docType.'">file_en</a>';
+                }
+            }
+
+
+            return $data->Title.$file.$file_en;
         },
         'type' => 'html',
     ),
@@ -264,12 +273,12 @@ if (Yii::app()->user->getState('Role') == 'A'){
     'label'=>'0',
 )); ?> - Translator has not yet started work on the translation
 </p>
-<p>
-    <?php $this->widget('bootstrap.widgets.TbBadge', array(
-        'type'=>'warning', // 'success', 'warning', 'important', 'info' or 'inverse'
-        'label'=>'1',
-    )); ?> - Translator is working on the translation
-</p>
+<!--<p>-->
+<!--    --><?php //$this->widget('bootstrap.widgets.TbBadge', array(
+//        'type'=>'warning', // 'success', 'warning', 'important', 'info' or 'inverse'
+//        'label'=>'1',
+//    )); ?><!-- - Translator is working on the translation-->
+<!--</p>-->
 <p>
     <?php $this->widget('bootstrap.widgets.TbBadge', array(
         'type'=>'success', // 'success', 'warning', 'important', 'info' or 'inverse'
