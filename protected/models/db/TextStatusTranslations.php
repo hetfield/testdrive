@@ -28,6 +28,12 @@ class TextStatusTranslations extends CActiveRecord
 
     public function search()
     {
+        if (Yii::app()->user->getState('Role') == 'A'){
+            $visible = $this->Status;
+        } else {
+            $visible = '<2';
+        }
+
         $criteria=new CDbCriteria;
 
         $criteria->compare('TextId',$this->TextId,true);
@@ -39,12 +45,17 @@ class TextStatusTranslations extends CActiveRecord
         $criteria->compare('StatusId',$this->StatusId,true);
         $criteria->compare('StatusAr',$this->StatusAr,true);
         $criteria->compare('StatusAz',$this->StatusAz,true);
-        $criteria->compare('Status','<2',true);
+        $criteria->compare('Status', $visible,true);
 //        $criteria->compare('Status',$this->Status,true);
+//        $criteria->compare('Status','<2',true);
+
 
         return new CActiveDataProvider(get_class($this), array(
-            'criteria'=>$criteria,
-            'pagination'=>array(
+            'criteria' => $criteria,
+            'sort' => array(
+                'defaultOrder' => 'TextId DESC',
+            ),
+            'pagination' => array(
                 'pageSize'=>'10',
             ),
         ));
