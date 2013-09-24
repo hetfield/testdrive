@@ -64,14 +64,14 @@ class Translations extends CActiveRecord
         $criteria->compare('ID',$this->ID);
         $criteria->compare('Category',$this->Category);
 //        $criteria->compare('Key',$this->Key,true);
-        $criteria->compare('LangEn',$this->LangEn,true);
-        $criteria->compare('LangAr',$this->LangAr,true);
-        $criteria->compare('LangEs',$this->LangEs,true);
-        $criteria->compare('LangId',$this->LangId,true);
-        $criteria->compare('LangMy',$this->LangMy,true);
-        $criteria->compare('LangRu',$this->LangRu,true);
-        $criteria->compare('LangCn',$this->LangCn,true);
-        $criteria->compare('LangAz',$this->LangAz,true);
+        $criteria->compare('LangEn',$this->LangEn);
+        $criteria->compare('LangAr',$this->LangAr);
+        $criteria->compare('LangEs',$this->LangEs);
+        $criteria->compare('LangId',$this->LangId);
+        $criteria->compare('LangMy',$this->LangMy);
+        $criteria->compare('LangRu',$this->LangRu);
+        $criteria->compare('LangCn',$this->LangCn);
+        $criteria->compare('LangAz',$this->LangAz);
 
         return new CActiveDataProvider(get_class($this), array(
             'criteria'=>$criteria,
