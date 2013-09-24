@@ -294,6 +294,7 @@ if (Yii::app()->user->getState('Role') == 'A'){
     <?php
     $this->widget('bootstrap.widgets.TbGridView', array(
         'type'=>'striped bordered condensed',
+        'template'=>"{pager}\n{items}\n{pager}",
         'dataProvider'=>$model->search(),
         'filter' => $model,
         'columns'=>$columns,
