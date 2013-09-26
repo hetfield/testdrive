@@ -7185,3 +7185,371 @@ HTTP_REFERER=http://testdrive.mf/?r=textstatustranslations/index
 2013/09/24 08:11:36 [error] [application] Started
 in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (79)
 in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/09/24 14:19:46 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (79)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/09/24 15:21:32 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (79)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/09/24 15:21:45 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (79)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/09/24 15:24:44 [error] [exception.CException] exception 'CException' with message 'Property "Translations.radioButtons" is not defined.' in C:\xampp\htdocs\yii-test\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\db\ar\CActiveRecord.php(143): CComponent->__get('radioButtons')
+#1 C:\xampp\htdocs\yii-test\framework\web\helpers\CHtml.php(2255): CActiveRecord->__get('radioButtons')
+#2 C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\TbActiveForm.php(274): CHtml::resolveValue(Object(Translations), 'radioButtons')
+#3 C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\TbActiveForm.php(258): TbActiveForm->inputsList(false, Object(Translations), 'radioButtons', Array, Array)
+#4 C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\input\TbInputVertical.php(109): TbActiveForm->radioButtonList(Object(Translations), 'radioButtons', Array, Array)
+#5 C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\input\TbInput.php(217): TbInputVertical->radioButtonList()
+#6 C:\xampp\htdocs\yii-test\framework\web\CBaseController.php(173): TbInput->run()
+#7 C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\TbActiveForm.php(497): CBaseController->widget('bootstrap.widge...', Array)
+#8 C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\TbActiveForm.php(161): TbActiveForm->inputRow('radiobuttonlist', Object(Translations), 'radioButtons', Array, Array)
+#9 C:\xampp\htdocs\yii-test\testdrive\protected\views\translations\translations.php(158): TbActiveForm->radioButtonListRow(Object(Translations), 'radioButtons', Array)
+#10 C:\xampp\htdocs\yii-test\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#11 C:\xampp\htdocs\yii-test\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii-test\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii-test\framework\web\CController.php(782): CController->renderPartial('translations', Array, true)
+#14 C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TranslationsController.php(63): CController->render('translations', Array)
+#15 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): TranslationsController->actionIndex()
+#16 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): CController->run('index')
+#20 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController('translations/in...')
+#21 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/?r=translations/index
+HTTP_REFERER=http://testdrive.mf/?r=textstatustranslations/index
+---
+2013/09/24 15:28:42 [error] [exception.CException] exception 'CException' with message 'Property "Translations.ChosenCategory" is not defined.' in C:\xampp\htdocs\yii-test\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\db\ar\CActiveRecord.php(159): CComponent->__set('ChosenCategory', NULL)
+#1 C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TranslationsController.php(26): CActiveRecord->__set('ChosenCategory', NULL)
+#2 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): TranslationsController->actionIndex()
+#3 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): CController->run('index')
+#7 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController('translations/in...')
+#8 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/?r=translations/index
+HTTP_REFERER=http://testdrive.mf/?r=textstatustranslations/index
+---
+2013/09/24 15:29:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "translations/index".' in C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController('translations/in...')
+#1 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/?r=translations/index
+HTTP_REFERER=http://testdrive.mf/?r=textstatustranslations/index
+---
+2013/09/24 15:29:19 [error] [exception.CException] exception 'CException' with message 'Property "Translations.ChosenCategory" is not defined.' in C:\xampp\htdocs\yii-test\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\db\ar\CActiveRecord.php(143): CComponent->__get('ChosenCategory')
+#1 C:\xampp\htdocs\yii-test\testdrive\protected\models\db\Translations.php(66): CActiveRecord->__get('ChosenCategory')
+#2 C:\xampp\htdocs\yii-test\testdrive\protected\views\translations\translations.php(168): Translations->search()
+#3 C:\xampp\htdocs\yii-test\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#4 C:\xampp\htdocs\yii-test\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yii-test\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#6 C:\xampp\htdocs\yii-test\framework\web\CController.php(782): CController->renderPartial('translations', Array, true)
+#7 C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TranslationsController.php(63): CController->render('translations', Array)
+#8 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): TranslationsController->actionIndex()
+#9 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): CController->run('index')
+#13 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController('translations/in...')
+#14 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/?r=translations/index
+HTTP_REFERER=http://testdrive.mf/?r=translations/index
+---
+2013/09/24 15:31:53 [error] [exception.CException] exception 'CException' with message 'TranslationsController contains improperly nested widget tags in its view "C:\xampp\htdocs\yii-test\testdrive\protected\views\translations\translations.php". A TbActiveForm widget does not have an endWidget() call.' in C:\xampp\htdocs\yii-test\framework\web\CBaseController.php:101
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(782): CController->renderPartial('translations', Array, true)
+#2 C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TranslationsController.php(63): CController->render('translations', Array)
+#3 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): TranslationsController->actionIndex()
+#4 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): CController->run('index')
+#8 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController('translations/in...')
+#9 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/?r=translations/index
+HTTP_REFERER=http://testdrive.mf/?r=translations/index
+---
+2013/09/24 15:32:13 [error] [exception.CException] exception 'CException' with message 'TranslationsController contains improperly nested widget tags in its view "C:\xampp\htdocs\yii-test\testdrive\protected\views\translations\translations.php". A TbActiveForm widget does not have an endWidget() call.' in C:\xampp\htdocs\yii-test\framework\web\CBaseController.php:101
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(782): CController->renderPartial('translations', Array, true)
+#2 C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TranslationsController.php(63): CController->render('translations', Array)
+#3 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): TranslationsController->actionIndex()
+#4 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): CController->run('index')
+#8 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController('translations/in...')
+#9 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/?r=translations/index
+HTTP_REFERER=http://testdrive.mf/?r=translations/index
+---
+2013/09/24 15:41:19 [error] [exception.CException] exception 'CException' with message 'Property "Translations.dropdown" is not defined.' in C:\xampp\htdocs\yii-test\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\db\ar\CActiveRecord.php(143): CComponent->__get('dropdown')
+#1 C:\xampp\htdocs\yii-test\framework\web\helpers\CHtml.php(2255): CActiveRecord->__get('dropdown')
+#2 C:\xampp\htdocs\yii-test\framework\web\helpers\CHtml.php(1565): CHtml::resolveValue(Object(Translations), 'dropdown')
+#3 C:\xampp\htdocs\yii-test\framework\web\widgets\CActiveForm.php(763): CHtml::activeDropDownList(Object(Translations), 'dropdown', Array, Array)
+#4 C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\input\TbInputInline.php(25): CActiveForm->dropDownList(Object(Translations), 'dropdown', Array, Array)
+#5 C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\input\TbInput.php(201): TbInputInline->dropDownList()
+#6 C:\xampp\htdocs\yii-test\framework\web\CBaseController.php(173): TbInput->run()
+#7 C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\TbActiveForm.php(497): CBaseController->widget('bootstrap.widge...', Array)
+#8 C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\TbActiveForm.php(112): TbActiveForm->inputRow('dropdownlist', Object(Translations), 'dropdown', Array, Array)
+#9 C:\xampp\htdocs\yii-test\testdrive\protected\views\translations\translations.php(187): TbActiveForm->dropDownListRow(Object(Translations), 'dropdown', Array)
+#10 C:\xampp\htdocs\yii-test\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#11 C:\xampp\htdocs\yii-test\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii-test\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii-test\framework\web\CController.php(782): CController->renderPartial('translations', Array, true)
+#14 C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TranslationsController.php(63): CController->render('translations', Array)
+#15 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): TranslationsController->actionIndex()
+#16 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): CController->run('index')
+#20 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController('translations/in...')
+#21 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/?r=translations/index
+HTTP_REFERER=http://testdrive.mf/?r=translations/index
+---
+2013/09/24 15:51:44 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (C:\xampp\htdocs\yii-test\framework\web\helpers\CHtml.php:98)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\helpers\CHtml.php(153): renderAttributes()
+#1 C:\xampp\htdocs\yii-test\framework\web\helpers\CHtml.php(1585): tag()
+#2 C:\xampp\htdocs\yii-test\framework\web\widgets\CActiveForm.php(763): activeDropDownList()
+#3 C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\input\TbInputInline.php(25): TbActiveForm->dropDownList()
+#4 C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\input\TbInput.php(201): TbInputInline->dropDownList()
+#5 C:\xampp\htdocs\yii-test\framework\web\CBaseController.php(173): TbInputInline->run()
+#6 C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\TbActiveForm.php(497): TranslationsController->widget()
+#7 C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\TbActiveForm.php(112): TbActiveForm->inputRow()
+#8 C:\xampp\htdocs\yii-test\testdrive\protected\views\translations\translations.php(188): TbActiveForm->dropDownListRow()
+#9 C:\xampp\htdocs\yii-test\framework\web\CBaseController.php(126): require()
+#10 C:\xampp\htdocs\yii-test\framework\web\CBaseController.php(95): TranslationsController->renderInternal()
+#11 C:\xampp\htdocs\yii-test\framework\web\CController.php(869): TranslationsController->renderFile()
+#12 C:\xampp\htdocs\yii-test\framework\web\CController.php(782): TranslationsController->renderPartial()
+#13 C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TranslationsController.php(63): TranslationsController->render()
+#14 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): TranslationsController->actionIndex()
+#15 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#16 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): TranslationsController->runAction()
+#17 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): TranslationsController->runActionWithFilters()
+#18 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): TranslationsController->run()
+#19 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/?r=translations/index
+in C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\input\TbInputInline.php (25)
+in C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\input\TbInput.php (201)
+in C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\TbActiveForm.php (497)
+2013/09/24 15:54:44 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (C:\xampp\htdocs\yii-test\framework\web\helpers\CHtml.php:98)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\helpers\CHtml.php(153): renderAttributes()
+#1 C:\xampp\htdocs\yii-test\framework\web\helpers\CHtml.php(1585): tag()
+#2 C:\xampp\htdocs\yii-test\framework\web\widgets\CActiveForm.php(763): activeDropDownList()
+#3 C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\input\TbInputInline.php(25): TbActiveForm->dropDownList()
+#4 C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\input\TbInput.php(201): TbInputInline->dropDownList()
+#5 C:\xampp\htdocs\yii-test\framework\web\CBaseController.php(173): TbInputInline->run()
+#6 C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\TbActiveForm.php(497): TranslationsController->widget()
+#7 C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\TbActiveForm.php(112): TbActiveForm->inputRow()
+#8 C:\xampp\htdocs\yii-test\testdrive\protected\views\translations\translations.php(188): TbActiveForm->dropDownListRow()
+#9 C:\xampp\htdocs\yii-test\framework\web\CBaseController.php(126): require()
+#10 C:\xampp\htdocs\yii-test\framework\web\CBaseController.php(95): TranslationsController->renderInternal()
+#11 C:\xampp\htdocs\yii-test\framework\web\CController.php(869): TranslationsController->renderFile()
+#12 C:\xampp\htdocs\yii-test\framework\web\CController.php(782): TranslationsController->renderPartial()
+#13 C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TranslationsController.php(63): TranslationsController->render()
+#14 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): TranslationsController->actionIndex()
+#15 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#16 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): TranslationsController->runAction()
+#17 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): TranslationsController->runActionWithFilters()
+#18 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): TranslationsController->run()
+#19 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/?r=translations/index
+in C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\input\TbInputInline.php (25)
+in C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\input\TbInput.php (201)
+in C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\TbActiveForm.php (497)
+2013/09/24 15:54:54 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (C:\xampp\htdocs\yii-test\framework\web\helpers\CHtml.php:98)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\helpers\CHtml.php(153): renderAttributes()
+#1 C:\xampp\htdocs\yii-test\framework\web\helpers\CHtml.php(1585): tag()
+#2 C:\xampp\htdocs\yii-test\framework\web\widgets\CActiveForm.php(763): activeDropDownList()
+#3 C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\input\TbInputInline.php(25): TbActiveForm->dropDownList()
+#4 C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\input\TbInput.php(201): TbInputInline->dropDownList()
+#5 C:\xampp\htdocs\yii-test\framework\web\CBaseController.php(173): TbInputInline->run()
+#6 C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\TbActiveForm.php(497): TranslationsController->widget()
+#7 C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\TbActiveForm.php(112): TbActiveForm->inputRow()
+#8 C:\xampp\htdocs\yii-test\testdrive\protected\views\translations\translations.php(188): TbActiveForm->dropDownListRow()
+#9 C:\xampp\htdocs\yii-test\framework\web\CBaseController.php(126): require()
+#10 C:\xampp\htdocs\yii-test\framework\web\CBaseController.php(95): TranslationsController->renderInternal()
+#11 C:\xampp\htdocs\yii-test\framework\web\CController.php(869): TranslationsController->renderFile()
+#12 C:\xampp\htdocs\yii-test\framework\web\CController.php(782): TranslationsController->renderPartial()
+#13 C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TranslationsController.php(63): TranslationsController->render()
+#14 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): TranslationsController->actionIndex()
+#15 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#16 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): TranslationsController->runAction()
+#17 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): TranslationsController->runActionWithFilters()
+#18 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): TranslationsController->run()
+#19 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/?r=translations/index
+in C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\input\TbInputInline.php (25)
+in C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\input\TbInput.php (201)
+in C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\TbActiveForm.php (497)
+2013/09/24 15:55:05 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (C:\xampp\htdocs\yii-test\framework\web\helpers\CHtml.php:98)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\helpers\CHtml.php(153): renderAttributes()
+#1 C:\xampp\htdocs\yii-test\framework\web\helpers\CHtml.php(1585): tag()
+#2 C:\xampp\htdocs\yii-test\framework\web\widgets\CActiveForm.php(763): activeDropDownList()
+#3 C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\input\TbInputInline.php(25): TbActiveForm->dropDownList()
+#4 C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\input\TbInput.php(201): TbInputInline->dropDownList()
+#5 C:\xampp\htdocs\yii-test\framework\web\CBaseController.php(173): TbInputInline->run()
+#6 C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\TbActiveForm.php(497): TranslationsController->widget()
+#7 C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\TbActiveForm.php(112): TbActiveForm->inputRow()
+#8 C:\xampp\htdocs\yii-test\testdrive\protected\views\translations\translations.php(188): TbActiveForm->dropDownListRow()
+#9 C:\xampp\htdocs\yii-test\framework\web\CBaseController.php(126): require()
+#10 C:\xampp\htdocs\yii-test\framework\web\CBaseController.php(95): TranslationsController->renderInternal()
+#11 C:\xampp\htdocs\yii-test\framework\web\CController.php(869): TranslationsController->renderFile()
+#12 C:\xampp\htdocs\yii-test\framework\web\CController.php(782): TranslationsController->renderPartial()
+#13 C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TranslationsController.php(63): TranslationsController->render()
+#14 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): TranslationsController->actionIndex()
+#15 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#16 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): TranslationsController->runAction()
+#17 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): TranslationsController->runActionWithFilters()
+#18 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): TranslationsController->run()
+#19 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/?r=translations/index
+in C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\input\TbInputInline.php (25)
+in C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\input\TbInput.php (201)
+in C:\xampp\htdocs\yii-test\testdrive\protected\extensions\bootstrap\widgets\TbActiveForm.php (497)
+2013/09/24 16:04:39 [error] [php] Undefined index: Category (C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TranslationsController.php:32)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): TranslationsController->runAction()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): TranslationsController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): TranslationsController->run()
+#3 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/?r=translations/index
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TranslationsController.php (32)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/09/24 16:05:39 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (79)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/09/24 16:05:49 [error] [php] Undefined index: Category (C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TranslationsController.php:32)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): TranslationsController->runAction()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): TranslationsController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): TranslationsController->run()
+#3 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/?r=translations/index
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TranslationsController.php (32)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/09/24 16:06:20 [error] [php] Undefined index: Translations (C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TranslationsController.php:27)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): TranslationsController->runAction()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): TranslationsController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): TranslationsController->run()
+#3 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/?r=translations/index
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TranslationsController.php (27)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/09/24 16:07:08 [error] [php] Undefined index: Category (C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TranslationsController.php:32)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): TranslationsController->runAction()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): TranslationsController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): TranslationsController->run()
+#3 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/?r=translations/index
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TranslationsController.php (32)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/09/24 16:12:05 [error] [php] Illegal string offset 'Translations' (C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TranslationsController.php:58)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): TranslationsController->runAction()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): TranslationsController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): TranslationsController->run()
+#3 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/?r=translations/index
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TranslationsController.php (58)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/09/24 16:12:59 [error] [php] Illegal string offset 'Translations' (C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TranslationsController.php:58)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): TranslationsController->runAction()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): TranslationsController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): TranslationsController->run()
+#3 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/?r=translations/index
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TranslationsController.php (58)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/09/24 16:13:20 [error] [php] Illegal string offset 'Translations' (C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TranslationsController.php:58)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): TranslationsController->runAction()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): TranslationsController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): TranslationsController->run()
+#3 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/?r=translations/index
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TranslationsController.php (58)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/09/24 16:15:07 [error] [php] Illegal string offset 'Translations' (C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TranslationsController.php:58)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): TranslationsController->runAction()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): TranslationsController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): TranslationsController->run()
+#3 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/?r=translations/index
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TranslationsController.php (58)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/09/24 16:15:35 [error] [php] Illegal string offset 'Translations' (C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TranslationsController.php:58)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): TranslationsController->runAction()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): TranslationsController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): TranslationsController->run()
+#3 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/?r=translations/index
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TranslationsController.php (58)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/09/26 08:12:54 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (79)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/09/26 09:20:43 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (79)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)

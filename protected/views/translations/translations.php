@@ -157,7 +157,7 @@ $this->breadcrumbs = array(
     $this->widget('bootstrap.widgets.TbGridView', array(
         'type'=>'striped bordered condensed',
         'dataProvider'=>$model->search(),
-        'template'=>"{pager}\n{items}\n{pager}",
+        'template'=>"{pager}{summary}\n{items}\n{pager}",
         'filter' => $model,
         'columns'=>$columns,
         'enableSorting' => true,

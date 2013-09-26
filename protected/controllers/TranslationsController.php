@@ -22,7 +22,6 @@ class TranslationsController extends Controller
 
         }
 
-        $columns = $model->getColumns();
 
         if (isset($_POST[$modelName])) {
 
@@ -53,7 +52,7 @@ class TranslationsController extends Controller
 
         $this->render('translations',array(
             'model'=>$model,
-            'columns' => $columns,
+            'columns' => $model->getColumns(),
 
         ));
     }
