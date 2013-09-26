@@ -168,26 +168,6 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
         <option <?php Yii::app()->user->getState('Category') == $category ? print('selected="selected"') : (Yii::app()->user->getState('Category') == $model->Category && $category == 'all') ? print('selected="selected"') : '' ?> value="<?= $category ?>"><?= $category ?></option>
     <?php endforeach; ?>
 </select>
-<!--    <option value="accounts">accounts</option>-->
-<!--    <option selected="selected" value="calc">calc</option>-->
-<!--    <option value="clientform">clientform</option>-->
-<!--    <option value="contests">contests</option>-->
-<!--    <option value="informers">informers</option>-->
-<!--    <option value="ism">ism</option>-->
-<!--    <option value="main">main</option>-->
-<!--    <option value="misc">misc</option>-->
-<!--    <option value="notice">notice</option>-->
-<!--    <option value="notify">notify</option>-->
-<!--    <option value="other">other</option>-->
-<!--    <option value="pamm">pamm</option>-->
-<!--    <option value="partner">partner</option>-->
-<!--    <option value="requests">requests</option>-->
-<!--    <option value="services">services</option>-->
-<!--    <option value="tournaments">tournaments</option>-->
-<!--    <option value="widgets">widgets</option>-->
-<!--    <option value="yii">yii</option>-->
-<!--    <option value="all">all categories</option>-->
-
 
 <?php $this->widget('bootstrap.widgets.TbButton', array(
     'buttonType'=>'submit',
