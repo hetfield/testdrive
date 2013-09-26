@@ -158,12 +158,15 @@ $this->breadcrumbs = array(
 
 <?php
 $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
-    'htmlOptions'=>array('class'=>'well'),
+    'htmlOptions'=>array(
+        'class'=>'well',
+        'style' => 'width: 245px; float: right; margin-top: -80px;',
+    ),
     'type' => 'inline',
 )); ?>
 
 <?= $form->label($model,'Category'); ?>
-<select name="Translations[Category]" id="Translations_Category">
+<select style="width: 120px;" name="Translations[ChooseCategory]" id="Translations_Category">
     <?php foreach ($model->CategoryNames as $category) : ?>
         <option <?php Yii::app()->user->getState('Category') == $category ? print('selected="selected"') : (Yii::app()->user->getState('Category') == $model->Category && $category == 'all') ? print('selected="selected"') : '' ?> value="<?= $category ?>"><?= $category ?></option>
     <?php endforeach; ?>
@@ -171,7 +174,7 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 
 <?php $this->widget('bootstrap.widgets.TbButton', array(
     'buttonType'=>'submit',
-    'label'=>'Save',
+    'label'=>'Submit',
     'type'=>'', // null, 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
     'size'=>'small', // null, 'large', 'small' or 'mini'
 

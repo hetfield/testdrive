@@ -7616,3 +7616,17 @@ in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
 2013/09/26 12:31:08 [error] [application] Started
 in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (79)
 in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/09/26 13:23:26 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (79)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/09/26 13:31:05 [error] [php] Undefined index: Category (C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TranslationsController.php:57)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): TranslationsController->runAction()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): TranslationsController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): TranslationsController->run()
+#3 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/?r=translations/index
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TranslationsController.php (57)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
