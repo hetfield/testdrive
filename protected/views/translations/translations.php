@@ -1,14 +1,15 @@
 <?php
+/** @var  $model Translations*/
+
 // 1 - админ или переводчик ru\en, 3 - переводчик
 if (Yii::app()->user->getState('Role') != 'A'){
-    $role = 3;
+    $role = 2;
 } else {
-    $role = 1;
+    $role = 0;
 }
 if (Yii::app()->user->getState('Role') == 'T' && Yii::app()->user->getState('Languages') == '["en"]') {
     $role = 1;
 }
-
 Yii::app()->clientScript->registerScript('adjust_currencies_ready', <<<JS
 var tableTranslition;
 $('body').bind('mousedown',function(){
@@ -94,14 +95,14 @@ $this->breadcrumbs = array(
 <?php endif; ?>
 
 <?php if (Yii::app()->user->getState('Role') == 'A'): ?>
-<div class="addedbtn">
-    <?php $this->widget('bootstrap.widgets.TbButton', array(
-        'buttonType'=>'submit',
-        'label'=>'Add phrase',
-        'type'=>'', // null, 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
-        'size'=>'small', // null, 'large', 'small' or 'mini'
-    )); ?>
-</div>
+    <div class="addedbtn">
+        <?php $this->widget('bootstrap.widgets.TbButton', array(
+            'buttonType'=>'submit',
+            'label'=>'Add phrase',
+            'type'=>'', // null, 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
+            'size'=>'small', // null, 'large', 'small' or 'mini'
+        )); ?>
+    </div>
 
 <div id="formAddText" style="width: 410px;">
     <?php
@@ -152,6 +153,54 @@ $this->breadcrumbs = array(
     <?php endif; ?>
 </div><!-- form -->
 
+<br />
+<br />
+
+<?php
+$form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
+    'htmlOptions'=>array('class'=>'well'),
+    'type' => 'inline',
+)); ?>
+
+<?= $form->label($model,'Category'); ?>
+<select name="Translations[Category]" id="Translations_Category">
+    <?php foreach ($model->CategoryNames as $category) : ?>
+        <option <?php Yii::app()->user->getState('Category') == $category ? print('selected="selected"') : (Yii::app()->user->getState('Category') == $model->Category && $category == 'all') ? print('selected="selected"') : '' ?> value="<?= $category ?>"><?= $category ?></option>
+    <?php endforeach; ?>
+</select>
+<!--    <option value="accounts">accounts</option>-->
+<!--    <option selected="selected" value="calc">calc</option>-->
+<!--    <option value="clientform">clientform</option>-->
+<!--    <option value="contests">contests</option>-->
+<!--    <option value="informers">informers</option>-->
+<!--    <option value="ism">ism</option>-->
+<!--    <option value="main">main</option>-->
+<!--    <option value="misc">misc</option>-->
+<!--    <option value="notice">notice</option>-->
+<!--    <option value="notify">notify</option>-->
+<!--    <option value="other">other</option>-->
+<!--    <option value="pamm">pamm</option>-->
+<!--    <option value="partner">partner</option>-->
+<!--    <option value="requests">requests</option>-->
+<!--    <option value="services">services</option>-->
+<!--    <option value="tournaments">tournaments</option>-->
+<!--    <option value="widgets">widgets</option>-->
+<!--    <option value="yii">yii</option>-->
+<!--    <option value="all">all categories</option>-->
+
+
+<?php $this->widget('bootstrap.widgets.TbButton', array(
+    'buttonType'=>'submit',
+    'label'=>'Save',
+    'type'=>'', // null, 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
+    'size'=>'small', // null, 'large', 'small' or 'mini'
+
+)); ?>
+
+<?php $this->endWidget(); ?>
+
+
+
 <div id="translatorsTable">
     <?php
     $this->widget('bootstrap.widgets.TbGridView', array(
@@ -159,7 +208,7 @@ $this->breadcrumbs = array(
         'dataProvider'=>$model->search(),
         'template'=>"{pager}{summary}\n{items}\n{pager}",
         'filter' => $model,
-        'columns'=>$columns,
+        'columns'=>$model->getColumns(),
         'enableSorting' => true,
     )); ?>
 </div>

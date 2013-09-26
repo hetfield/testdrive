@@ -48,6 +48,7 @@ class Translations extends CActiveRecord
         'tournaments' => 'tournaments',
         'widgets' => 'widgets',
         'yii' => 'yii',
+        'all' => 'all'
     );
 
 
@@ -62,7 +63,7 @@ class Translations extends CActiveRecord
         $criteria=new CDbCriteria;
 
         $criteria->compare('ID',$this->ID);
-        $criteria->compare('Category',$this->Category);
+        $criteria->compare('Category', Yii::app()->user->getState('Category'));
 //        $criteria->compare('Key',$this->Key,true);
         $criteria->compare('LangEn',$this->LangEn);
         $criteria->compare('LangAr',$this->LangAr);
@@ -144,12 +145,12 @@ class Translations extends CActiveRecord
                 'name' => 'ID',
                 'htmlOptions' => array('style'=>'width: 50px; text-align: center;'),
             ),
-            array(
-                'name'=>'Category',
-                //'value'=>'$data->Category',
-                'filter' => $this->CategoryNames,
-                'htmlOptions'=>array('style'=>'width: 70px; text-align: center;'),
-            ),
+//            array(
+//                'name'=>'Category',
+//                //'value'=>'$data->Category',
+//                'filter' => $this->CategoryNames,
+//                'htmlOptions'=>array('style'=>'width: 70px; text-align: center;'),
+//            ),
             array(
                 'name' => 'LangRu',
                 'htmlOptions' => array('style' => 'max-width: 100px'),

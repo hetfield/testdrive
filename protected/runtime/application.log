@@ -7553,3 +7553,66 @@ in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
 2013/09/26 09:20:43 [error] [application] Started
 in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (79)
 in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/09/26 11:26:55 [error] [php] Undefined index: textField (C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TranslationsController.php:31)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): TranslationsController->runAction()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): TranslationsController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): TranslationsController->run()
+#3 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/?r=translations/index
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TranslationsController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/09/26 11:27:22 [error] [php] Undefined index: textField (C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TranslationsController.php:31)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): TranslationsController->runAction()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): TranslationsController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): TranslationsController->run()
+#3 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/?r=translations/index
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TranslationsController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/09/26 11:27:39 [error] [php] Undefined index: textField (C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TranslationsController.php:31)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): TranslationsController->runAction()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): TranslationsController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): TranslationsController->run()
+#3 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/?r=translations/index
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TranslationsController.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/09/26 11:42:00 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (79)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/09/26 11:42:46 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (79)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/09/26 11:43:03 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (79)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/09/26 11:44:19 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (79)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/09/26 11:44:37 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (79)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/09/26 11:45:00 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (79)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/09/26 12:04:57 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (79)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/09/26 12:24:08 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (79)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/09/26 12:24:15 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (79)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/09/26 12:31:08 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (79)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
