@@ -94,73 +94,13 @@ $this->breadcrumbs = array(
     </div>
 <?php endif; ?>
 
-<?php if (Yii::app()->user->getState('Role') == 'A'): ?>
-    <div class="addedbtn">
-        <?php $this->widget('bootstrap.widgets.TbButton', array(
-            'buttonType'=>'submit',
-            'label'=>'Add phrase',
-            'type'=>'', // null, 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
-            'size'=>'small', // null, 'large', 'small' or 'mini'
-        )); ?>
-    </div>
-
-<div id="formAddText" style="width: 410px;">
-    <?php
-    $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
-        'id'=>'verticalForm',
-        'htmlOptions'=>array('class'=>'well'),
-    )); ?>
 
 
-    <div class="textField">
-        <?= $form->textAreaRow($model, 'textField', array('class'=>'span4', 'rows'=>5, 'required' => 'required')); ?>
-    </div>
-    <div class="btn-toolbar">
-        <?= $form->dropDownList($model,'Category',array(
-            'accounts' => 'accounts',
-            'calc' => 'calc',
-            'clientform' => 'clientform',
-            'contests' => 'contests',
-            'informers' => 'informers',
-            'ism' => 'ism',
-            'main' => 'main',
-            'misc' => 'misc',
-            'notice' => 'notice',
-            'notify' => 'notify',
-            'other' => 'other',
-            'pamm' => 'pamm',
-            'partner' => 'partner',
-            'requests' => 'requests',
-            'services' => 'services',
-            'tournaments' => 'tournaments',
-            'widgets' => 'widgets',
-            'yii' => 'yii',
-        )); ?>
-    </div>
-
-
-    <div>
-        <?php $this->widget('bootstrap.widgets.TbButton', array(
-            'buttonType'=>'submit',
-            'label'=>'Save',
-            'type'=>'', // null, 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
-            'size'=>'small', // null, 'large', 'small' or 'mini'
-
-        )); ?>
-    </div>
-
-    <?php $this->endWidget(); ?>
-    <?php endif; ?>
-</div><!-- form -->
-
-<br />
-<br />
 
 <?php
 $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
     'htmlOptions'=>array(
-        'class'=>'well',
-        'style' => 'width: 245px; float: right; margin-top: -80px;',
+        'style' => 'width: 245px; position: absolute; margin: 0 400px;',
     ),
     'type' => 'inline',
 )); ?>
@@ -184,6 +124,81 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 
 
 
+<?php if (Yii::app()->user->getState('Role') == 'A'): ?>
+<div class="addedbtn">
+    <?php $this->widget('bootstrap.widgets.TbButton', array(
+        'buttonType'=>'submit',
+        'label'=>'Add phrase',
+        'type'=>'', // null, 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
+        'size'=>'small', // null, 'large', 'small' or 'mini'
+    )); ?>
+</div>
+<div id="formAddText" style="width: 410px; position: absolute; z-index: 1000; border-radius: 10px">
+    <?php
+    $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
+        'id'=>'verticalForm',
+        'htmlOptions'=>array(
+            'class'=>'well',
+            'style' => 'background-color: rgba(131, 131, 131, 0.91); box-shadow: #666 2px 2px 30px; border-radius: 10px;',
+        ),
+    )); ?>
+
+
+    <div class="textField">
+        <?= $form->textAreaRow($model, 'textField', array('class'=>'span4', 'rows'=>5, 'required' => 'required')); ?>
+    </div>
+    <div class="btn-toolbar">
+        <?= $form->dropDownList($model,'Category',array(
+                'accounts' => 'accounts',
+                'calc' => 'calc',
+                'clientform' => 'clientform',
+                'contests' => 'contests',
+                'informers' => 'informers',
+                'ism' => 'ism',
+                'main' => 'main',
+                'misc' => 'misc',
+                'notice' => 'notice',
+                'notify' => 'notify',
+                'other' => 'other',
+                'pamm' => 'pamm',
+                'partner' => 'partner',
+                'requests' => 'requests',
+                'services' => 'services',
+                'tournaments' => 'tournaments',
+                'widgets' => 'widgets',
+                'yii' => 'yii',
+            ),
+            array(
+                'style' => 'width: 120px;'
+            )
+        ); ?>
+    </div>
+
+    <div style="position: absolute; margin: -60px 150px;">
+        <?= $form->radioButtonList($model, 'RKey', $model->RKeyList(), array('style' => 'color: #000;')); ?>
+    </div>
+
+
+    <div>
+        <?php $this->widget('bootstrap.widgets.TbButton', array(
+            'buttonType'=>'submit',
+            'label'=>'Save',
+            'type'=>'', // null, 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
+            'size'=>'small', // null, 'large', 'small' or 'mini'
+
+        )); ?>
+    </div>
+
+    <?php $this->endWidget(); ?>
+    <?php endif; ?>
+</div><!-- form -->
+
+
+
+
+
+
+
 <div id="translatorsTable">
     <?php
     $this->widget('bootstrap.widgets.TbGridView', array(
@@ -195,3 +210,4 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
         'enableSorting' => true,
     )); ?>
 </div>
+

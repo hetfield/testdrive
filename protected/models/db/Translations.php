@@ -26,6 +26,7 @@ class Translations extends CActiveRecord
     public $textField;
     public $Category;
     public $Key;
+    public $RKey = 'en';
 
     public $CategoryNames = array(
         'accounts' => 'accounts',
@@ -176,5 +177,13 @@ class Translations extends CActiveRecord
             }
         }
         return $columns;
+    }
+
+    public function RKeyList()
+    {
+        return array(
+            'en' => 'KeyEn',
+            'ru' => 'KeyRu',
+        );
     }
 }

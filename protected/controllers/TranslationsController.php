@@ -28,7 +28,11 @@ class TranslationsController extends Controller
             /** @var  $record Translations*/
             $record = new Translations();
             $record->Category = htmlspecialchars($_POST[$modelName]['Category']);
-            $record->LangRu = htmlspecialchars($_POST[$modelName]['textField']);
+            if ($_POST['Translations']['RKey'] == 'ru'){
+                $record->LangRu = htmlspecialchars($_POST[$modelName]['textField']);
+            } else {
+                $record->LangEn = htmlspecialchars($_POST[$modelName]['textField']);
+            }
             $record->Key = htmlspecialchars($_POST[$modelName]['textField']);
 
             try {
