@@ -98,7 +98,7 @@ class PhrasesController extends Controller
             $phraseAll['ru'][$phrase->Category][$phrase->Key] = $phrase->LangRu;
         }
 
-        json_encode($phraseAll);
+        echo json_encode($phraseAll);
         exit();
 
 ////выгрузка массива в файлы
