@@ -62,50 +62,63 @@
 //
 ////после принятия массива проверяем на совпадения в БД
 //
-////foreach ($phraseAll as $category => $keys){
-////    foreach ($keys as $key => $languages){
-////        /** @var Translations $oldData */
-////        $oldData = Translations::model()->findByAttributes(array('Category' => $category, 'Key' => $key));
-////        if (!$oldData){
-////            /** @var Translations $newData */
-////            $newData = new Translations();
-////            $newData->Category = $category;
-////            $newData->Key = $key;
-////            foreach ($languages as $language => $phrase){
-////                switch($language){
-////                    case 'ar':
-////                        $newData->LangAr = htmlspecialchars($phrase);
-////                        break;
-////                    case 'es':
-////                        $newData->LangEs = htmlspecialchars($phrase);
-////                        break;
-////                    case 'zh_cn':
-////                        $newData->LangCn = htmlspecialchars($phrase);
-////                        break;
-////                    case 'my':
-////                        $newData->LangMy = htmlspecialchars($phrase);
-////                        break;
-////                    case 'id':
-////                        $newData->LangId = htmlspecialchars($phrase);
-////                        break;
-////                    case 'en':
-////                        $newData->LangEn = htmlspecialchars($phrase);
-////                        break;
-////                    case 'ru':
-////                        $newData->LangRu = htmlspecialchars($phrase);
-////                        break;
-////                }
-////
-////            }
-////            $newData->save();
-////        }
-////    }
-////}
-//echo 'done!'; die;
+
 class ParserController extends Controller
 {
     public function actionIndex()
     {
-        $this->renderPartial('parser');
+        $phraseAll = json_decode(file_get_contents('http://dev-front.mf/report/translationsinfo'));
+        $i = 0;
+        foreach ($phraseAll as $category => $keys){
+            foreach ($keys as $key => $languages){
+                /** @var Translations $oldData */
+                $oldData = Translations::model()->findByAttributes(array('Category' => $category, 'Key' => $key));
+                if (!$oldData){
+
+                    /** @var Translations $newData */
+                    $newData = new Translations();
+                    $newData->Category = $category;
+                    $newData->Key = $key;
+                    foreach ($languages as $language => $phrase){
+                        switch($language){
+                            case 'ar':
+                                $newData->LangAr = htmlspecialchars($phrase);
+                                break;
+                            case 'az':
+                                $newData->LangAz = htmlspecialchars($phrase);
+                                break;
+                            case 'es':
+                                $newData->LangEs = htmlspecialchars($phrase);
+                                break;
+                            case 'zh_cn':
+                                $newData->LangCn = htmlspecialchars($phrase);
+                                break;
+                            case 'my':
+                                $newData->LangMy = htmlspecialchars($phrase);
+                                break;
+                            case 'id':
+                                $newData->LangId = htmlspecialchars($phrase);
+                                break;
+                            case 'en':
+                                $newData->LangEn = htmlspecialchars($phrase);
+                                break;
+                            case 'ru':
+                                $newData->LangRu = htmlspecialchars($phrase);
+                                break;
+                        }
+
+                    }
+                    $newData->save();
+                }
+            }
+        }
+        echo 'done!'; die;
+
+
+
+
+
+
+//        $this->renderPartial('parser');
     }
 }
