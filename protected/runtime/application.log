@@ -8277,3 +8277,27 @@ in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
 2013/09/27 12:42:04 [error] [application] Started
 in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (79)
 in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/09/27 14:26:58 [error] [php] file_put_contents(C:\xampp\htdocs\yii-test\testdrive\protected\messages-test\ar\accounts.php): failed to open stream: No such file or directory (C:\xampp\htdocs\yii-test\testdrive\protected\controllers\PhrasesController.php:125)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): PhrasesController->runAction()
+#2 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): PhrasesController->runActionWithFilters()
+#3 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): PhrasesController->run()
+#4 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/?r=phrases/index
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\PhrasesController.php (125)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/09/27 14:33:11 [error] [php] fopen(C:\xampp\htdocs\yii-test\testdrive\protected\messages-test\ar\accounts.php): failed to open stream: No such file or directory (C:\xampp\htdocs\yii-test\testdrive\protected\controllers\PhrasesController.php:126)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): PhrasesController->runAction()
+#2 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): PhrasesController->runActionWithFilters()
+#3 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): PhrasesController->run()
+#4 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/?r=phrases/index
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\PhrasesController.php (126)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
