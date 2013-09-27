@@ -27,7 +27,9 @@ class Translations extends CActiveRecord
     public $Category;
     public $Key;
     public $RKey = 'en';
-    public $NColumns = array(
+    public $NColumns = '';
+
+    public $columnsForCookies = array(
         0 => 'ar',
         1 => 'id',
         2 => 'es',
@@ -73,7 +75,6 @@ class Translations extends CActiveRecord
     public static function model($className=__CLASS__)
     {
         return parent::model($className);
-
     }
 
     public function attributeLabels()

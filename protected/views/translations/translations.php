@@ -128,12 +128,13 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 <?php if (Yii::app()->user->getState('Role') == 'A'): ?>
 
 
-<div>
+<div style="position: absolute; margin: -72px 240px; top: 115px;">
     <?php
 
     $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
         'htmlOptions'=>array(
-            'style' => 'position: absolute; margin: -72px 240px;',
+//            'style' => 'position: absolute; margin: -72px 240px;',
+            'style' => 'margin: 10px;',
         ),
         'type' => 'inline',
     )); ?>
@@ -176,30 +177,55 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
         <?= $form->textAreaRow($model, 'textField', array('class'=>'span4', 'rows'=>5, 'required' => 'required')); ?>
     </div>
     <div class="btn-toolbar">
-        <?= $form->dropDownList($model,'Category',array(
-                'accounts' => 'accounts',
-                'calc' => 'calc',
-                'clientform' => 'clientform',
-                'contests' => 'contests',
-                'informers' => 'informers',
-                'ism' => 'ism',
-                'main' => 'main',
-                'misc' => 'misc',
-                'notice' => 'notice',
-                'notify' => 'notify',
-                'other' => 'other',
-                'pamm' => 'pamm',
-                'partner' => 'partner',
-                'requests' => 'requests',
-                'services' => 'services',
-                'tournaments' => 'tournaments',
-                'widgets' => 'widgets',
-                'yii' => 'yii',
-            ),
-            array(
-                'style' => 'width: 120px;'
-            )
-        ); ?>
+        <select style="width: 120px;" name="Translations[Category]" id="Translations_Category">
+            <?php foreach($model->CategoryNames as $category) :?>
+                <?php if ($category != 'all') : ?>
+                    <option <?php Yii::app()->user->getState('Category') == $category ? print('selected="selected"') : '' ?> value="<?= $category ?>"><?= $category ?></option>
+                <?php endif; ?>
+            <?php endforeach; ?>
+            <option value="accounts">accounts</option>
+            <option value="calc">calc</option>
+            <option value="clientform">clientform</option>
+            <option value="contests">contests</option>
+            <option value="informers">informers</option>
+            <option value="ism">ism</option>
+            <option value="main">main</option>
+            <option value="misc">misc</option>
+            <option value="notice">notice</option>
+            <option value="notify">notify</option>
+            <option value="other">other</option>
+            <option value="pamm">pamm</option>
+            <option value="partner">partner</option>
+            <option value="requests">requests</option>
+            <option value="services">services</option>
+            <option value="tournaments">tournaments</option>
+            <option value="widgets">widgets</option>
+            <option value="yii">yii</option>
+        </select>
+        <!--        --><?//= $form->dropDownList($model,'Category',array(
+        //                'accounts' => 'accounts',
+        //                'calc' => 'calc',
+        //                'clientform' => 'clientform',
+        //                'contests' => 'contests',
+        //                'informers' => 'informers',
+        //                'ism' => 'ism',
+        //                'main' => 'main',
+        //                'misc' => 'misc',
+        //                'notice' => 'notice',
+        //                'notify' => 'notify',
+        //                'other' => 'other',
+        //                'pamm' => 'pamm',
+        //                'partner' => 'partner',
+        //                'requests' => 'requests',
+        //                'services' => 'services',
+        //                'tournaments' => 'tournaments',
+        //                'widgets' => 'widgets',
+        //                'yii' => 'yii',
+        //            ),
+        //            array(
+        //                'style' => 'width: 120px;'
+        //            )
+        //        ); ?>
     </div>
 
     <div style="position: absolute; margin: -60px 150px;">

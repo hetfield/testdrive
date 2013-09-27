@@ -62,9 +62,14 @@ class TranslationsController extends Controller
             }
         }
 
-        if (isset($_POST[$modelName]['NColumns'])){
-            $model->NColumns = $_POST[$modelName]['NColumns'];
+        if (isset($_POST[$modelName]['NColumns']) && Yii::app()->user->getState('Role') == 'A'){
+            Yii::app()->user->setState('Columns', $_POST[$modelName]['NColumns']);
         }
+        if (Yii::app()->user->getState('Columns') === NULL && Yii::app()->user->getState('Role') == 'A'){
+            Yii::app()->user->setState('Columns', $model->columnsForCookies);
+        }
+        $model->NColumns = Yii::app()->user->getState('Columns');
+
 
         $this->render('translations',array(
             'model'=>$model,
