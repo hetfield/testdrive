@@ -23,7 +23,7 @@ class TranslationsController extends Controller
         }
 
 
-        if (isset($_POST[$modelName]) && !isset($_POST[$modelName]['ChooseCategory'])) {
+        if (isset($_POST[$modelName]) && !isset($_POST[$modelName]['ChooseCategory']) && !isset($_POST[$modelName]['NColumns'])) {
 
             /** @var  $record Translations*/
             $record = new Translations();
@@ -60,6 +60,10 @@ class TranslationsController extends Controller
             } else {
                 Yii::app()->user->setState('Category', $_POST[$modelName]['ChooseCategory']);
             }
+        }
+
+        if (isset($_POST[$modelName]['NColumns'])){
+            $model->NColumns = $_POST[$modelName]['NColumns'];
         }
 
         $this->render('translations',array(

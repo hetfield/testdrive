@@ -27,6 +27,23 @@ class Translations extends CActiveRecord
     public $Category;
     public $Key;
     public $RKey = 'en';
+    public $NColumns = array(
+        0 => 'ar',
+        1 => 'id',
+        2 => 'es',
+        3 => 'my',
+        4 => 'cn',
+        5 => 'az',
+    );
+
+    public $Columns = array(
+        'ar' => 'Lang Ar',
+        'id' => 'Lang Id',
+        'es' => 'Lang Es',
+        'my' => 'Lang My',
+        'cn' => 'Lang Cn',
+        'az' => 'Lang Az',
+    );
 
     public $CategoryNames = array(
         'accounts' => 'accounts',
@@ -57,6 +74,14 @@ class Translations extends CActiveRecord
     {
         return parent::model($className);
 
+    }
+
+    public function attributeLabels()
+    {
+        return array(
+            'NColumns' => 'Select columns to dislpay:  ',
+            'Category' => 'Category:'
+        );
     }
 
     public function search()
@@ -108,38 +133,51 @@ class Translations extends CActiveRecord
 
     public function getColumns()
     {
-        $langs = array(
-            'ar' => array(
-                'name' => 'LangAr',
-                'htmlOptions' => array('style' => 'max-width: 100px'),
-                'type' => 'html',
-            ),
-            'id' => array(
-                'name' => 'LangId',
-                'htmlOptions' => array('style' => 'max-width: 100px'),
-                'type' => 'html',
-            ),
-            'es' => array(
-                'name' => 'LangEs',
-                'htmlOptions' => array('style' => 'max-width: 100px'),
-                'type' => 'html',
-            ),
-            'my' => array(
-                'name' => 'LangMy',
-                'htmlOptions' => array('style' => 'max-width: 100px'),
-                'type' => 'html',
-            ),
-            'cn' => array(
-                'name' => 'LangCn',
-                'htmlOptions' => array('style' => 'max-width: 100px'),
-                'type' => 'html',
-            ),
-            'az' => array(
-                'name' => 'LangAz',
-                'htmlOptions' => array('style' => 'max-width: 100px'),
-                'type' => 'html',
-            ),
-        );
+            $langs = array(
+                'ar' => array(
+                    'name' => 'LangAr',
+                    'htmlOptions' => array('style' => 'max-width: 100px'),
+                    'type' => 'html',
+                ),
+                'id' => array(
+                    'name' => 'LangId',
+                    'htmlOptions' => array('style' => 'max-width: 100px'),
+                    'type' => 'html',
+                ),
+                'es' => array(
+                    'name' => 'LangEs',
+                    'htmlOptions' => array('style' => 'max-width: 100px'),
+                    'type' => 'html',
+                ),
+                'my' => array(
+                    'name' => 'LangMy',
+                    'htmlOptions' => array('style' => 'max-width: 100px'),
+                    'type' => 'html',
+                ),
+                'cn' => array(
+                    'name' => 'LangCn',
+                    'htmlOptions' => array('style' => 'max-width: 100px'),
+                    'type' => 'html',
+                ),
+                'az' => array(
+                    'name' => 'LangAz',
+                    'htmlOptions' => array('style' => 'max-width: 100px'),
+                    'type' => 'html',
+                ),
+            );
+
+
+        if ($this->NColumns != '' && Yii::app()->user->getState('Role') == 'A'){
+            foreach($langs as $lang => $value){
+                if (!is_int(array_search($lang, $this->NColumns))){
+                    unset($langs[$lang]);
+                }
+            }
+        }
+
+        if ($this->NColumns == ''){
+            $langs = array();
+        }
 
         $columns = array(
             array(

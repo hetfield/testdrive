@@ -1,5 +1,6 @@
 <?php
 /** @var  $model Translations*/
+/** @var TbActiveForm $form */
 
 // 1 - админ или переводчик ru\en, 3 - переводчик
 if (Yii::app()->user->getState('Role') != 'A'){
@@ -100,7 +101,7 @@ $this->breadcrumbs = array(
 <?php
 $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
     'htmlOptions'=>array(
-        'style' => 'width: 245px; position: absolute; margin: 0 400px;',
+        'style' => 'width: 247px; position: absolute; margin: 0 400px;',
     ),
     'type' => 'inline',
 )); ?>
@@ -125,6 +126,33 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 
 
 <?php if (Yii::app()->user->getState('Role') == 'A'): ?>
+
+
+<div>
+    <?php
+
+    $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
+        'htmlOptions'=>array(
+            'style' => 'position: absolute; margin: -72px 240px;',
+        ),
+        'type' => 'inline',
+    )); ?>
+
+    <?= $form->checkBoxListInlineRow($model, 'NColumns', $model->Columns); ?>
+
+    <?php $this->widget('bootstrap.widgets.TbButton', array(
+        'buttonType'=>'submit',
+        'label'=>'ReDrawTable',
+        'type'=>'', // null, 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
+        'size'=>'small', // null, 'large', 'small' or 'mini'
+
+    )); ?>
+
+    <?php $this->endWidget(); ?>
+</div>
+
+
+
 <div class="addedbtn">
     <?php $this->widget('bootstrap.widgets.TbButton', array(
         'buttonType'=>'submit',
