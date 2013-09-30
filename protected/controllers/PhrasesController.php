@@ -88,14 +88,14 @@ class PhrasesController extends Controller
         /** @var Translations $phrase*/
         $phraseAll = array();
         foreach ($phrases as $phrase){
-            $phraseAll['ar'][$phrase->Category][$phrase->Key] = htmlspecialchars($phrase->LangAr, ENT_QUOTES);
-            $phraseAll['az'][$phrase->Category][$phrase->Key] = htmlspecialchars($phrase->LangAz, ENT_QUOTES);
-            $phraseAll['en'][$phrase->Category][$phrase->Key] = htmlspecialchars($phrase->LangEn, ENT_QUOTES);
-            $phraseAll['es'][$phrase->Category][$phrase->Key] = htmlspecialchars($phrase->LangEs, ENT_QUOTES);
-            $phraseAll['zh_cn'][$phrase->Category][$phrase->Key] = htmlspecialchars($phrase->LangCn, ENT_QUOTES);
-            $phraseAll['my'][$phrase->Category][$phrase->Key] = htmlspecialchars($phrase->LangMy, ENT_QUOTES);
-            $phraseAll['id'][$phrase->Category][$phrase->Key] = htmlspecialchars($phrase->LangId, ENT_QUOTES);
-            $phraseAll['ru'][$phrase->Category][$phrase->Key] = htmlspecialchars($phrase->LangRu, ENT_QUOTES);
+            $phraseAll['ar'][$phrase->Category][$phrase->Key] = htmlspecialchars(htmlspecialchars_decode($phrase->LangAr), ENT_QUOTES);
+            $phraseAll['az'][$phrase->Category][$phrase->Key] = htmlspecialchars(htmlspecialchars_decode($phrase->LangAz), ENT_QUOTES);
+            $phraseAll['en'][$phrase->Category][$phrase->Key] = htmlspecialchars(htmlspecialchars_decode($phrase->LangEn), ENT_QUOTES);
+            $phraseAll['es'][$phrase->Category][$phrase->Key] = htmlspecialchars(htmlspecialchars_decode($phrase->LangEs), ENT_QUOTES);
+            $phraseAll['zh_cn'][$phrase->Category][$phrase->Key] = htmlspecialchars(htmlspecialchars_decode($phrase->LangCn), ENT_QUOTES);
+            $phraseAll['my'][$phrase->Category][$phrase->Key] = htmlspecialchars(htmlspecialchars_decode($phrase->LangMy), ENT_QUOTES);
+            $phraseAll['id'][$phrase->Category][$phrase->Key] = htmlspecialchars(htmlspecialchars_decode($phrase->LangId), ENT_QUOTES);
+            $phraseAll['ru'][$phrase->Category][$phrase->Key] = htmlspecialchars(htmlspecialchars_decode($phrase->LangRu), ENT_QUOTES);
         }
 
         echo json_encode($phraseAll);
