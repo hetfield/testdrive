@@ -88,14 +88,14 @@ class PhrasesController extends Controller
         /** @var Translations $phrase*/
         $phraseAll = array();
         foreach ($phrases as $phrase){
-            $phraseAll['ar'][$phrase->Category][$phrase->Key] = $phrase->LangAr;
-            $phraseAll['az'][$phrase->Category][$phrase->Key] = $phrase->LangAz;
-            $phraseAll['en'][$phrase->Category][$phrase->Key] = $phrase->LangEn;
-            $phraseAll['es'][$phrase->Category][$phrase->Key] = $phrase->LangEs;
-            $phraseAll['zh_cn'][$phrase->Category][$phrase->Key] = $phrase->LangCn;
-            $phraseAll['my'][$phrase->Category][$phrase->Key] = $phrase->LangMy;
-            $phraseAll['id'][$phrase->Category][$phrase->Key] = $phrase->LangId;
-            $phraseAll['ru'][$phrase->Category][$phrase->Key] = $phrase->LangRu;
+            $phraseAll['ar'][$phrase->Category][$phrase->Key] = htmlspecialchars($phrase->LangAr, ENT_QUOTES);
+            $phraseAll['az'][$phrase->Category][$phrase->Key] = htmlspecialchars($phrase->LangAz, ENT_QUOTES);
+            $phraseAll['en'][$phrase->Category][$phrase->Key] = htmlspecialchars($phrase->LangEn, ENT_QUOTES);
+            $phraseAll['es'][$phrase->Category][$phrase->Key] = htmlspecialchars($phrase->LangEs, ENT_QUOTES);
+            $phraseAll['zh_cn'][$phrase->Category][$phrase->Key] = htmlspecialchars($phrase->LangCn, ENT_QUOTES);
+            $phraseAll['my'][$phrase->Category][$phrase->Key] = htmlspecialchars($phrase->LangMy, ENT_QUOTES);
+            $phraseAll['id'][$phrase->Category][$phrase->Key] = htmlspecialchars($phrase->LangId, ENT_QUOTES);
+            $phraseAll['ru'][$phrase->Category][$phrase->Key] = htmlspecialchars($phrase->LangRu, ENT_QUOTES);
         }
 
         echo json_encode($phraseAll);
