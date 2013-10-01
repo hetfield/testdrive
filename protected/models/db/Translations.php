@@ -59,6 +59,7 @@ class Translations extends CActiveRecord
         'misc' => 'misc',
         'notice' => 'notice',
         'notify' => 'notify',
+        'office' => 'office',
         'other' => 'other',
         'pamm' => 'pamm',
         'partner' => 'partner',
@@ -92,7 +93,7 @@ class Translations extends CActiveRecord
         $criteria->compare('ID',$this->ID);
         $criteria->compare('Category', Yii::app()->user->getState('Category'));
 //        $criteria->compare('Key',$this->Key,true);
-        $criteria->compare('LangEn',$this->LangEn);
+        $criteria->compare('LangEn',$this->LangEn,true);
         $criteria->compare('LangAr',$this->LangAr);
         $criteria->compare('LangEs',$this->LangEs);
         $criteria->compare('LangId',$this->LangId);
@@ -138,32 +139,32 @@ class Translations extends CActiveRecord
                 'ar' => array(
                     'name' => 'LangAr',
                     'htmlOptions' => array('style' => 'max-width: 100px'),
-                    'type' => 'html',
+                    'type' => 'raw',
                 ),
                 'id' => array(
                     'name' => 'LangId',
                     'htmlOptions' => array('style' => 'max-width: 100px'),
-                    'type' => 'html',
+                    'type' => 'raw',
                 ),
                 'es' => array(
                     'name' => 'LangEs',
                     'htmlOptions' => array('style' => 'max-width: 100px'),
-                    'type' => 'html',
+                    'type' => 'raw',
                 ),
                 'my' => array(
                     'name' => 'LangMy',
                     'htmlOptions' => array('style' => 'max-width: 100px'),
-                    'type' => 'html',
+                    'type' => 'raw',
                 ),
                 'cn' => array(
                     'name' => 'LangCn',
                     'htmlOptions' => array('style' => 'max-width: 100px'),
-                    'type' => 'html',
+                    'type' => 'raw',
                 ),
                 'az' => array(
                     'name' => 'LangAz',
                     'htmlOptions' => array('style' => 'max-width: 100px'),
-                    'type' => 'html',
+                    'type' => 'raw',
                 ),
             );
 
@@ -194,12 +195,12 @@ class Translations extends CActiveRecord
             array(
                 'name' => 'LangRu',
                 'htmlOptions' => array('style' => 'max-width: 100px'),
-                'type' => 'html',
+                'type' => 'raw',
             ),
             array(
                 'name' => 'LangEn',
                 'htmlOptions' => array('style' => 'max-width: 100px'),
-                'type' => 'html',
+                'type' => 'raw',
             ),
         );
 

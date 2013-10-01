@@ -114,11 +114,11 @@ $this->breadcrumbs=array(
             </tr>
             <tr>
                 <td>
-                    <input id="TaskForm_languages_8" value="az" type="checkbox" name="TaskForm[languages][]" />
+                    <input id="TaskForm_languages_8" value="az" type="checkbox" name="TaskForm[languages][]" disabled />
                     <label style="display: inline;" for="TaskForm_languages_8">Az</label></label>
                 </td>
                 <td>
-                    <input style="width: 145px;" type="datetime" name="TaskForm[calendar][LangAz]" value="<?= date("Y-m-d H:i", mktime(0, 0, 0, date("m"), date("d")+1, date("Y"))); ?>">
+                    <input style="width: 145px;" type="datetime" name="TaskForm[calendar][LangAz]" disabled value="<?= date("Y-m-d H:i", mktime(0, 0, 0, date("m"), date("d")+1, date("Y"))); ?>">
                 </td>
             </tr>
             <tr>
