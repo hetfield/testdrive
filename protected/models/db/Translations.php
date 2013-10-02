@@ -212,6 +212,7 @@ class Translations extends CActiveRecord
                 }
             }
         }
+
         if (Yii::app()->user->getState('Role') == 'A'){
             $data = array(
                 'name' => 'isConfirmed',
