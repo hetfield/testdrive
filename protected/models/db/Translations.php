@@ -188,12 +188,6 @@ class Translations extends CActiveRecord
                 'name' => 'ID',
                 'htmlOptions' => array('style'=>'width: 50px; text-align: center;'),
             ),
-//            array(
-//                'name'=>'Category',
-//                //'value'=>'$data->Category',
-//                'filter' => $this->CategoryNames,
-//                'htmlOptions'=>array('style'=>'width: 70px; text-align: center;'),
-//            ),
             array(
                 'name' => 'LangRu',
                 'htmlOptions' => array('style' => 'max-width: 100px'),
