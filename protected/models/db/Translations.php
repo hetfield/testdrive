@@ -17,6 +17,7 @@
  * @property string $LangRu
  * @property string $LangCn
  * @property string $LangAz
+ * @property string $isConfirmed
  */
 
 class Translations extends CActiveRecord
@@ -101,6 +102,7 @@ class Translations extends CActiveRecord
         $criteria->compare('LangRu',$this->LangRu);
         $criteria->compare('LangCn',$this->LangCn);
         $criteria->compare('LangAz',$this->LangAz);
+        $criteria->compare('isConfirmed',$this->isConfirmed);
 
         return new CActiveDataProvider(get_class($this), array(
             'criteria'=>$criteria,
@@ -118,7 +120,7 @@ class Translations extends CActiveRecord
         return array(
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
-            array('ID, Category, Key, LangRu, LangEn, LangAr, LangId, LangEs, LangMy, LangCn, LangAz', 'safe', 'on'=>'search'),
+            array('ID, Category, Key, LangRu, LangEn, LangAr, LangId, LangEs, LangMy, LangCn, LangAz, isConfirm', 'safe', 'on'=>'search'),
             array('Key', 'required'),
         );
     }
@@ -135,38 +137,38 @@ class Translations extends CActiveRecord
 
     public function getColumns()
     {
-            $langs = array(
-                'ar' => array(
-                    'name' => 'LangAr',
-                    'htmlOptions' => array('style' => 'max-width: 100px'),
-                    'type' => 'raw',
-                ),
-                'id' => array(
-                    'name' => 'LangId',
-                    'htmlOptions' => array('style' => 'max-width: 100px'),
-                    'type' => 'raw',
-                ),
-                'es' => array(
-                    'name' => 'LangEs',
-                    'htmlOptions' => array('style' => 'max-width: 100px'),
-                    'type' => 'raw',
-                ),
-                'my' => array(
-                    'name' => 'LangMy',
-                    'htmlOptions' => array('style' => 'max-width: 100px'),
-                    'type' => 'raw',
-                ),
-                'cn' => array(
-                    'name' => 'LangCn',
-                    'htmlOptions' => array('style' => 'max-width: 100px'),
-                    'type' => 'raw',
-                ),
-                'az' => array(
-                    'name' => 'LangAz',
-                    'htmlOptions' => array('style' => 'max-width: 100px'),
-                    'type' => 'raw',
-                ),
-            );
+        $langs = array(
+            'ar' => array(
+                'name' => 'LangAr',
+                'htmlOptions' => array('style' => 'max-width: 100px'),
+                'type' => 'raw',
+            ),
+            'id' => array(
+                'name' => 'LangId',
+                'htmlOptions' => array('style' => 'max-width: 100px'),
+                'type' => 'raw',
+            ),
+            'es' => array(
+                'name' => 'LangEs',
+                'htmlOptions' => array('style' => 'max-width: 100px'),
+                'type' => 'raw',
+            ),
+            'my' => array(
+                'name' => 'LangMy',
+                'htmlOptions' => array('style' => 'max-width: 100px'),
+                'type' => 'raw',
+            ),
+            'cn' => array(
+                'name' => 'LangCn',
+                'htmlOptions' => array('style' => 'max-width: 100px'),
+                'type' => 'raw',
+            ),
+            'az' => array(
+                'name' => 'LangAz',
+                'htmlOptions' => array('style' => 'max-width: 100px'),
+                'type' => 'raw',
+            ),
+        );
 
 
         if ($this->NColumns != '' && Yii::app()->user->getState('Role') == 'A'){
@@ -215,6 +217,22 @@ class Translations extends CActiveRecord
                     }
                 }
             }
+        }
+        if (Yii::app()->user->getState('Role') == 'A'){
+            $data = array(
+                'name' => 'isConfirmed',
+                'htmlOptions' => array('style'=>'width: 10px; text-align: center;'),
+                'value' => function($data){
+                    if ($data->isConfirmed == 1){
+                        $show = '<div class="btn-group" data-toggle="buttons-radio"><a btnid="'.$data->ID.'" class="btn btn-success btn-mini active">Y</a><a btnid="'.$data->ID.'" class="btn btn-success btn-mini">N</a></div>';
+                    } else {
+                        $show = '<div class="btn-group" data-toggle="buttons-radio"><a btnid="'.$data->ID.'" class="btn btn-danger btn-mini">Y</a><a btnid="'.$data->ID.'" class="btn btn-danger btn-mini active">N</a></div>';
+                    }
+                    return $show;
+                },
+                'type' => 'raw',
+            );
+            array_push($columns, $data);
         }
         return $columns;
     }

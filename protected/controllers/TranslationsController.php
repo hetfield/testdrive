@@ -79,7 +79,12 @@ class TranslationsController extends Controller
     public function actionSave()
     {
         if (!Yii::app()->user->isGuest){
-            if (isset($_POST)){
+            if (isset($_POST) && $_POST["lang"] == 'Is Confirmed'){
+                $translation = Translations::model()->findByAttributes(array('ID' => $_POST["id"]));
+                $translation->isConfirmed = htmlspecialchars($_POST["text"]);
+                $translation->save();
+                echo 'done!';
+            } elseif (isset($_POST)){
                 /** @var Translations $translation */
                 $translation = Translations::model()->findByAttributes(array('ID' => $_POST["id"]));
                 $attribute = $_POST["lang"];

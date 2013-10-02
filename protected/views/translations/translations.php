@@ -22,6 +22,7 @@ $('.table tr').each(function(k)
                         var lang = $(this).closest('table').find('tr').eq(0).find('th').eq(k).find('a').html();
                         lang = lang.split('<');
                         lang = lang[0];
+                        if (lang == 'Is Confirmed') { return; }
                         $(this).attr('lang',lang);
                         $(this).bind('click',function(){
                             var id = $(this).closest('tr').find('td').eq(0).html();
@@ -73,6 +74,38 @@ $('.addedbtn .btn').click(function(){
             });
         }
 });
+
+$('.btn-group a').click(function(){
+    var ID = $(this).attr("btnid");
+    if ($(this).html() == 'Y'){
+        $(this).removeClass('btn-danger');
+        $(this).addClass('btn-success');
+        $(this).next().removeClass('btn-danger');
+        $(this).next().addClass('btn-success');
+        $.ajax({
+            url: '?r=translations/save',
+            type: 'POST',
+            data: {'id':ID,'lang':'Is Confirmed','text':1},
+            success:  function(res) {
+
+            }
+        });
+    } else {
+        $(this).removeClass('btn-success');
+        $(this).addClass('btn-danger');
+        $(this).prev().removeClass('btn-success');
+        $(this).prev().addClass('btn-danger');
+        $.ajax({
+            url: '?r=translations/save',
+            type: 'POST',
+            data: {'id':ID,'lang':'Is Confirmed','text':0},
+            success:  function(res) {
+
+            }
+        });
+    }
+})
+
 
 JS
     , CClientScript::POS_READY);
@@ -204,7 +237,6 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
     <?php $this->endWidget(); ?>
     <?php endif; ?>
 </div><!-- form -->
-
 
 
 
