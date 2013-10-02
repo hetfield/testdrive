@@ -68,7 +68,7 @@ class ParserController extends Controller
     public function actionIndex()
     {
         $phraseAll = json_decode(file_get_contents('https://cabinet.masterforex.org/a/report/translationsinfo.jsp'));
-        $i = 0;
+
         foreach ($phraseAll as $category => $keys){
             foreach ($keys as $key => $languages){
                 /** @var Translations $oldData */
