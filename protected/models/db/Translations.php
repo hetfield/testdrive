@@ -180,9 +180,6 @@ class Translations extends CActiveRecord
             }
         }
 
-        if ($this->NColumns == ''){
-            $langs = array();
-        }
 
         $columns = array(
             array(
