@@ -68,6 +68,7 @@ class Translations extends CActiveRecord
         'requests' => 'requests',
         'services' => 'services',
         'signals' => 'signals',
+        'statistic' => 'statistic',
         'tournaments' => 'tournaments',
         'widgets' => 'widgets',
         'yii' => 'yii',
@@ -141,7 +142,7 @@ class Translations extends CActiveRecord
         $langs = array(
             'ar' => array(
                 'name' => 'LangAr',
-                'htmlOptions' => array('style' => 'max-width: 100px;', 'dir' => 'rtl'),
+                'htmlOptions' => array('style' => 'max-width: 100px; text-align: right;', 'dir' => 'rtl'),
                 'type' => 'raw',
             ),
             'id' => array(
