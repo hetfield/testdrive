@@ -141,7 +141,7 @@ class Translations extends CActiveRecord
         $langs = array(
             'ar' => array(
                 'name' => 'LangAr',
-                'htmlOptions' => array('style' => 'max-width: 100px'),
+                'htmlOptions' => array('style' => 'max-width: 100px;', 'dir' => 'rtl'),
                 'type' => 'raw',
             ),
             'id' => array(
