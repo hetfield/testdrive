@@ -241,7 +241,7 @@ class Translations extends CActiveRecord
         );
     }
 
-    public function sendNoticeToTranslators()
+    public static function sendNoticeToTranslators()
     {
         include_once (Yii::app()->basePath.'/components/Mailer.php');
         include_once (Yii::app()->basePath.'/components/Smtp.php');

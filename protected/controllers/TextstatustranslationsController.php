@@ -24,6 +24,23 @@ class TextstatustranslationsController extends Controller
         $this->render('textstatustranslations',array(
             'model'=>$model,
         ));
+
+        //ежедневное уведомление переводчиков о неготовых переводах фраз
+        $path = Yii::app()->basePath;
+        $file = $path.DIRECTORY_SEPARATOR.'today';
+        if (is_file($file)){
+            $today = date('Y-m-d');
+            $fileDate = file_get_contents($file);
+            if ($fileDate < $today){
+                Translations::sendNoticeToTranslators();
+                file_put_contents($file, $today);
+            }
+        } else {
+            $today = date('Y-m-d');
+            file_put_contents($file, $today);
+            Translations::sendNoticeToTranslators();
+        }
+        // end
     }
 
     public function actionUpdate()
@@ -135,6 +152,8 @@ class TextstatustranslationsController extends Controller
                 'id' => $id,
             )
         );
+
+
 
     }
 

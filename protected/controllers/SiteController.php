@@ -76,10 +76,14 @@ class SiteController extends Controller
 
 
 
+
+
         Yii::log("Started", 'error');
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
 		$this->redirect(Yii::app()->createUrl('textstatustranslations/index'));
+
+
 	}
 
 	/**
