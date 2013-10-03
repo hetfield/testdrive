@@ -67,6 +67,7 @@ class Translations extends CActiveRecord
         'registration' => 'registration',
         'requests' => 'requests',
         'services' => 'services',
+        'signals' => 'signals',
         'tournaments' => 'tournaments',
         'widgets' => 'widgets',
         'yii' => 'yii',
@@ -239,4 +240,88 @@ class Translations extends CActiveRecord
             'ru' => 'KeyRu',
         );
     }
+
+    public function sendNoticeToTranslators()
+    {
+        include_once (Yii::app()->basePath.'/components/Mailer.php');
+        include_once (Yii::app()->basePath.'/components/Smtp.php');
+
+        $mailer = new Mailer();
+        $Emails = TextStatusTranslations::$mailTranslators;
+
+        $langs = array(
+            'en' => 'LangEn',
+            'es' => 'LangEs',
+            'cn' => 'LangCn',
+            'az' => 'LangAz',
+            'ar' => 'LangAr',
+            'id' => 'LangId',
+            'my' => 'LangMy',
+        );
+
+        foreach ($langs as $lang => $value){
+            $data = Translations::model()->findAllByAttributes(array(
+                $value => '',
+            ));
+
+            /** @var Translations $phrase */
+            $phrases = array();
+            $quote = '"';
+            $quote = htmlspecialchars(htmlspecialchars($quote, ENT_QUOTES), ENT_QUOTES);
+            if ($lang == 'ar' || $lang == 'id' || $lang == 'my'){
+                foreach($data as $phrase){
+                    if ($phrase->LangEn != ''){
+                        $phrases[$phrase->ID] = $phrase->LangEn;
+                    } else {
+                        $phrases[$phrase->ID] = $phrase->Key;
+                    }
+                }
+                $subject = 'Translation status is available on the website  http://translations.masterforex.com/';
+                $body = 'Hello, <br />
+                <p>Please, don’t reply to this email, for it was sent by automatic translation software.  Translation works should be carried out on the website  http://translations.masterforex.com/</p>
+                <p>You still have unaccomplished translation tasks in the Translate Phrases page.</p>
+                <p>You may use the search feature by putting id number into column called ID in the same section.  Service tags such as &lt;strong/&gt;, {account} or '.$quote.' should not be translated, but left as is and be put into a relevant place in the translation.</p>
+                <p>List of IDs of these translations:<br /></p>
+                <p>
+                <ul>';
+                foreach($phrases as $id => $phrase){
+                    $body .= '<li>"'.$id.'" -  translation Id, "'.$phrase.'" - translation phrase</li>';
+                }
+                $body .= '</ul>
+                </p>
+                <p>Best regards, MasterForex</p>';
+            } else {
+                foreach($data as $phrase){
+                    if ($phrase->LangRu != ''){
+                        $phrases[$phrase->ID] = $phrase->LangRu;
+                    } else {
+                        $phrases[$phrase->ID] = $phrase->Key;
+                    }
+                }
+                $subject = 'Информация о состоянии переводов на сайте http://translations.masterforex.com/';
+                $body = 'Здравствуйте, <br />
+                <p>Отвечать на это письмо не нужно, оно отправлено автоматически программой для переводов. Переводы нужно сделать на сайте http://translations.masterforex.com/</p>
+                <p>У вас еще остались не переведенные фразы в разделе Translate Phrases.</p>
+                <p>
+                Вы можете воспользоваться поиском, набрав номер Id в столбце с на званием "Id" в этом же разделе сайта.
+                Служебные символы, к примеру, такие как &lt;strong/&gt;, {account} или '.$quote.' переводить не нужно, а оставлять как есть и вставлять в нужном месте перевода.
+                </p>
+                <p>Список Id этих переводов:<br /></p>
+                <p>
+                <ul>';
+                foreach ($phrases as $id => $phrase){
+                    $body .= '<li>"'.$id.'" - Id перевода, "'.$phrase.'" - фраза перевода</li>';
+                }
+                $body .= '</ul>
+                </p>
+                <p>С уважением, MasterForex.</p>';
+            }
+            $address = array($Emails[$lang]);
+            $mailer->NewMail($subject, $address, $body);
+        }
+    }
+
+
+
+
 }

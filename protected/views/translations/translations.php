@@ -75,7 +75,8 @@ $('.addedbtn .btn').click(function(){
         }
 });
 
-$('.btn-group a').click(function(){
+
+$('.btn-group a').live("click", function(){
     var ID = $(this).attr("btnid");
     if ($(this).html() == 'Y'){
         $(this).removeClass('btn-danger');
@@ -104,7 +105,11 @@ $('.btn-group a').click(function(){
             }
         });
     }
-})
+});
+
+
+
+
 
 
 JS

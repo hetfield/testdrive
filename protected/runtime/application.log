@@ -8704,3 +8704,73 @@ in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
 2013/10/02 12:58:53 [error] [application] Started
 in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (79)
 in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/10/02 13:52:05 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (79)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/10/02 14:28:53 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (79)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/10/02 14:58:52 [error] [php] file_get_contents(C:\xampp\htdocs\yii-test\testdrive\protected\today): failed to open stream: No such file or directory (C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TranslationsController.php:20)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): TranslationsController->runAction()
+#2 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): TranslationsController->runActionWithFilters()
+#3 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): TranslationsController->run()
+#4 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/?r=translations/index
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TranslationsController.php (20)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/10/02 14:58:57 [error] [php] file_get_contents(C:\xampp\htdocs\yii-test\testdrive\protected\today): failed to open stream: No such file or directory (C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TranslationsController.php:20)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): TranslationsController->runAction()
+#2 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): TranslationsController->runActionWithFilters()
+#3 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): TranslationsController->run()
+#4 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/?r=translations/index
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TranslationsController.php (20)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/10/02 15:36:31 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (79)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/10/02 16:03:13 [error] [php] Illegal string offset 'email' (C:\xampp\htdocs\yii-test\testdrive\protected\components\Mailer.php:31)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): TranslationsController->actionIndex()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): TranslationsController->runAction()
+#3 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): TranslationsController->runActionWithFilters()
+#4 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): TranslationsController->run()
+#5 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/?r=translations/index
+in C:\xampp\htdocs\yii-test\testdrive\protected\components\Mailer.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\protected\models\db\Translations.php (287)
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TranslationsController.php (25)
+2013/10/02 16:10:56 [error] [php] Illegal string offset 'email' (C:\xampp\htdocs\yii-test\testdrive\protected\components\Mailer.php:31)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): TranslationsController->actionIndex()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): TranslationsController->runAction()
+#3 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): TranslationsController->runActionWithFilters()
+#4 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): TranslationsController->run()
+#5 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 C:\xampp\htdocs\yii-test\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/?r=translations/index
+in C:\xampp\htdocs\yii-test\testdrive\protected\components\Mailer.php (31)
+in C:\xampp\htdocs\yii-test\testdrive\protected\models\db\Translations.php (289)
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\TranslationsController.php (25)
+2013/10/03 09:07:20 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (79)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/10/03 12:41:15 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (79)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/10/03 13:04:14 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (79)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)

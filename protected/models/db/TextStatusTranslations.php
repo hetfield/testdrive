@@ -26,6 +26,65 @@ class TextStatusTranslations extends CActiveRecord
         return parent::model($className);
     }
 
+    public static $mailTranslators = array(
+//        'en' => array(
+//            'email' => 'translations@mfxbroker.com',
+//            'name' => 'Егор Фентисов'
+//        ),
+//        'es' => array(
+//            'email' => 'translations@mfxbroker.com',
+//            'name' => 'Iria Martinez Espinar'
+//        ),
+//        'cn' => array(
+//            'email' => 'translations@mfxbroker.com',
+//            'name' => 'huayu@masterforex.org',
+//        ),
+//        'az' => array(
+//            'email' => 'translations@mfxbroker.com',
+//            'name' => 'e.zhidkov@mfxbroker.com'
+//        ),
+//        'ar' => array(
+//            'email' => 'translations@mfxbroker.com',
+//            'name' => 'Mado Saied'
+//        ),
+//        'my' => array(
+//            'email' => 'translations@mfxbroker.com',
+//            'name' => 'Jeff Nash'
+//        ),
+//        'id' => array(
+//            'email' => 'translations@mfxbroker.com',
+//            'name' => 'Juliana Saja'
+//        ),
+        'en' => array(
+            'email' => 'e.fentisov@mfxbroker.com',
+            'name' => 'Егор Фентисов'
+        ),
+        'es' => array(
+            'email' => 'iria_me9@hotmail.com',
+            'name' => 'Iria Martinez Espinar'
+        ),
+        'cn' => array(
+            'email' => 'huayu@masterforex.org',
+            'name' => 'huayu@masterforex.org',
+        ),
+        'az' => array(
+            'email' => 'e.zhidkov@mfxbroker.com',
+            'name' => 'e.zhidkov@mfxbroker.com'
+        ),
+        'ar' => array(
+            'email' => 'ahmedsaied44@gmail.com',
+            'name' => 'Mado Saied'
+        ),
+        'my' => array(
+            'email' => 'kamnfx@gmail.com',
+            'name' => 'Jeff Nash'
+        ),
+        'id' => array(
+            'email' => 'juliana_djulie@yahoo.com',
+            'name' => 'Juliana Saja'
+        ),
+    );
+
     public function search()
     {
         if (Yii::app()->user->getState('Role') == 'A'){
@@ -78,10 +137,7 @@ class TextStatusTranslations extends CActiveRecord
         return 'textstatustranslations';
     }
 
-//    public function getCategoryNames()
-//    {
-//        return $this->CategoryNames[$this->CategoryNames];
-//    }
+
 
 
 }
