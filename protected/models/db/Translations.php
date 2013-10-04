@@ -312,10 +312,8 @@ class Translations extends CActiveRecord
 
     public function saveTranslation($id, $lang, $text)
     {
-        /** @var Translations $translation */
         $translation = $this->model()->findByAttributes(array('ID' => $id));
-        $attribute = $lang;
-        switch ($attribute) {
+        switch ($lang) {
             case "Lang Ru":
                 $translation->LangRu = htmlspecialchars($text);
                 break;
