@@ -80,42 +80,11 @@ class TranslationsController extends Controller
     public function actionSave()
     {
         if (!Yii::app()->user->isGuest){
+            $model = new Translations();
             if (isset($_POST) && $_POST["lang"] == 'Is Confirmed'){
-                $translation = Translations::model()->findByAttributes(array('ID' => $_POST["id"]));
-                $translation->isConfirmed = htmlspecialchars($_POST["text"]);
-                $translation->save();
-                echo 'done!';
+                $model->saveValueIsConfirmed($_POST["id"], $_POST["text"]);
             } elseif (isset($_POST)){
-                /** @var Translations $translation */
-                $translation = Translations::model()->findByAttributes(array('ID' => $_POST["id"]));
-                $attribute = $_POST["lang"];
-                switch ($attribute) {
-                    case "Lang Ru":
-                        $translation->LangRu = htmlspecialchars($_POST["text"]);
-                        break;
-                    case "Lang En":
-                        $translation->LangEn = htmlspecialchars($_POST["text"]);
-                        break;
-                    case "Lang Ar":
-                        $translation->LangAr = htmlspecialchars($_POST["text"]);
-                        break;
-                    case "Lang Id":
-                        $translation->LangId = htmlspecialchars($_POST["text"]);
-                        break;
-                    case "Lang Es":
-                        $translation->LangEs = htmlspecialchars($_POST["text"]);
-                        break;
-                    case "Lang My":
-                        $translation->LangMy = htmlspecialchars($_POST["text"]);
-                        break;
-                    case "Lang Cn":
-                        $translation->LangCn = htmlspecialchars($_POST["text"]);
-                        break;
-                    case "Lang Az":
-                        $translation->LangAz = htmlspecialchars($_POST["text"]);
-                        break;
-                }
-                $translation->save();
+                $model->saveTranslation($_POST["id"], $_POST["lang"], $_POST["text"]);
             }
         }
     }

@@ -303,7 +303,46 @@ class Translations extends CActiveRecord
         }
     }
 
+    public function saveValueIsConfirmed($id, $value)
+    {
+        $translations = $this->model()->findByAttributes(array('ID' => $id));
+        $translations->isConfirmed = htmlspecialchars($value);
+        $translations->save();
+    }
 
+    public function saveTranslation($id, $lang, $text)
+    {
+        /** @var Translations $translation */
+        $translation = $this->model()->findByAttributes(array('ID' => $id));
+        $attribute = $lang;
+        switch ($attribute) {
+            case "Lang Ru":
+                $translation->LangRu = htmlspecialchars($text);
+                break;
+            case "Lang En":
+                $translation->LangEn = htmlspecialchars($text);
+                break;
+            case "Lang Ar":
+                $translation->LangAr = htmlspecialchars($text);
+                break;
+            case "Lang Id":
+                $translation->LangId = htmlspecialchars($text);
+                break;
+            case "Lang Es":
+                $translation->LangEs = htmlspecialchars($text);
+                break;
+            case "Lang My":
+                $translation->LangMy = htmlspecialchars($text);
+                break;
+            case "Lang Cn":
+                $translation->LangCn = htmlspecialchars($text);
+                break;
+            case "Lang Az":
+                $translation->LangAz = htmlspecialchars($text);
+                break;
+        }
+        $translation->save();
+    }
 
 
 
