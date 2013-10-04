@@ -48,33 +48,7 @@ class Translations extends CActiveRecord
         'az' => 'Lang Az',
     );
 
-    public $CategoryNames = array(
-        'accounts' => 'accounts',
-        'calc' => 'calc',
-        'clientform' => 'clientform',
-        'contests' => 'contests',
-        'financial' => 'financial',
-        'informers' => 'informers',
-        'ism' => 'ism',
-        'main' => 'main',
-        'misc' => 'misc',
-        'notice' => 'notice',
-        'notify' => 'notify',
-        'office' => 'office',
-        'other' => 'other',
-        'pamm' => 'pamm',
-        'partner' => 'partner',
-        'registration' => 'registration',
-        'requests' => 'requests',
-        'services' => 'services',
-        'signals' => 'signals',
-        'statistic' => 'statistic',
-        'tournaments' => 'tournaments',
-        'widgets' => 'widgets',
-        'yii' => 'yii',
-        'all' => 'all'
-    );
-
+    public $CategoryNames = array();
 
     public static function model($className=__CLASS__)
     {
@@ -132,9 +106,19 @@ class Translations extends CActiveRecord
         return 'translations';
     }
 
-    public function getCategoryNames()
+    public function fillCategoryNames()
     {
-        return $this->CategoryNames[$this->CategoryNames];
+        $category_list = Translations::model()->findAll(array(
+            'select' => 'Category',
+            'group' => 'Category',
+            'distinct'=>true,
+        ));
+
+        foreach ($category_list as $category){
+            $category_array[$category->Category] = $category->Category;
+        }
+        $category_array['all'] = 'all';
+        $this->CategoryNames = $category_array;
     }
 
     public function getColumns()
@@ -318,6 +302,7 @@ class Translations extends CActiveRecord
             $mailer->NewMail($subject, $address, $body);
         }
     }
+
 
 
 

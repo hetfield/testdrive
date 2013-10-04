@@ -22,6 +22,7 @@ class TranslationsController extends Controller
             $model->attributes=$_GET['Translations'];
 
         }
+        $model->fillCategoryNames();
 
         if (isset($_POST[$modelName]) && !isset($_POST[$modelName]['ChooseCategory']) && !isset($_POST[$modelName]['NColumns'])) {
 
