@@ -165,6 +165,10 @@ class Translations extends CActiveRecord
             }
         }
 
+        if ($this->NColumns == '' && Yii::app()->user->getState('Role') == 'A'){
+            $langs = array();
+        }
+
 
         $columns = array(
             array(
