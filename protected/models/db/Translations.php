@@ -69,7 +69,7 @@ class Translations extends CActiveRecord
 
         $criteria->compare('ID',$this->ID);
         $criteria->compare('Category', Yii::app()->user->getState('Category'));
-//        $criteria->compare('Key',$this->Key,true);
+        $criteria->compare('Key',$this->Key,true);
         $criteria->compare('LangEn',$this->LangEn,true);
         $criteria->compare('LangAr',$this->LangAr,true);
         $criteria->compare('LangEs',$this->LangEs,true);
@@ -197,6 +197,12 @@ class Translations extends CActiveRecord
         }
 
         if (Yii::app()->user->getState('Role') == 'A'){
+            $data = array(
+                'name' => 'Key',
+                'htmlOptions' => array('style' => 'max-width: 100px'),
+                'type' => 'raw',
+            );
+            array_push($columns, $data);
             $data = array(
                 'name' => 'isConfirmed',
                 'htmlOptions' => array('style'=>'width: 10px; text-align: center;'),
@@ -338,6 +344,9 @@ class Translations extends CActiveRecord
                 break;
             case "Lang Az":
                 $translation->LangAz = htmlspecialchars($text);
+                break;
+            case "Key":
+                $translation->Key = htmlspecialchars($text);
                 break;
         }
         $translation->save();
