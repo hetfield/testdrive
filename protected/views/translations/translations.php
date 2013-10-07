@@ -51,7 +51,7 @@ $('.table tr').each(function(k)
 											type: 'POST',
 											data: {'id':id,'lang':lang,'text':text},
 											success:  function(res) {
-                                            console.log(res);
+
                                         }
 										});
 										$(this).parent().html(text);
