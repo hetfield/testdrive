@@ -71,13 +71,13 @@ class Translations extends CActiveRecord
         $criteria->compare('Category', Yii::app()->user->getState('Category'));
 //        $criteria->compare('Key',$this->Key,true);
         $criteria->compare('LangEn',$this->LangEn,true);
-        $criteria->compare('LangAr',$this->LangAr);
-        $criteria->compare('LangEs',$this->LangEs);
-        $criteria->compare('LangId',$this->LangId);
-        $criteria->compare('LangMy',$this->LangMy);
-        $criteria->compare('LangRu',$this->LangRu);
-        $criteria->compare('LangCn',$this->LangCn);
-        $criteria->compare('LangAz',$this->LangAz);
+        $criteria->compare('LangAr',$this->LangAr,true);
+        $criteria->compare('LangEs',$this->LangEs,true);
+        $criteria->compare('LangId',$this->LangId,true);
+        $criteria->compare('LangMy',$this->LangMy,true);
+        $criteria->compare('LangRu',$this->LangRu,true);
+        $criteria->compare('LangCn',$this->LangCn,true);
+        $criteria->compare('LangAz',$this->LangAz,true);
         $criteria->compare('isConfirmed',$this->isConfirmed);
 
         return new CActiveDataProvider(get_class($this), array(
@@ -231,6 +231,9 @@ class Translations extends CActiveRecord
         $mailer = new Mailer();
         $Emails = TextStatusTranslations::$mailTranslators;
 
+        $quote = '"';
+        $quote = htmlspecialchars(htmlspecialchars($quote, ENT_QUOTES), ENT_QUOTES);
+
         $langs = array(
             'en' => 'LangEn',
             'es' => 'LangEs',
@@ -248,8 +251,6 @@ class Translations extends CActiveRecord
 
             /** @var Translations $phrase */
             $phrases = array();
-            $quote = '"';
-            $quote = htmlspecialchars(htmlspecialchars($quote, ENT_QUOTES), ENT_QUOTES);
             if ($lang == 'ar' || $lang == 'id' || $lang == 'my'){
                 foreach($data as $phrase){
                     if ($phrase->LangEn != ''){
@@ -285,7 +286,7 @@ class Translations extends CActiveRecord
                 <p>Отвечать на это письмо не нужно, оно отправлено автоматически программой для переводов. Переводы нужно сделать на сайте http://translations.masterforex.com/</p>
                 <p>У вас еще остались не переведенные фразы в разделе Translate Phrases.</p>
                 <p>
-                Вы можете воспользоваться поиском, набрав номер Id в столбце с на званием "Id" в этом же разделе сайта.
+                Вы можете воспользоваться поиском, набрав номер Id в столбце с названием "Id" в этом же разделе сайта.
                 Служебные символы, к примеру, такие как &lt;strong/&gt;, {account} или '.$quote.' переводить не нужно, а оставлять как есть и вставлять в нужном месте перевода.
                 </p>
                 <p>Список Id этих переводов:<br /></p>

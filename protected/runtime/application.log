@@ -9035,3 +9035,15 @@ Stack trace:
 #13 {main}
 REQUEST_URI=/?r=translations/index
 ---
+2013/10/04 10:06:30 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (81)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/10/04 10:08:06 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (81)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/10/04 10:11:17 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (81)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
+2013/10/04 10:57:24 [error] [application] Started
+in C:\xampp\htdocs\yii-test\testdrive\protected\controllers\SiteController.php (81)
+in C:\xampp\htdocs\yii-test\testdrive\index.php (13)
