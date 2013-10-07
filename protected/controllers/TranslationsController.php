@@ -89,6 +89,15 @@ class TranslationsController extends Controller
         }
     }
 
+    public function actionDelete()
+    {
+        if (Yii::app()->user->getState('Role') == 'A'){
+            if ($_GET['id']){
+                Translations::model()->deleteByPk($_GET['id']);
+            }
+        }
+    }
+
 
 //    public function actionNewBase()
 //    {

@@ -20,9 +20,10 @@ $('.table tr').each(function(k)
             $(this).find('td').each( function(k){
                     if (k > {$role}) {
                         var lang = $(this).closest('table').find('tr').eq(0).find('th').eq(k).find('a').html();
+                        if  (lang != undefined){
                         lang = lang.split('<');
                         lang = lang[0];
-                        if (lang == 'Is Confirmed') { return; }
+                        if (lang == 'Is Confirmed' || lang == 'Buttons') { return; }
                         $(this).attr('lang',lang);
                         $(this).bind('click',function(){
                             var id = $(this).closest('tr').find('td').eq(0).html();
@@ -58,6 +59,7 @@ $('.table tr').each(function(k)
 								});
                             }
                         })
+					}
 					}
                 })
 	})

@@ -217,6 +217,23 @@ class Translations extends CActiveRecord
                 'type' => 'raw',
             );
             array_push($columns, $data);
+            $data = array(
+                'class' => 'bootstrap.widgets.TbButtonColumn',
+                'htmlOptions' => array('style'=>'width: 50px; text-align: center;'),
+                'header' => 'Buttons',
+                'buttons' => array(
+                    'update' => array(
+                        'visible' => 'false',
+                    ),
+                    'view' => array(
+                        'visible' => 'false',
+                    ),
+                    'delete' => array(
+                        'url' => 'Yii::app()->createUrl("translations/delete", array("id"=>$data->ID))',
+                    ),
+                ),
+            );
+            array_push($columns, $data);
         }
         return $columns;
     }
@@ -313,7 +330,7 @@ class Translations extends CActiveRecord
     public function saveValueIsConfirmed($id, $value)
     {
         $translations = $this->model()->findByAttributes(array('ID' => $id));
-        $translations->isConfirmed = htmlspecialchars($value);
+        $translations->isConfirmed = htmlspecialchars($value, ENT_QUOTES);
         $translations->save();
     }
 
@@ -322,31 +339,31 @@ class Translations extends CActiveRecord
         $translation = $this->model()->findByAttributes(array('ID' => $id));
         switch ($lang) {
             case "Lang Ru":
-                $translation->LangRu = htmlspecialchars($text);
+                $translation->LangRu = htmlspecialchars($text, ENT_QUOTES);
                 break;
             case "Lang En":
-                $translation->LangEn = htmlspecialchars($text);
+                $translation->LangEn = htmlspecialchars($text, ENT_QUOTES);
                 break;
             case "Lang Ar":
-                $translation->LangAr = htmlspecialchars($text);
+                $translation->LangAr = htmlspecialchars($text, ENT_QUOTES);
                 break;
             case "Lang Id":
-                $translation->LangId = htmlspecialchars($text);
+                $translation->LangId = htmlspecialchars($text, ENT_QUOTES);
                 break;
             case "Lang Es":
-                $translation->LangEs = htmlspecialchars($text);
+                $translation->LangEs = htmlspecialchars($text, ENT_QUOTES);
                 break;
             case "Lang My":
-                $translation->LangMy = htmlspecialchars($text);
+                $translation->LangMy = htmlspecialchars($text, ENT_QUOTES);
                 break;
             case "Lang Cn":
-                $translation->LangCn = htmlspecialchars($text);
+                $translation->LangCn = htmlspecialchars($text, ENT_QUOTES);
                 break;
             case "Lang Az":
-                $translation->LangAz = htmlspecialchars($text);
+                $translation->LangAz = htmlspecialchars($text, ENT_QUOTES);
                 break;
             case "Key":
-                $translation->Key = htmlspecialchars($text);
+                $translation->Key = htmlspecialchars($text, ENT_QUOTES);
                 break;
         }
         $translation->save();
