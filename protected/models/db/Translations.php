@@ -79,6 +79,7 @@ class Translations extends CActiveRecord
         $criteria->compare('LangCn',$this->LangCn,true);
         $criteria->compare('LangAz',$this->LangAz,true);
         $criteria->compare('isConfirmed',$this->isConfirmed);
+        $criteria->compare('Category',$this->Category);
 
         return new CActiveDataProvider(get_class($this), array(
             'criteria'=>$criteria,
@@ -203,6 +204,12 @@ class Translations extends CActiveRecord
         if (Yii::app()->user->getState('Role') == 'A'){
             $data = array(
                 'name' => 'Key',
+                'htmlOptions' => array('style' => 'max-width: 100px'),
+                'type' => 'raw',
+            );
+            array_push($columns, $data);
+            $data = array(
+                'name' => 'Category',
                 'htmlOptions' => array('style' => 'max-width: 100px'),
                 'type' => 'raw',
             );
