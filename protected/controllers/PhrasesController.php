@@ -96,6 +96,7 @@ class PhrasesController extends Controller
             $phraseAll['my'][$phrase->Category][$phrase->Key] = htmlspecialchars(htmlspecialchars_decode($phrase->LangMy), ENT_QUOTES);
             $phraseAll['id'][$phrase->Category][$phrase->Key] = htmlspecialchars(htmlspecialchars_decode($phrase->LangId), ENT_QUOTES);
             $phraseAll['ru'][$phrase->Category][$phrase->Key] = htmlspecialchars(htmlspecialchars_decode($phrase->LangRu), ENT_QUOTES);
+            $phraseAll['ge'][$phrase->Category][$phrase->Key] = htmlspecialchars(htmlspecialchars_decode($phrase->LangGe), ENT_QUOTES);
         }
 
         echo json_encode($phraseAll);

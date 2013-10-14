@@ -168,7 +168,7 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 <?php if (Yii::app()->user->getState('Role') == 'A'): ?>
 
 
-<div style="position: absolute; margin: -72px 240px; top: 115px;">
+<div style="position: absolute; margin: -72px 240px; width: 100%; top: 115px">
     <?php
 
     $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(

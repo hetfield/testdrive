@@ -17,6 +17,7 @@
  * @property string $LangRu
  * @property string $LangCn
  * @property string $LangAz
+ * @property string $LangGe
  * @property string $isConfirmed
  */
 
@@ -37,6 +38,7 @@ class Translations extends CActiveRecord
         3 => 'my',
         4 => 'cn',
         5 => 'az',
+        6 => 'ge',
     );
 
     public $Columns = array(
@@ -46,6 +48,7 @@ class Translations extends CActiveRecord
         'my' => 'Lang My',
         'cn' => 'Lang Cn',
         'az' => 'Lang Az',
+        'ge' => 'Lang Ge',
     );
 
     public $CategoryNames = array();
@@ -78,6 +81,7 @@ class Translations extends CActiveRecord
         $criteria->compare('LangRu',$this->LangRu,true);
         $criteria->compare('LangCn',$this->LangCn,true);
         $criteria->compare('LangAz',$this->LangAz,true);
+        $criteria->compare('LangGe',$this->LangGe,true);
         $criteria->compare('isConfirmed',$this->isConfirmed);
         $criteria->compare('Category',$this->Category);
 
@@ -97,7 +101,7 @@ class Translations extends CActiveRecord
         return array(
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
-            array('ID, Category, Key, LangRu, LangEn, LangAr, LangId, LangEs, LangMy, LangCn, LangAz, isConfirm', 'safe', 'on'=>'search'),
+            array('ID, Category, Key, LangRu, LangEn, LangAr, LangId, LangEs, LangMy, LangCn, LangAz, LangGe isConfirm', 'safe', 'on'=>'search'),
             array('Key', 'required'),
         );
     }
@@ -152,6 +156,11 @@ class Translations extends CActiveRecord
             ),
             'az' => array(
                 'name' => 'LangAz',
+                'htmlOptions' => array('style' => 'max-width: 100px'),
+                'type' => 'raw',
+            ),
+            'ge' => array(
+                'name' => 'LangGe',
                 'htmlOptions' => array('style' => 'max-width: 100px'),
                 'type' => 'raw',
             ),
@@ -372,6 +381,9 @@ class Translations extends CActiveRecord
                 break;
             case "Lang Az":
                 $translation->LangAz = htmlspecialchars($text, ENT_QUOTES);
+                break;
+            case "Lang Ge":
+                $translation->LangGe = htmlspecialchars($text, ENT_QUOTES);
                 break;
             case "Key":
                 $translation->Key = htmlspecialchars($text, ENT_QUOTES);
