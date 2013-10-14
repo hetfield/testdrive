@@ -9,7 +9,7 @@ if (Yii::app()->user->getState('Role') != 'A'){
     $role = 0;
 }
 if (Yii::app()->user->getState('Role') == 'T' && Yii::app()->user->getState('Languages') == '["en"]') {
-    $role = 1;
+    $role = 0;
 }
 Yii::app()->clientScript->registerScript('adjust_currencies_ready', <<<JS
 var tableTranslition;
